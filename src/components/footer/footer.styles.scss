@@ -1,0 +1,62 @@
+#footerComponent{
+    background-color: #001D23;
+    background-image: url("../../assets/images/footerLine.png");
+    border: 1px solid black;
+    height: 500px;
+    position: relative;
+    bottom: 0;
+    margin-top: 180px;
+
+    #footerContentArea{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 95%;
+        width: 90%;
+        background-color: #F7F7F7;
+        position: absolute;
+        left: 5%;
+        top: -30%;
+
+        #footerOutro{
+            display: flex;
+            align-items: center;
+            padding: 0 60px 0 50px;
+
+            img{
+                margin-bottom: 20px;
+            }
+
+            .quickLinks{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        #footerInstagram{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h2{
+                margin-bottom: 20px;
+            }
+
+            .igImages{
+                display: flex;
+            }
+
+            .igImage{
+                height: 100px;
+                width: 105px;
+                margin: 5px 5px;
+                
+                img{
+                    height: inherit;
+                    width: inherit;
+                    object-fit: cover;
+                    background-color: #FFFFFF;
+                }
+            }
+        }
+    }
+}

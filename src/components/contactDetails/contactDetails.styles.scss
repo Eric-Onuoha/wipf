@@ -1,0 +1,42 @@
+#contactDetailsComponent{
+    background-image: linear-gradient(to top right, #FEA244, #FC693A);
+    padding: 0 50px;
+
+    #contactDetails{
+        height: 100%;
+        color: #FFFFFF;
+
+        #phoneDetails, #emailDetails, #addressDetails{
+            margin: 50px 0 30px 30px;
+            position: relative;
+
+            img{
+                position: absolute;
+                height: 40px;
+                top: calc(50% - 25px);
+            }
+
+            div{
+                padding-left: 80px;
+            }
+
+            h2{
+                font-family: 'Yeseva One', cursive;
+                font-size: 32px;
+                line-height: 38px;
+            }
+
+            p, a{
+                font-family: 'Roboto', sans-serif;
+                font-size: 16px;
+                line-height: 30px;
+                font-weight: 500;
+                color: #FFFFFF;
+            }
+
+            a:hover{
+                color: black;
+            }
+        }
+    }
+}

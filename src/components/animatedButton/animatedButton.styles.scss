@@ -1,0 +1,18 @@
+@mixin animatedButton($primaryColour, $secondaryColour){
+    border: 1px $primaryColour solid;
+    position: relative;
+    border-radius: 30px;
+    background-image: linear-gradient(to top right, #FEA244, #FC693A);
+    color: $secondaryColour;
+    font-size: 17px;
+    line-height: 23px;
+    cursor: pointer;
+    height: 60px;
+    padding: 0 25px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    line-height: 23px;
+}
+#animatedButton{
+    @include animatedButton(#FC693A, #FFFFFF);
+}

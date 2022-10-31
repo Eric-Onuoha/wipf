@@ -1,0 +1,50 @@
+.coreAreaPreviewPage{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 28px;
+    padding: 0 10vw;
+    margin-bottom: 70px;
+
+    h1{
+        font-size: 38px;
+        line-height: 45px;
+        font-family: 'Yeseva One', sans-serif;
+    }
+
+
+    p{
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 350;
+        color: #FEECE7;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .coreAreaPreview{
+        background-color: #FC693A;
+        // height: 380px;
+        padding: 30px 40px;
+        // max-width: 38vw;
+        color: #FFFFFF;
+        display: grid;
+        gap: 2px;
+    }
+
+    #plainButton{
+        margin-top: 15px;
+        color: #FFFFFF;
+        height: 40px;
+
+        .rightArrow{
+            top: 36%;
+        }
+
+        #rightArrowD{
+            display: none;
+        }
+
+        #rightArrowW{
+            display: block;
+        }
+    }
+}

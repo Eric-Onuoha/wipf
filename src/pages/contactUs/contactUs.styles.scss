@@ -1,0 +1,28 @@
+#contactUsComponent{
+    padding-top: 6.5em;
+
+    #contactUsBanner{
+        position: relative;
+        height: 300px;
+
+        img{
+            width: 100%;
+        }
+
+        h2{
+            font-family: 'Yeseva One', cursive;
+            font-size: 55px;
+            line-height: 80px;
+            color: #FFFFFF;
+            position: absolute;
+            top: 34%;
+            left: 40%;
+        }
+    }
+
+    #contactUs{
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        padding: 5.5% 18%;
+    }
+}

@@ -1,0 +1,19 @@
+#sectionIntro{
+    position: relative;
+
+    img{
+        position: absolute;
+        top: 29%;
+        left: 40px;
+        height: 200px;
+    }
+
+    h1{
+        position: absolute;
+        // top: 35%;
+        margin-top: 15px;
+        font-size: 55px;
+        line-height: 75px;
+        font-family: 'Yeseva One', sans-serif;
+    }
+}

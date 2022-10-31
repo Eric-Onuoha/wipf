@@ -1,0 +1,34 @@
+import React, { Fragment } from "react";
+import { Outlet, Link } from "react-router-dom";
+import "../navigationBar/navigationBar.styles.scss";
+import "../../index.css";
+
+import Logo from "../../assets/images/wipfnewlogo.png";
+// import Button from "react-bootstrap/Button";
+import AnimatedButton from "../animatedButton/animatedButton.component";
+import "bootstrap/scss/bootstrap.scss";
+
+const NavigationBar = () => {
+  return (
+    <Fragment id="navBarComponent">
+      <div id="navBar">
+        <div id="navLogo">
+          <img src={Logo} alt="" />
+        </div>
+        <div className="navItems">
+          <Link className="active" to={"/"}><ul>Home</ul></Link>
+          <Link to={"aboutus"}><ul>About Us</ul></Link>
+          <Link to={"programs"}><ul>Programs</ul></Link>
+          {/* <ul>Newsletter</ul> */}
+          <Link to={"contactus"}><ul>Contact Us</ul></Link>
+        </div>
+        <div>
+          <AnimatedButton text= "Nigerian Women Aspirants "/>
+        </div>
+      </div>
+      <Outlet/>
+    </Fragment>
+  );
+};
+
+export default NavigationBar;

@@ -1,0 +1,65 @@
+#navBarComponent{
+    // position: relative;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+#navBar{
+    display: flex;
+    background-color: #FFFFFF;
+    height: 6em;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+
+    #navLogo img{
+        height: 4.5em;
+    }
+
+    .navItems{
+        display: flex;
+        justify-content: space-around;
+        font-size: 17px;
+        line-height: 22px;
+        padding-top: 20px;
+
+        ul{
+            padding: 6px 30px 0 15px;
+            height: 40px;
+            // width: 110px;
+            text-align: center;
+            text-decoration: none;
+
+        }
+
+        ul:hover{
+            color: #FC693A;
+            cursor: pointer;
+        }
+
+        ul:first-of-type{
+            padding: 6px 32px 0 30px;
+        }
+
+        .active{
+            color: #FC693A;
+            cursor: pointer;
+            background-image: url("../../assets/images/activeMenu.webp");
+            background-repeat: no-repeat;
+            background-size: 110px 40px;
+            color: #FFFFFF;
+        }
+    }
+    // font-family: 'Yeseva One';
+    // font-style: normal;
+    // font-weight: 400;
+    // src: url(https://fonts.gstatic.com/s/yesevaone/v18/OpNJno4ck8vc-xYpwWWxliBVWyXD.woff2) format('woff2');
+    // unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}

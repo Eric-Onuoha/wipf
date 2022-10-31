@@ -1,0 +1,96 @@
+#newsPreviewsComponent{
+    position: relative;
+    height: 600px;
+    background-color: #001D23;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.18fr 2fr;
+    column-gap: 55px;
+    margin-bottom: 70px;
+  
+    #newsImageCover{
+        object-fit: cover;
+        height: 75%;
+        width: 36vw;
+        position: relative;
+        top: 12.5%;
+    }
+
+    #newsImage{
+        height: 100%;
+        width: 36vw;
+    }
+
+    #newsContent{
+        position: relative;
+        top: 5%;
+    }
+
+    #newsTitle h1{
+        font-family: 'Yeseva One', sans-serif;
+        font-size: 38px;
+        line-height: 45px;
+        padding-right: 10px;
+    }
+
+    #newsPreview{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 2fr 0.7fr;
+        column-gap: 10px;
+        font-family: 'Yeseva One', sans-serif;
+
+        h4{
+            line-height: 35px;
+            font-size: 20px;
+            color: #C2C2C2;
+            padding-right: 35px;
+        }
+
+        #newsMetadata{
+            margin-top: 20px;
+
+            h5{
+                margin-top: 20px;
+                font-size: 15px;
+                line-height: 27px;
+                font-weight: 600;
+            }
+            p{
+                font-size: 14px;
+                line-height: 15px;
+                color: #FC6539;
+                font-weight: 700;
+            }
+        }
+
+        #newsToggle{
+            background-color:#192A2D;
+            height: 120px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 100px;
+        }
+
+        #ovalButtonComponent{
+            margin: 35px 0 0 30px;
+
+            #ovalButton{
+                border: 1px solid #283E42;
+            }
+
+            #ovalButton:hover{
+                background-color: #283E42;
+            }
+
+            &:last-child button{
+                transform: rotate(180deg);
+            }
+        }
+
+    }
+
+    p, h1, h2, h3, h4, h5{
+        color: white;
+    }
+}
