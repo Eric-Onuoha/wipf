@@ -21,6 +21,7 @@ const NavigationBar = () => {
           <Link to={"programs"}><ul>Programs</ul></Link>
           {/* <ul>Newsletter</ul> */}
           <Link to={"contactus"}><ul>Contact Us</ul></Link>
+          <Link to={"programsupload"}><ul>Upload Programs</ul></Link>
         </div>
         <div>
           <AnimatedButton text= "Nigerian Women Aspirants "/>

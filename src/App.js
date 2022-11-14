@@ -7,6 +7,7 @@ import AboutUs from "./pages/aboutUs/aboutUs.component";
 import Programs from "./pages/programs/programs.component";
 import NavigationBar from "./components/navigationBar/navigationBar.components";
 import Footer from "./components/footer/footer.component";
+import ProgramsUpload from "./components/programsUpload/programsUpload.component";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="contactus" element={<ContactUs/>}/>
           <Route path="aboutus" element={<AboutUs/>}/>
           <Route path="programs" element={<Programs/>}></Route>
+          <Route path="programsupload" element={<ProgramsUpload/>}></Route>
         </Route>
       </Routes>
         {/* <Footer/> */}
