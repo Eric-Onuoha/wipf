@@ -4,10 +4,6 @@ import curvedLineBg1 from "../../assets/images/bannerCurvedLine.webp";
 import curvedLineBg2 from "../../assets/images/bannerCurvedLine.png";
 
 import "../landingPage/landingPage.styles.scss";
-import "bootstrap/scss/bootstrap.scss";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
 
 import AnimatedButton from "../../components/animatedButton/animatedButton.component";
 import PlainButton from "../../components/plainButton/plainButton.component";
@@ -21,32 +17,40 @@ import LatestPrograms from "../../components/latestPrograms/latestPrograms.compo
 
 const LandingPage = () => {
   return (
-    <Container fluid id="landingPageBody">
+    <div fluid id="landingPageBody">
       <img id="curvedLineBg1" src={curvedLineBg1} alt=""/>
       <img id="curvedLineBg2" src={curvedLineBg2} alt=""/>
-      <Row>
-        <Col>
+
+      <div className="landingIntros">
+
+        <div className="landingIntroDiv">
           <LandingIntro />
           <div className="introButtons">
             <AnimatedButton text="Our Programs "></AnimatedButton>
             <PlainButton text="Join Us "></PlainButton>
           </div>
-        </Col>
-        <Col className="hoverAnimation"> <BannerImage/></Col>
-      </Row>
-      <Row>
-        <Col> <CoreAreas/> </Col>
-      </Row>
-      <Row>
-        <Col className="barMargin barPadding"> <NewsPreviews/> </Col>
-      </Row>
-      <Row>
-        <Col className="barMargin barPadding"> <LatestPrograms/> </Col>
-      </Row>
-      <Row>
-        <Col> <Sponsors/> </Col>
-      </Row>
-    </Container>
+        </div>
+
+        <div className="hoverAnimation"> <BannerImage/></div>
+
+      </div>
+
+      <div className="coreAreasDiv">
+        <CoreAreas/>
+      </div>
+
+      <div className="newsPreviewsDiv">
+         <NewsPreviews/>
+      </div>
+
+      <div className="latestProgramsDiv">
+        <LatestPrograms/>
+      </div>
+
+      <div className="sponsorsDiv">
+        <Sponsors/>
+      </div>
+    </div>
   );
 };
 

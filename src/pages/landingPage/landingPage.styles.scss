@@ -1,8 +1,16 @@
 #landingPageBody{
-//     background-color: #F7F7F7;
-//     height: 90vh;
-//     overflow-x: hidden;
-padding-top: 5em;
+       padding-top: 5em;
+
+    .landingIntros{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 110px;
+        margin-top: 10px;
+    }
+
+    .coreAreasDiv{
+        margin-bottom: 80px;
+    }
 
     .barMargin{
         margin: 0;
@@ -88,5 +96,17 @@ padding-top: 5em;
   
     .hoverAnimation:hover {
         animation: vibrate-1 3.5s linear infinite both;
+    }
+
+    
+    @media(max-width: 600px){
+        .hoverAnimation{
+                display: none;
+        }
+        .landingIntroDiv{
+            border: 1px solid blue;
+            width: 100vw;
+            margin: 0 auto;
+        }
     }
 }

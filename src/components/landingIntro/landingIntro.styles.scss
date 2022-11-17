@@ -1,7 +1,13 @@
-.landingIntro{
-    max-width: 600px;
-    padding-top: 18vh;
-    padding-bottom: 12px;
-    padding-left: 18px;
-    padding-left: 5vw;
+
+@media (min-width:600px){
+    .landingIntro{
+        max-width: 600px;
+        padding-top: 18vh;
+        padding-bottom: 12px;
+        padding-left: 18px;
+        padding-left: 5vw;
+    }
 }
+
+
+

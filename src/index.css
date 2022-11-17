@@ -14,3 +14,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#heading1{
+  font-family: 'Yeseva One', cursive;
+  line-height: 82px;
+  font-size: 81px;
+}
+
+h2, p{
+  text-decoration: underline;
+}

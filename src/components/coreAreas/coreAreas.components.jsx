@@ -6,7 +6,7 @@ const areas = [{name:"Mentorship & Training", colour: "#FC6539"}, {name:"Politic
 
 const CoreAreas = () => {
     return(
-        <div className='coreAreasPage'>
+        <div>
             <CoreAreasPreview areas = {areas}></CoreAreasPreview>
         </div>
     )

@@ -3,10 +3,6 @@ import React from 'react';
 import "../contactUs/contactUs.styles.scss";
 
 // import "../landingPage/landingPage.styles.scss";
-import "bootstrap/scss/bootstrap.scss";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
 
 import ContactUsBanner from "../../assets/images/contactUsBanner.jpg";
 

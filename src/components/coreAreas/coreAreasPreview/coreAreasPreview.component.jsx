@@ -1,10 +1,6 @@
 import React from "react";
 
 import "./coreAreasPreview.styles.scss";
-import "bootstrap/scss/bootstrap.scss";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
 
 import PlainButton from "../../plainButton/plainButton.component";
 
