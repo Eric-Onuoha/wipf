@@ -17,7 +17,7 @@ const NewsPreviews = () =>{
                     <h1>Sample News Article: WIPF LAUNCH ORGANIZATION WEBSITE</h1>
                 </div>
                 <div id="newsPreview">
-                    <div>
+                    <div id="newsPreviewCover">
                     <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde odio quisquam adipisci et expedita 
                         perspiciatis nam dolorem doloribus asperiores, corporis ad officia rem aspernatur architecto? 
                         Id quo vel consequatur enim debitis, ipsam nemo quibusdam quae pariatur laudantium. Sint minima 

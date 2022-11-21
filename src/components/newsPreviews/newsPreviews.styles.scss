@@ -1,55 +1,51 @@
 #newsPreviewsComponent{
     position: relative;
-    height: 600px;
+    padding: 10px 0;
     background-color: #001D23;
     width: 100%;
     display: grid;
-    grid-template-columns: 1.18fr 2fr;
-    column-gap: 55px;
-    margin-bottom: 70px;
+    grid-template-columns: 100%;
   
     #newsImageCover{
         object-fit: cover;
-        height: 75%;
-        width: 36vw;
-        position: relative;
-        top: 12.5%;
+        height: 220px;
+        margin-top: 10px;
     }
 
     #newsImage{
         height: 100%;
-        width: 36vw;
+        width: 80vw;
+        display: block;
+        margin: 0 auto;
     }
 
     #newsContent{
-        position: relative;
-        top: 5%;
+        display: grid;
+        grid-template-columns: 100%;
     }
 
     #newsTitle h1{
         font-family: 'Yeseva One', sans-serif;
         font-size: 38px;
         line-height: 45px;
-        padding-right: 10px;
+        padding: 0 5px;
     }
 
     #newsPreview{
-        margin-top: 20px;
         display: grid;
-        grid-template-columns: 2fr 0.7fr;
-        column-gap: 10px;
+        grid-template-columns: 100%;
         font-family: 'Yeseva One', sans-serif;
 
         h4{
             line-height: 35px;
             font-size: 20px;
             color: #C2C2C2;
-            padding-right: 35px;
+            padding: 0 10px;
         }
 
         #newsMetadata{
-            margin-top: 20px;
-
+            text-align: center;
+            
             h5{
                 margin-top: 20px;
                 font-size: 15px;
@@ -66,14 +62,15 @@
 
         #newsToggle{
             background-color:#192A2D;
-            height: 120px;
+            width: 60%;
+            height: 80px;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            margin-top: 100px;
+            margin: 15px auto 5px auto;
         }
 
         #ovalButtonComponent{
-            margin: 35px 0 0 30px;
+            margin: 20px 0 0 35px;
 
             #ovalButton{
                 border: 1px solid #283E42;
@@ -92,5 +89,62 @@
 
     p, h1, h2, h3, h4, h5{
         color: white;
+    }
+}
+
+@media(min-width:600px){
+    #newsPreviewsComponent{
+        height: 600px;
+        grid-template-columns: 1.18fr 2fr;
+        column-gap: 55px;
+        margin-bottom: 70px;
+        padding: 0;
+
+        #newsTitle h1{
+            padding: 0;
+        }
+
+        #newsContent{
+            position: relative;
+            top: 5%;
+            display: block;
+        }
+        #newsPreview{
+            margin-top: 20px;
+            grid-template-columns: 2fr 0.7fr;
+            column-gap: 10px;
+
+            #newsMetadata{
+                text-align: left;
+            }
+
+            h4{
+                padding: 0 35px 0 0;
+            }
+        }
+
+        #newsImageCover{
+            height: 75%;
+            width: 36vw;
+            position: relative;
+            top: 12.5%;
+            margin-top: 0;
+        }
+    
+        #newsImage{
+            width: 36vw;
+        }
+
+        #newsPreview{
+            #newsToggle{
+                height: 120px;
+                width: 100%;
+                margin-top: 100px;
+            }
+
+            #ovalButtonComponent{
+                margin: 35px 0 0 35px;
+            }
+        }        
     }
 }
