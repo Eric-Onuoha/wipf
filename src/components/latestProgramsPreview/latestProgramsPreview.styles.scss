@@ -1,10 +1,11 @@
 #latestProgramsPreviewComponent{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 100%;
     padding: 0 10%;
     margin-bottom: 20px;
     column-gap: 24px;
-    margin-bottom: 70px;
+    row-gap: 250px;
+    margin-bottom: 150px;
 
     .latestProgram{
         position: relative;
@@ -24,7 +25,7 @@
                 overflow: hidden;
                 text-align: center;
                 color: #FFFFFF;
-                padding-top: 4%;
+                padding-top: 1%;
         
                 .day{
                     font-weight: 400;
@@ -49,7 +50,7 @@
             width: 270px;
             position: absolute;
             top: 220px;
-            left: 28px;
+            left: 17px;
             padding: 25px 25px 0 25px;
             cursor: pointer;
 
@@ -97,5 +98,11 @@
                 border: 1.5px solid #EE6B44;
             }
         }
+    }
+}
+
+@media(min-width: 600px){
+    #latestProgramsPreviewComponent{
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }

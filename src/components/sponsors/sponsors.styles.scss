@@ -1,12 +1,22 @@
 #sponsorsComponent{
-    margin-top: 60px;
     height: 420px;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
     column-gap: 28px;
+    row-gap: 120px;
     padding: 0 6vw;
 
     #sponsorsIntro{
-        margin-top: 135px;
+        margin-top: 100px;
+    }
+}
+
+@media(min-width:600px){
+    #sponsorsComponent{
+        grid-template-columns: 1fr 2fr;
+
+        #sponsorsIntro{
+            margin-top: 135px;
+        }
     }
 }

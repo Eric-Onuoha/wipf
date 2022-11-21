@@ -4,16 +4,31 @@
     img{
         position: absolute;
         top: 29%;
-        left: 40px;
-        height: 200px;
+        left: 26%;
+        height: 150px;
     }
 
     h1{
         position: absolute;
-        // top: 35%;
-        margin-top: 15px;
-        font-size: 55px;
-        line-height: 75px;
+        left: 18%;
+        margin-top: 1px;
+        font-size: 40px;
+        line-height: 70px;
         font-family: 'Yeseva One', sans-serif;
+    }
+
+    @media(min-width:600px){
+        img{
+            top: 29%;
+            left: 40px;
+            height: 200px;
+        }
+
+        h1{
+            left: 0;
+            margin-top: 15px;
+            font-size: 55px;
+            line-height: 75px;
+        }
     }
 }

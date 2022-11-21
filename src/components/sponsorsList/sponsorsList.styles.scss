@@ -1,14 +1,31 @@
 #sponsorsListComponent{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    padding: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0;
     position: relative;
     top: 22%;
 
     .sponsorsList{
         img{
-            height: 120px;
-            width: 120px;
+            height: 75px;
+            width: 75px;
+        }
+    }
+}
+
+@media(min-width:600px){
+    #sponsorsListComponent{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        padding: 10px;
+        position: relative;
+        top: 22%;
+
+        .sponsorsList{
+            img{
+                height: 120px;
+                width: 120px;
+            }
         }
     }
 }
