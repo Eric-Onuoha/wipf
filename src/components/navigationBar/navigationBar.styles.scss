@@ -79,6 +79,11 @@ a{
         ul:first-of-type{
             padding: 6px 32px 0 30px;
         }
+
+        .active{
+            color: #FC693A;
+            cursor: pointer;
+        }
     
     }
 
@@ -153,7 +158,6 @@ a{
                 background-repeat: no-repeat;
                 background-size: 140px 40px;
                 background-position: 2px -2px;
-                color: #FFFFFF;
             }
         }
     }

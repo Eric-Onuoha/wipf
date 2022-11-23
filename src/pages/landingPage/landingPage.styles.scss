@@ -105,11 +105,19 @@
     .hoverAnimation:hover {
         animation: vibrate-1 3.5s linear infinite both;
     }
+}
 
-    
-    @media(max-width: 600px){
+@media(max-width: 600px){
+
+    #landingPageBody{
+        padding-top: 2em;
+
+        #curvedLineBg1, #curvedLineBg2{
+            display: none;
+        }
+
         .hoverAnimation{
-                display: none;
+            display: none;
         }
         .landingIntroDiv{
             width: 100vw;
