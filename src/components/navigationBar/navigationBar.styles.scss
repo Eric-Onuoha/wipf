@@ -17,7 +17,7 @@ a{
     top: 0;
 
     #navLogo img{
-        height: 2.8em;
+        height: 3em;
     }
 
     .hamburgerMenu img{
@@ -25,43 +25,58 @@ a{
         margin-right: 34px;
     }
 
-    .navItems{
+    #navItemsMobile{
         display: none;
+    }
 
-        .navItems{
-            display: flex;
-            justify-content: space-around;
-            font-size: 20px;
-            line-height: 22px;
-            padding-top: 20px;
+    .navItems{
+        // display: block;
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        line-height: 22px;
+        padding-top: 65px;
+        position: fixed;
+        height: 100%;
+        background-color: white;
+        z-index: 5;
+        top: 0;
+        right: 0;
+        width: 70%;
+
+        .hamburgerMenu img{
+            height: 2em;
+            position: absolute;
+            right: -18px;
+            top: 18px;
+        }
     
-            ul{
-                padding: 6px 30px 0 15px;
-                height: 40px;
-                min-width: 80px;
-                text-align: center;
-                text-decoration: none;
+        ul{
+            padding: 6px 30px 0 15px;
+            // height: 40px;
+            // min-width: 80px;
+            text-align: center;
+            text-decoration: none;
     
-            }
+        }
     
-            ul:hover{
-                color: #FC693A;
-                cursor: pointer;
-            }
+        ul:hover{
+            color: #FC693A;
+            cursor: pointer;
+        }
     
-            ul:first-of-type{
-                padding: 6px 32px 0 30px;
-            }
+        ul:first-of-type{
+            padding: 6px 32px 0 30px;
+        }
     
-            .active{
-                color: #FC693A;
-                cursor: pointer;
-                background-image: url("../../assets/images/activeMenu.webp");
-                background-repeat: no-repeat;
-                background-size: 140px 40px;
-                background-position: 1px 17px;
-                color: #FFFFFF;
-            }
+        .active{
+            color: #FC693A;
+            cursor: pointer;
+            background-image: url("../../assets/images/activeMenu.webp");
+            background-repeat: no-repeat;
+            background-size: 140px 40px;
+            background-position: 1px 17px;
+            color: #FFFFFF;
         }
     }
 
@@ -69,6 +84,8 @@ a{
         display: none;
     }
 }
+
+
 
 @media(min-width:600px){
     #navBar{
@@ -81,6 +98,10 @@ a{
 
         #navLogo img{
             height: 4.5em;
+        }
+
+        #navItemsMobile{
+            display: block;
         }
 
         .hamburgerMenu{

@@ -1,4 +1,4 @@
-import React, { Fragment} from "react";
+import React, { Fragment, useState} from "react";
 import { Outlet, NavLink, } from "react-router-dom";
 import "../navigationBar/navigationBar.styles.scss";
 import "../../index.css";
@@ -9,14 +9,24 @@ import HamburgerMenu from "../../assets/images/hamburgermenu.png";
 import AnimatedButton from "../animatedButton/animatedButton.component";
 
 const NavigationBar = (props) => {
+  
+  const [showNav, setShowNav] = useState("navItemsMobile");
+
+  const toggleMenu = () => {
+    (showNav === "navItemsMobile" ? setShowNav(" ") : setShowNav("navItemsMobile"));
+    
+    console.log(showNav);
+  }
+
   return (
-    <Fragment id="navBarComponent">
+    <Fragment>
       <div id="navBar">
         <div id="navLogo">
           <img src={Logo} alt="Menu"/>
         </div>
-        <div className="hamburgerMenu"><img src={HamburgerMenu} alt="Menu"/></div>
-        <div className="navItems">
+        <div className="hamburgerMenu" onClick={toggleMenu}><img src={HamburgerMenu} alt="Menu"/></div>
+        <div id={showNav} className = "navItems">
+          <div className="hamburgerMenu" onClick={toggleMenu}><img src={HamburgerMenu} alt="Menu"/></div>
           <NavLink activeClassName="active" to={"/"}><ul>Home</ul></NavLink>
           <NavLink activeClassName="active" to={"aboutus"}><ul>About Us</ul></NavLink>
           <NavLink activeClassName="active" to={"programs"}><ul>Programs</ul></NavLink>
