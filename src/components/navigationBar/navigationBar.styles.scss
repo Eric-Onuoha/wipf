@@ -3,6 +3,17 @@ a{
     color: #000000;
 }
 
+
+#navModal{
+    top: 0;
+    position: fixed;
+    height: 100%;
+    width: 40%;
+    left: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 6;
+}
+
 #navBar{
     display: flex;
     background-color: #FFFFFF;
@@ -21,7 +32,7 @@ a{
     }
 
     .hamburgerMenu img{
-        height: 2.5em;
+        height: 2em;
         margin-right: 34px;
     }
 
@@ -33,31 +44,31 @@ a{
         // display: block;
         display: flex;
         flex-direction: column;
-        font-size: 20px;
-        line-height: 22px;
-        padding-top: 65px;
+        font-size: 18px;
+        line-height: 15px;
+        padding-top: 95px;
         position: fixed;
         height: 100%;
         background-color: white;
         z-index: 5;
         top: 0;
         right: 0;
-        width: 70%;
+        width: 60%;
 
         .hamburgerMenu img{
-            height: 2em;
+            height: 1.8em;
             position: absolute;
             right: -18px;
-            top: 18px;
+            top: 22px;
         }
     
         ul{
             padding: 6px 30px 0 15px;
+            margin-left: 35px;
             // height: 40px;
             // min-width: 80px;
-            text-align: center;
+            text-align: left;
             text-decoration: none;
-    
         }
     
         ul:hover{
@@ -69,15 +80,6 @@ a{
             padding: 6px 32px 0 30px;
         }
     
-        .active{
-            color: #FC693A;
-            cursor: pointer;
-            background-image: url("../../assets/images/activeMenu.webp");
-            background-repeat: no-repeat;
-            background-size: 140px 40px;
-            background-position: 1px 17px;
-            color: #FFFFFF;
-        }
     }
 
     .nwaLink{
@@ -88,10 +90,14 @@ a{
 
 
 @media(min-width:600px){
+    #navModal{
+        display: none;
+    }
+
     #navBar{
-        display: flex;
         height: 6em;
         justify-content: space-around;
+        padding: 0;
         width: 100%;
         z-index: 2;
         top: 0;
@@ -101,7 +107,7 @@ a{
         }
 
         #navItemsMobile{
-            display: block;
+            display: flex;
         }
 
         .hamburgerMenu{
@@ -113,19 +119,22 @@ a{
         }
     
         .navItems{
-            display: flex;
+            flex-direction: row;
             justify-content: space-around;
+            align-items: center;
+            // justify-content: space-around;
             font-size: 20px;
             line-height: 22px;
-            padding-top: 20px;
+            padding-top: 2px;
+            position: relative;
+            height: inherit;
+            width: auto;
     
             ul{
-                padding: 6px 30px 0 15px;
                 height: 40px;
+                margin: 0;
                 min-width: 80px;
-                text-align: center;
-                text-decoration: none;
-    
+                text-align: center;    
             }
     
             ul:hover{
@@ -143,7 +152,7 @@ a{
                 background-image: url("../../assets/images/activeMenu.webp");
                 background-repeat: no-repeat;
                 background-size: 140px 40px;
-                background-position: 1px 17px;
+                background-position: 2px -2px;
                 color: #FFFFFF;
             }
         }

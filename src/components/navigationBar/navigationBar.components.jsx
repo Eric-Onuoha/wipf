@@ -11,15 +11,18 @@ import AnimatedButton from "../animatedButton/animatedButton.component";
 const NavigationBar = (props) => {
   
   const [showNav, setShowNav] = useState("navItemsMobile");
+  const [navFocus, setNavFocus] = useState(" ");
 
   const toggleMenu = () => {
     (showNav === "navItemsMobile" ? setShowNav(" ") : setShowNav("navItemsMobile"));
+    (navFocus === " " ? setNavFocus("navModal") : setNavFocus(" "));
     
     console.log(showNav);
   }
 
   return (
     <Fragment>
+      <div id={navFocus} onClick={toggleMenu}></div>
       <div id="navBar">
         <div id="navLogo">
           <img src={Logo} alt="Menu"/>
