@@ -1,11 +1,28 @@
+#landingIntroComponent{
+    padding: 0 25px;
+
+    #landingImageMobile{
+        display: block;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        margin: 40px auto;
+        // position: absolute;
+        // right: 20px;
+    }
+}
 
 @media (min-width:600px){
-    .landingIntro{
+    #landingIntroComponent{
         max-width: 600px;
         padding-top: 18vh;
         padding-bottom: 12px;
         padding-left: 18px;
         padding-left: 5vw;
+
+        #landingImageMobile{
+            display: none;
+        }
     }
 }
 

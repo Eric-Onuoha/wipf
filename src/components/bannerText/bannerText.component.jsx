@@ -1,11 +1,11 @@
-import React, {Fragment} from "react";
+import React from "react";
 import "../bannerText/bannerText.styles.scss";
 
 const BannerText = (prop)=>{
     return(
-        <Fragment>
-            <h1 id="heading1">{prop.text}</h1>
-        </Fragment>
+        <div id="bannerTextComponent">
+            <h1 id="bannerText">{prop.text}</h1>
+        </div>
     )
 }
 

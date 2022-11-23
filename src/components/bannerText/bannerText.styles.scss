@@ -1,0 +1,17 @@
+#bannerTextComponent{
+    
+    #bannerText{
+        font-family: 'Yeseva One', cursive;
+        line-height: 82px;
+        font-size: 82px;
+      }
+      
+      @media(max-width:600px){
+        #bannerText{
+          line-height: 52px;
+          font-size: 52px;
+          font-weight: 400;
+        }
+      }
+}
+
