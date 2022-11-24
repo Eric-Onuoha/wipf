@@ -1,5 +1,6 @@
 #landingPageBody{
        padding-top: 5em;
+       background-color: #F7F7F7;
 
     .landingIntros{
         display: grid;
@@ -116,6 +117,7 @@
             display: grid;
             grid-template-columns: 1fr;
             margin-top: 20px;
+            margin-bottom: 60px;
         }
 
         #curvedLineBg1, #curvedLineBg2{

@@ -1,29 +1,18 @@
-.coreAreaPreviewPage{
+.coreAreaPreviewComponent{
     display: grid;
     grid-template-columns: 100%;
     row-gap: 20px;
     padding: 0 10vw;
-    
 
-    h1{
-        font-size: 38px;
-        line-height: 45px;
-        font-family: 'Yeseva One', sans-serif;
-    }
-
-
-    p{
-        font-size: 14px;
-        line-height: 22px;
-        font-weight: 350;
-        color: #FEECE7;
-        font-family: 'Roboto', sans-serif;
-    }
+    // h1{
+    //     font-size: 38px;
+    //     line-height: 45px;
+    //     font-family: 'Yeseva One', sans-serif;
+    // }
 
     .coreAreaPreview{
         background-color: #FC693A;
-        padding: 30px 40px;
-        // max-width: 38vw;
+        padding: 0 40px 30px 40px;
         color: #FFFFFF;
         display: grid;
     }
@@ -48,10 +37,17 @@
 }
 
 @media(min-width:600px){
-    .coreAreaPreviewPage{
+    .coreAreaPreviewComponent{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 28px;
         padding: 0 10vw;
+
+        .coreAreaPreview{
+            background-color: #FC693A;
+            padding: 30px 40px;
+            color: #FFFFFF;
+            display: grid;
+        }
     }
 }

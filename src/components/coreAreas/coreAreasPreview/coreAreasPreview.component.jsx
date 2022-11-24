@@ -6,12 +6,12 @@ import PlainButton from "../../plainButton/plainButton.component";
 
 const CoreAreasPreview = ({ areas }) => {
   return (
-    <div className="coreAreaPreviewPage">
+    <div className="coreAreaPreviewComponent">
       {areas.map((area) => (
         <div className="coreAreaPreview" style={{backgroundColor: area.colour}}>
-          <h1>{area.name}</h1>
+          <h1 className="h2">{area.name}</h1>
           <span>
-            <p>
+            <p className="p2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
               perspiciatis dolore. Odit esse quasi, laborum libero blanditiis ex
               eaque harum dignissimos nesciunt, recusandae aliquid repudiandae.

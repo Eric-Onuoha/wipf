@@ -14,3 +14,48 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.p2{
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 350;
+  color: #FEECE7;
+  font-family: 'Roboto', sans-serif;
+}
+
+.h1{
+  font-family: 'Yeseva One', cursive;
+  line-height: 52px;
+  font-size: 52px;
+  font-weight: 550;
+}
+
+.h2{
+  font-size: 38px;
+  line-height: 45px;
+  font-family: 'Yeseva One', sans-serif;
+  font-weight: 400;
+}
+
+@media(min-width:600px){
+  .h1{
+    line-height: 82px;
+    font-size: 82px;
+    font-weight: 600;
+  }
+
+  .h2{
+    font-size: 42px;
+    line-height: 45px;
+    font-family: 'Yeseva One', sans-serif;
+    font-weight: 400;
+  }
+
+  .p2{
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 350;
+    color: #FEECE7;
+    font-family: 'Roboto', sans-serif;
+  }
+}

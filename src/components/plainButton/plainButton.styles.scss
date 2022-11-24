@@ -1,3 +1,4 @@
+
 #plainButton{
     border: 1px #D7D7D7 solid;
     border-radius: 30px;
@@ -6,33 +7,40 @@
     font-size: 17px;
     line-height: 23px;
     cursor: pointer;
-    height: 60px;
-    padding: 0 25px;
+    height: 50px;
+    padding: 0 20px;
     padding-right: 45px;
     position: relative;
-
+    
     &:hover{
         background-image: linear-gradient(to top right, #FEA244, #FC693A);
         color: #FFFFFF;
-
+    
         #rightArrowD{
             display: none;
         }
-
+    
         #rightArrowW{
             display: block;
         }
     }
-
+    
     .rightArrow{
         position: absolute;
         padding-left: 15px;
         top: 40%;
     }
-
+    
     #rightArrowW{
         right: 16px;
         display: none;
     }
+}
 
+@media(min-width:600px){
+    #plainButton{
+        height: 60px;
+        padding: 0 25px;
+        padding-right: 45px;
+    }
 }

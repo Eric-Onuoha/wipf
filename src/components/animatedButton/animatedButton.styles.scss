@@ -1,3 +1,4 @@
+
 @mixin animatedButton($primaryColour, $secondaryColour){
     border: 1px $primaryColour solid;
     position: relative;
@@ -7,12 +8,19 @@
     font-size: 17px;
     line-height: 23px;
     cursor: pointer;
-    height: 60px;
-    padding: 0 25px;
+    height: 48px;
+    padding: 0 20px;
     font-family: 'Roboto', sans-serif;
     font-size: 17px;
     line-height: 23px;
 }
 #animatedButton{
     @include animatedButton(#FC693A, #FFFFFF);
+}
+
+@media(min-width:600px){
+    #animatedButton{
+        height: 60px;
+        padding: 0 25px;
+    }
 }
