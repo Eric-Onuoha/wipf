@@ -112,16 +112,26 @@
     #landingPageBody{
         padding-top: 2em;
 
+        .landingIntros{
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-top: 20px;
+        }
+
         #curvedLineBg1, #curvedLineBg2{
             display: none;
         }
-
-        .hoverAnimation{
-            display: none;
-        }
+        
         .landingIntroDiv{
             width: 100vw;
             margin: 0 auto;
+            order: 2;
+        }
+
+        .hoverAnimation{
+            order: 1;
+            display: block;
+            margin: 15px auto 0 auto;
         }
     }
 }
