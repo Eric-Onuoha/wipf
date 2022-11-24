@@ -15,11 +15,16 @@ code {
     monospace;
 }
 
+.p1{
+  font-family: 'Roboto', sans-serif;
+  line-height: 30px;
+  font-size: 18px;
+}
+
 .p2{
   font-size: 14px;
   line-height: 22px;
   font-weight: 350;
-  color: #FEECE7;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -37,7 +42,20 @@ code {
   font-weight: 400;
 }
 
-@media(min-width:600px){
+.h4{
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.h5{
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 12px;
+  line-height: 13px;
+}
+
+@media(min-width:900px){
   .h1{
     line-height: 82px;
     font-size: 82px;
@@ -49,6 +67,25 @@ code {
     line-height: 45px;
     font-family: 'Yeseva One', sans-serif;
     font-weight: 400;
+  }
+
+  .h4{
+    font-family: 'Yeseva One', sans-serif;
+    font-size: 15px;
+    line-height: 27px;
+    font-weight: 600;
+  }
+
+  .h5{
+    font-family: 'Yeseva One', sans-serif;
+    font-size: 14px;
+    line-height: 15px;
+  }
+
+  .p1{
+    font-family: 'Roboto', sans-serif;
+    line-height: 30px;
+    font-size: 19px;
   }
 
   .p2{

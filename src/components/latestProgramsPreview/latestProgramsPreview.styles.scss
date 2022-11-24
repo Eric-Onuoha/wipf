@@ -1,14 +1,12 @@
 #latestProgramsPreviewComponent{
     display: grid;
-    grid-template-columns: 100%;
-    padding: 0 10%;
-    margin-bottom: 20px;
-    column-gap: 24px;
-    row-gap: 250px;
+    grid-template-columns: 1fr;
     margin-bottom: 150px;
+    row-gap: 250px;
 
     .latestProgram{
         position: relative;
+        margin: 0 auto;
 
         .cardTop{
             height: 300px;
@@ -49,7 +47,7 @@
             background-color: #F7F7F7;
             width: 270px;
             position: absolute;
-            top: 220px;
+            top: 200px;
             left: 17px;
             padding: 25px 25px 0 25px;
             cursor: pointer;
@@ -101,8 +99,15 @@
     }
 }
 
-@media(min-width: 600px){
+@media(min-width: 900px){
     #latestProgramsPreviewComponent{
+        column-gap: 24px;
         grid-template-columns: 1fr 1fr 1fr;
+        padding: 0 10%;
+
+        .latestProgram{
+            position: relative;
+            margin: 0;
+        }
     }
 }

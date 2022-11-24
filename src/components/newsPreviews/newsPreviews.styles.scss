@@ -1,62 +1,49 @@
 #newsPreviewsComponent{
     position: relative;
-    padding: 10px 0;
+    padding: 0 0 20px 0;
     background-color: #001D23;
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
   
     #newsImageCover{
-        object-fit: cover;
-        height: 220px;
-        margin-top: 10px;
-    }
-
-    #newsImage{
-        height: 100%;
-        width: 80vw;
-        display: block;
-        margin: 0 auto;
+        display: none;
     }
 
     #newsContent{
         display: grid;
         grid-template-columns: 100%;
+        padding: 0 10px;
     }
 
-    #newsTitle h1{
-        font-family: 'Yeseva One', sans-serif;
-        font-size: 38px;
-        line-height: 45px;
-        padding: 0 5px;
-    }
+    #newsTitle{
+        h2{
+            color: #C2C2C2;
+            font-size: 35px;
+            line-height: 40px;
+        }
+    } 
 
     #newsPreview{
         display: grid;
         grid-template-columns: 100%;
-        font-family: 'Yeseva One', sans-serif;
 
-        h4{
-            line-height: 35px;
-            font-size: 20px;
+        p{
+            margin: 0;
             color: #C2C2C2;
-            padding: 0 10px;
         }
 
         #newsMetadata{
             text-align: center;
+            padding-top: 5px;
             
-            h5{
-                margin-top: 20px;
-                font-size: 15px;
-                line-height: 27px;
-                font-weight: 600;
+            h4{
+                color: #FFFFFF;
             }
-            p{
-                font-size: 14px;
-                line-height: 15px;
+
+            h5{
                 color: #FC6539;
-                font-weight: 700;
+                font-weight: 400;
             }
         }
 
@@ -84,15 +71,10 @@
                 transform: rotate(180deg);
             }
         }
-
-    }
-
-    p, h1, h2, h3, h4, h5{
-        color: white;
     }
 }
 
-@media(min-width:600px){
+@media(min-width:900px){
     #newsPreviewsComponent{
         height: 600px;
         grid-template-columns: 1.18fr 2fr;
@@ -100,9 +82,13 @@
         margin-bottom: 70px;
         padding: 0;
 
-        #newsTitle h1{
-            padding: 0;
-        }
+        #newsTitle{
+            h2{
+                padding: 0;
+                font-size: 42px;
+                line-height: 45px;
+            }
+        } 
 
         #newsContent{
             position: relative;
@@ -114,8 +100,18 @@
             grid-template-columns: 2fr 0.7fr;
             column-gap: 10px;
 
+            p{
+                margin-top: 20px;
+            }
+
             #newsMetadata{
                 text-align: left;
+                padding-top: 25px;
+
+                h5{
+                    color: #FC6539;
+                    font-weight: 700;
+                }
             }
 
             h4{
@@ -124,6 +120,7 @@
         }
 
         #newsImageCover{
+            display: block;
             height: 75%;
             width: 36vw;
             position: relative;
