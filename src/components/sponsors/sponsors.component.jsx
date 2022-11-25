@@ -9,7 +9,7 @@ const Sponsors = () => {
     return(
         <div id="sponsorsComponent">
             <div id="sponsorsIntro">
-                <SectionIntro header="Our Current Sponsors" />
+                <SectionIntro header="Our Current Partners" />
             </div>
             <div>
                 <SponsorsList />

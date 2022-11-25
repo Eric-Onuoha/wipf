@@ -5,15 +5,20 @@
     column-gap: 28px;
     row-gap: 120px;
     padding: 0 6vw;
+    background-color: #FFFFFF;
+    z-index: 7;
+    margin-bottom: 360px;
 
     #sponsorsIntro{
         margin-top: 100px;
+        margin-bottom: 30px;
     }
 }
 
-@media(min-width:600px){
+@media(min-width:900px){
     #sponsorsComponent{
         grid-template-columns: 1fr 2fr;
+        margin-bottom: 10px;
 
         #sponsorsIntro{
             margin-top: 135px;
