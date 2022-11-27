@@ -30,11 +30,11 @@ const NavigationBar = (props) => {
         <div className="hamburgerMenu" onClick={toggleMenu}><img src={HamburgerMenu} alt="Menu"/></div>
         <div id={showNav} className = "navItems">
           <div className="hamburgerMenu" onClick={toggleMenu}><img src={HamburgerMenu} alt="Menu"/></div>
-          <NavLink activeClassName="active" to={"/"}><ul>Home</ul></NavLink>
-          <NavLink activeClassName="active" to={"aboutus"}><ul>About Us</ul></NavLink>
-          <NavLink activeClassName="active" to={"programs"}><ul>Programs</ul></NavLink>
+          <NavLink activeclassname="active" to={"/"}><ul>Home</ul></NavLink>
+          <NavLink activeclassname="active" to={"aboutus"}><ul>About Us</ul></NavLink>
+          <NavLink activeclassname="active" to={"programs"}><ul>Programs</ul></NavLink>
           {/* <ul>Newsletter</ul> */}
-          <NavLink activeClassName="active" to={"contactus"}><ul>Contact Us</ul></NavLink>
+          <NavLink activeclassname="active" to={"contactus"}><ul>Contact Us</ul></NavLink>
           {/* <NavLink to={"programsupload"}><ul>Upload Programs</ul></NavLink> */}
         </div>
         <div className="nwaLink">

@@ -1,7 +1,7 @@
 import "../footer/footer.styles.scss";
+import {Timeline} from 'react-twitter-widgets';
 
-import WIPFLogo from "../wipfLogo/wipfLogo.component";
-import igImage from "../../assets/images/press conference.jpg";
+// import WIPFLogo from "../wipfLogo/wipfLogo.component";
 
 const Footer = () =>{
     return(
@@ -9,7 +9,7 @@ const Footer = () =>{
             <div id="footerContentArea">
                 <div id="footerOutro">
                     <div>
-                    <WIPFLogo />
+                    {/* <WIPFLogo /> */}
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste harum nihil maxime sit quas non dicta numquam minima fuga tempora quae dolores dolor, pariatur ad porro perspiciatis illum aperiam reiciendis.</p>
                     <div className="quickLinks">
                         <a href="#">Join Us</a>
@@ -20,32 +20,12 @@ const Footer = () =>{
                     </div>
                 </div>
                 <div id="footerInstagram">
-                    <h2>Instagram</h2>
-                    <div className="igImages">
-                        <div className="igImage">
-                            <img src={igImage} alt="" />
-                        </div>
-                        <div className="igImage">
-                            <img src={igImage} alt="" />
-                        </div>
-                        <div className="igImage">
-                            <img src={igImage} alt="" />
-                        </div>
-                    </div>
-                    <div className="igImages">
-                    <div className="igImage">
-                            <img src={igImage} alt="" />
-                        </div>
-                        <div className="igImage">
-                            <img src={igImage} alt="" />
-                        </div>
-                        <div className="igImage">
-                            <img src={igImage} alt="" />
-                        </div>
-                    </div>
+                    
                 </div>
                 <div id="footerTwitter">
-                    <h1>Twitter</h1>
+                <a className="twitter-timeline" data-width="95%" data-height="450px" href="https://twitter.com/wipfng?ref_src=twsrc%5Etfw">Tweets by wipfng</a> 
+                <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script> 
+                    <Timeline/>                
                 </div>
             </div>            
         </div>

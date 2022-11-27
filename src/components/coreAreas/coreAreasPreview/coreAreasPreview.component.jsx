@@ -8,7 +8,7 @@ const CoreAreasPreview = ({ areas }) => {
   return (
     <div className="coreAreaPreviewComponent">
       {areas.map((area) => (
-        <div className="coreAreaPreview" style={{backgroundColor: area.colour}}>
+        <div className="coreAreaPreview" style={{backgroundColor: area.colour}} key={area.name}>
           <h1 className="h2">{area.name}</h1>
           <span>
             <p className="p2">

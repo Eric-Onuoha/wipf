@@ -19,7 +19,7 @@ const SponsorsList = () => {
   return (
     <div id="sponsorsListComponent">
       {sponsors.map((sponsor) => (
-        <div class="sponsorsList">
+        <div className="sponsorsList" key={Math.random(0, 10)}>
           <img src={sponsor} alt="Sponsors Logo" />
         </div>
       ))}

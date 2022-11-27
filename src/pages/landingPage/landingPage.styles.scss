@@ -1,16 +1,17 @@
 #landingPageBody{
        padding-top: 5em;
-       background-color: #F7F7F7;
 
     .landingIntros{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin-bottom: 110px;
+        padding-bottom: 110px;
         margin-top: 20px;
+        background-color: #F7F7F7;
     }
 
     .coreAreasDiv{
-        margin-bottom: 80px;
+        padding-bottom: 80px;
+        background-color: #F7F7F7;
     }
 
     .newsPreviewsDiv{
@@ -117,7 +118,7 @@
             display: grid;
             grid-template-columns: 1fr;
             margin-top: 20px;
-            margin-bottom: 90px;
+            padding-bottom: 90px;
         }
 
         #curvedLineBg1, #curvedLineBg2{
