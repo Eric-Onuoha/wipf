@@ -10,6 +10,7 @@
         img{
             height: 85px;
             width: 85px;
+            object-fit: contain;
         }
     }
 }
@@ -26,6 +27,7 @@
             img{
                 height: 120px;
                 width: 120px;
+                object-fit: contain;
             }
         }
     }

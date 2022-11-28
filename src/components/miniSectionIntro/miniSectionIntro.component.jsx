@@ -6,6 +6,6 @@ const MiniSectionIntro = (props) => {
             <h4>{props.sectionTitle}</h4>
         </div>
     )
-}
+};
 
 export default MiniSectionIntro;
