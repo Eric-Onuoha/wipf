@@ -21,7 +21,7 @@ const Footer = () =>{
                     </div>
                 </div>
                 <div id="footerInstagram">
-                    <InstagramEmbed url="https://www.instagram.com/p/CUbHfhpswxt/" width={328} captioned />
+                    <InstagramEmbed url="https://www.instagram.com/p/ClOEgO4Ko-e/" width={328} captioned />
                 </div>
                 <div id="footerTwitter">
                     <a className="twitter-timeline" href="https://twitter.com/wipfng?ref_src=twsrc%5Etfw">Tweets by wipfng</a> 
