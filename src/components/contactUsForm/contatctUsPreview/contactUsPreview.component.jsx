@@ -5,7 +5,7 @@ import MiniSectionIntro from "../../miniSectionIntro/miniSectionIntro.component"
 
 const ContactUsPreview = () => {
     return(
-        <div className="contactUsPreviewComponent">
+        <div id="contactUsPreviewComponent">
             <div id="intro">
                 <MiniSectionIntro sectionTitle = "Contact Us" />
                 <h2>Get In Touch</h2>

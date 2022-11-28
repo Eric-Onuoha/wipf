@@ -14,7 +14,7 @@ const ContactUs = () => {
         <div id ="contactUsComponent">
             <div id='contactUsBanner'>
                 <img src={ContactUsBanner} alt="" srcset="" />
-                <h2>Contact Us</h2>
+                <h2 className='h2'>Contact Us</h2>
             </div>
             <div id='contactUs'>
                 <ContactUsPreview></ContactUsPreview>
