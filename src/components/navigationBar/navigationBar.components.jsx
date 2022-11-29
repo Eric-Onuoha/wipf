@@ -20,7 +20,7 @@ const NavigationBar = (props) => {
 
   useEffect(()=> {
     window.scrollTo(0, 0);
-  }, [showNav]);
+  }, [window.location.pathname]);
 
   return (
     <Fragment>
