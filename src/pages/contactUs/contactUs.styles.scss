@@ -1,5 +1,6 @@
 #contactUsComponent{
-    padding-top: 6.5em;
+    padding-top: 5.2em;
+    margin-bottom: 300px;
 
     #contactUsBanner{
         position: relative;
@@ -30,6 +31,7 @@
 @media(min-width:900px){
     #contactUsComponent{
         padding-top: 6.5em;
+        margin-bottom: 50px;
     
         #contactUsBanner{
             height: 300px;

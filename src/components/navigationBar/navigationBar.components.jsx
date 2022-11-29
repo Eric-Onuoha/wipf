@@ -1,4 +1,4 @@
-import React, { Fragment, useState} from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { Outlet, NavLink, } from "react-router-dom";
 import "../navigationBar/navigationBar.styles.scss";
 import "../../index.css";
@@ -16,9 +16,11 @@ const NavigationBar = (props) => {
   const toggleMenu = () => {
     (showNav === "navItemsMobile" ? setShowNav(" ") : setShowNav("navItemsMobile"));
     (navFocus === " " ? setNavFocus("navModal") : setNavFocus(" "));
-    
-    console.log(showNav);
   }
+
+  useEffect(()=> {
+    window.scrollTo(0, 0);
+  }, [showNav]);
 
   return (
     <Fragment>
@@ -30,11 +32,11 @@ const NavigationBar = (props) => {
         <div className="hamburgerMenu" onClick={toggleMenu}><img src={HamburgerMenu} alt="Menu"/></div>
         <div id={showNav} className = "navItems">
           <div className="hamburgerMenu" onClick={toggleMenu}><img src={HamburgerMenu} alt="Menu"/></div>
-          <NavLink activeclassname="active" to={"/"}><ul>Home</ul></NavLink>
-          <NavLink activeclassname="active" to={"aboutus"}><ul>About Us</ul></NavLink>
-          <NavLink activeclassname="active" to={"programs"}><ul>Programs</ul></NavLink>
+          <NavLink activeclassname="active" to={"/"} onClick={toggleMenu}><ul>Home</ul></NavLink>
+          <NavLink activeclassname="active" to={"aboutus"} onClick={toggleMenu}><ul>About Us</ul></NavLink>
+          <NavLink activeclassname="active" to={"programs"} onClick={toggleMenu}><ul>Programs</ul></NavLink>
           {/* <ul>Newsletter</ul> */}
-          <NavLink activeclassname="active" to={"contactus"}><ul>Contact Us</ul></NavLink>
+          <NavLink activeclassname="active" to={"contactus"} onClick={toggleMenu}><ul>Contact Us</ul></NavLink>
           {/* <NavLink to={"programsupload"}><ul>Upload Programs</ul></NavLink> */}
         </div>
         <div className="nwaLink">
