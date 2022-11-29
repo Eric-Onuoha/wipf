@@ -2,7 +2,7 @@
     padding: 0 40px;
     margin-top: 140px;
     display: grid;
-    grid-template-columns: 0.3fr 0.7fr;
+    grid-template-columns: 1fr;
     column-gap: 20px;
 
     #teamIntro{
@@ -24,3 +24,10 @@
         }
     }
 }
+
+@media(min-width:900px){
+    #WIPFTeamPreviewComponent{
+        grid-template-columns: 0.3fr 0.7fr;
+    }
+}
+

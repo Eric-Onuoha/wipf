@@ -1,9 +1,8 @@
 #principlesPreviewComponent{
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 4%;
-    row-gap: 8%;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
 
     .principles{
         color: #FFFFFF;
@@ -18,6 +17,32 @@
             font-family: 'Roboto', sans-serif;
             font-size: 13px;
             line-height: 25px;
+        }
+    }
+}
+
+@media(min-width:900px){
+    #principlesPreviewComponent{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4%;
+        row-gap: 8%;
+    
+        .principles{
+            color: #FFFFFF;
+            padding: 20px 35px;
+    
+            h3{
+                font-family: 'Yeseva One', cursive;
+                font-size: 35px;
+                line-height: 38px;
+            }
+            p{
+                font-family: 'Roboto', sans-serif;
+                font-size: 13px;
+                line-height: 25px;
+            }
         }
     }
 }

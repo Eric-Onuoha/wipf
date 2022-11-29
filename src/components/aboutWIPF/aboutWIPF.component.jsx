@@ -9,29 +9,35 @@ import AboutUsImage from "../../assets/images/press conference.jpg";
 const AboutWIPF = () => {
   return (
     <div id="aboutWIPFComponent">
-      <div id="aboutWIPFBackground"></div>
-      <div id="aboutWIPF">
-        <div id="intro">
-        <MiniSectionIntro sectionTitle = "Our Background" />
-        <h1><span>WIPF:</span> Our Background, Principles and Commitment story</h1>
-        </div>
-        <div id="content">
-          <div id="aboutUsImage"><img src={AboutUsImage} alt="" /></div>
-          <div>
-            <div id="textContent">
-              <h2>Women In Politics Forum, ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              minus molestiae tem."</h2>
 
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              minus molestiae temporibus rem nam provident minima unde officia,
-              sunt reprehenderit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              minus molestiae temporibus rem nam provident minima unde officia,
-              sunt reprehenderit.
+        <div id="aboutWIPFBackground"></div>
+
+        <div id="aboutWIPF">
+            <div id="intro">
+              <MiniSectionIntro sectionTitle = "Our Background" />
+              <h1 className="h2"><span>WIPF:</span> Our Background, Principles and Commitment story</h1>
             </div>
-              <Principles></Principles>
-          </div>
+
+            <div id="content">
+              <div id="aboutUsImage"><img src={AboutUsImage} alt="" /></div>
+
+                <div>
+                  <div id="textContent">
+                    <h2>Women In Politics Forum, ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                    minus molestiae tem."</h2>
+
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                    minus molestiae temporibus rem nam provident minima unde officia,
+                    sunt reprehenderit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                    minus molestiae temporibus rem nam provident minima unde officia,
+                    sunt reprehenderit.
+                  </div>
+                  <Principles></Principles>
+              </div>
+            </div>
+
         </div>
-      </div>
+
     </div>
   );
 };
