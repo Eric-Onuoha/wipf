@@ -1,13 +1,19 @@
-#programsPage{
-    padding-top: 6.5em;
-    display: grid;
-    grid-template-columns: 0.75fr 0.25fr;
+#programsPageBody{
+    padding-top: 4.8em;
+
 
     #programsNavigation{
-        background-color: #001D23;
-        background-image: url("../../assets/images/bannerCurvedLine.webp");
-        background-repeat: repeat-y;
-        padding: 30px;
-        height: 100%;
+        margin: 0 18vw 0 12vw;
     }
+    // padding-top: 6.5em;
+    // display: grid;
+    // grid-template-columns: 0.75fr 0.25fr;
+
+    // #programsNavigation{
+    //     background-color: #001D23;
+    //     background-image: url("../../assets/images/bannerCurvedLine.webp");
+    //     background-repeat: repeat-y;
+    //     padding: 30px;
+    //     height: 100%;
+    // }
 }

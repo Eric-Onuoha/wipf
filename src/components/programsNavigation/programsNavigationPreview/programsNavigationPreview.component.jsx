@@ -1,23 +1,34 @@
 import "./programsNavigationPreview.styles.scss";
 
 const ProgramsNavigationPreview = ({ programs }) => {
+
   return (
     <div id="programsNavigationPreviewComponent">
       <div id="programSearch">
-        {/* <label htmlFor="search">Enter keyword to search:</label> */}
+        
         <input
-          id="search"
+          id="searchTitle"
           type="text"
           aria-label="search"
-          placeholder="Search For Programs"
+          placeholder="Search Programs by Title"
         />
+
+      <select name="theme" id="searchTheme">
+        <option value="search">Search by Theme</option>
+        <option value="Political Advocacy">Political Advocacy</option>
+        <option value="Mentorship & Training">Mentorship & Training</option>
+        <option value="Socio-Political Activism">Socio-Political Activism</option>
+      </select>
+
+      <select name="year" id="searchYear">
+      <option value="search">Search by Year</option>
+        {programs.map((program)=>(
+          <option value={program.year}>{program.year}</option>
+        ))}
+      </select>
+
       </div>
 
-      <div id="yearGroups">
-        {programs.map((program)=>(
-            <p>{program.year}</p>
-        ))}
-      </div>
     </div>
   );
 };
