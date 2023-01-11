@@ -9,7 +9,11 @@ const LatestProgramsPreview = ({programDetails}) =>{
           {programDetails.map((programDetails) => (
             <div className="latestProgram" key={Math.random(0, 10)}>
               <div className="cardTop">
-                <div className="date"><h2 className="day">30<span className="month">January</span></h2></div>
+                <div className="date">
+                  <h2 className="day">30</h2>
+                  <h2 className="month">January</h2>
+                  <h2 className="year">2022</h2>                
+                </div>
               </div>
               <div className="cardBottom">
                 <div className="latestProgramDetails">
