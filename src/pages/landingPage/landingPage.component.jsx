@@ -50,6 +50,7 @@ const LandingPage = () => {
       <div className="sponsorsDiv">
         <Sponsors/>
       </div>
+      
     </div>
   );
 };

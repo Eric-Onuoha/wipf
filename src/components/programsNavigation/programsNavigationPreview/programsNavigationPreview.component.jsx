@@ -14,14 +14,14 @@ const ProgramsNavigationPreview = ({ programs }) => {
         />
 
       <select name="theme" id="searchTheme">
-        <option value="search">Search by Theme</option>
+        <option disabled selected value="search">Search by Theme</option>
         <option value="Political Advocacy">Political Advocacy</option>
         <option value="Mentorship & Training">Mentorship & Training</option>
         <option value="Socio-Political Activism">Socio-Political Activism</option>
       </select>
 
       <select name="year" id="searchYear">
-      <option value="search">Search by Year</option>
+      <option disabled selected value="search">Search by Year</option>
         {programs.map((program)=>(
           <option value={program.year}>{program.year}</option>
         ))}

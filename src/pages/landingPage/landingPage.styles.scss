@@ -10,16 +10,20 @@
     }
 
     .coreAreasDiv{
-        padding-bottom: 80px;
+        padding-bottom: 130px;
         background-color: #F7F7F7;
     }
 
     .newsPreviewsDiv{
-        margin-bottom: 70px;
+        margin-bottom: 120px;
     }
 
     .latestProgramsDiv{
         margin-bottom: 70px;
+    }
+
+    .sponsorsDiv{
+        margin-bottom: 280px;
     }
 
     .barMargin{
@@ -135,6 +139,10 @@
             order: 1;
             display: block;
             margin: 15px auto 0 auto;
+        }
+
+        .sponsorsDiv{
+            margin-bottom: 420px;
         }
     }
 }
