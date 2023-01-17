@@ -9,7 +9,7 @@ const ContactUsPreview = () => {
             <div id="intro">
                 <MiniSectionIntro sectionTitle = "Contact Us" />
                 <h2>Get In Touch</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet quo saepe sequi commodi repudiandae earum, rerum provident illum</p>
+                <p>Have a question to ask? Want to get in touch with us? Leave a message here. We'll get it and we'll respond!</p>
             </div>
             <div id="form">
                 <form action="#" method="post">
