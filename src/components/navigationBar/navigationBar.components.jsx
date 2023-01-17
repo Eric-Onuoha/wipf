@@ -27,7 +27,9 @@ const NavigationBar = (props) => {
       <div id={navFocus} onClick={toggleMenu}></div>
       <div id="navBar">
         <div id="navLogo">
-          <img src={Logo} alt="Menu"/>
+          <NavLink to={"/"}>
+            <img src={Logo} alt="Menu"/>
+          </NavLink>
         </div>
         <div className="hamburgerMenu" onClick={toggleMenu}><img src={HamburgerMenu} alt="Menu"/></div>
         <div id={showNav} className = "navItems">
