@@ -1,15 +1,11 @@
 import {useReducer, useEffect} from "react";
-
+import { coreAreasTypes } from "../../../reduxStore/actionTypes";
 
 const initialState = {
     coreAreas: []
 }
 
-const coreAreasTypes = {
-    setCoreArea: "coreArea/setCoreArea"
-}
-
-const coreAreasReducer = (state, action) => {
+export const coreAreasReducer = (state = initialState, action) => {
     const {type, payload} = action;
 
     switch(type){
@@ -19,10 +15,7 @@ const coreAreasReducer = (state, action) => {
                 coreAreas: payload
             };
         default:
-            return{
-                ...state,
-                coreAreas:[]
-            }
+            return state;
     }
 }
 

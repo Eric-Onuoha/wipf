@@ -9,14 +9,17 @@ import NavigationBar from "./components/navigationBar/navigationBar.components";
 import Footer from "./components/footer/footer.component";
 import ProgramsUpload from "./components/programsUpload/programsUpload.component";
 
+import CoreAreasCMS from "./components/coreAreas/coreAreasCMS/coreAreasCMS.components";
+
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path = "/" element={[<NavigationBar/>, <Footer/>]}>
-          <Route index element={<LandingPage/>}/>
-          <Route path="contactus" element={<ContactUs/>}/>
-          <Route path="aboutus" element={<AboutUs/>}/>
+          <Route path="landingcms" element={<CoreAreasCMS/>}></Route>
+          <Route index element={<LandingPage/>}></Route>
+          <Route path="contactus" element={<ContactUs/>}></Route>
+          <Route path="aboutus" element={<AboutUs/>}></Route>
           <Route path="programs" element={<Programs/>}></Route>
           <Route path="programsupload" element={<ProgramsUpload/>}></Route>
         </Route>

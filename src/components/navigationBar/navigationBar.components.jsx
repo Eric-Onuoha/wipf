@@ -37,7 +37,6 @@ const NavigationBar = (props) => {
           <NavLink activeclassname="active" to={"/"} onClick={toggleMenu}><ul>Home</ul></NavLink>
           <NavLink activeclassname="active" to={"aboutus"} onClick={toggleMenu}><ul>About Us</ul></NavLink>
           <NavLink activeclassname="active" to={"programs"} onClick={toggleMenu}><ul>Programs</ul></NavLink>
-          {/* <ul>Newsletter</ul> */}
           <NavLink activeclassname="active" to={"contactus"} onClick={toggleMenu}><ul>Contact Us</ul></NavLink>
           {/* <NavLink to={"programsupload"}><ul>Upload Programs</ul></NavLink> */}
         </div>
