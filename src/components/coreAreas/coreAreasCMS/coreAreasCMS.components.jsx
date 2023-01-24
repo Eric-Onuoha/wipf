@@ -1,6 +1,12 @@
 import { useState } from "react";
+import { updateCoreAreas } from "../../../reduxStore/actionDispatches";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 const CoreAreasCMS = () => {
+
+    const dispatch = useDispatch();
+
     const defaultFormFields = {
         mentorship: " ",
         advocacy: " ",
@@ -17,10 +23,14 @@ const CoreAreasCMS = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-       
+        console.log(formFields);
+        dispatch(updateCoreAreas(formFields));
     }
 
-    return(
+    const mentorshipAndT = useSelector((state)=> state.coreAreas.coreAreas.mentorship);
+    console.log(mentorshipAndT);
+
+    return(        
         <div>
             <br />
             <br />
@@ -40,7 +50,13 @@ const CoreAreasCMS = () => {
                 <label>Socio-Political Activism</label>
                 <br />
                 <textarea onChange={handleChange} name="activism" cols={80} rows={4} value={activism}></textarea>
+                <br />
+                <button>Add Core Area</button>
             </form>
+
+            <p1>Mentorship: {mentorshipAndT}</p1>
+            <p1>Advocacy: {advocacy}</p1>
+            <p1>activism: {activism}</p1>
         </div>
     )
 }

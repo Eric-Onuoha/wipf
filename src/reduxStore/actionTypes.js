@@ -1,4 +1,4 @@
 
 export const coreAreasTypes = {
-    setCoreArea: "coreArea/setCoreArea"
+    setCoreAreas: "coreArea/setCoreAreas"
 }

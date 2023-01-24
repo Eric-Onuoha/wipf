@@ -1,6 +1,7 @@
 import { createAction } from "./createAction";
 import { coreAreasTypes } from "./actionTypes";
 
-const updateCoreAreas = (coreArea) => {
-    createAction(coreAreasTypes.setCoreArea,coreArea);
-}
+//ok
+export const updateCoreAreas = (coreAreas) => (
+    createAction(coreAreasTypes.setCoreAreas,coreAreas)
+)
