@@ -27,6 +27,7 @@ export const db = getFirestore();
 
 export const addCollectionAndDocuments = async (CollectionKey, docKey, docToAdd, mergeStatus = true) => {
     await setDoc(doc(db, CollectionKey, docKey), docToAdd, mergeStatus);
+    console.log("Added Succesfully");
 }
 
 

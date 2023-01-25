@@ -32,7 +32,7 @@ const CoreAreasCMS = () => {
     useEffect(() => {
         if(coreAreas.length != 0){
             console.log(coreAreas);
-            addCollectionAndDocuments("CoreAreas", "CoreAreas", coreAreas, false);
+            addCollectionAndDocuments("LandingPage", "CoreAreas", coreAreas, false);
         }
     }, [coreAreas]);
 
