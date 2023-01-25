@@ -10,7 +10,7 @@ import InstagramLogo from "../../assets/images/instagramLogo.png"
 const Footer = () =>{
     return(
         <div id="footerComponent">
-            <div id="footerContentArea">
+            {/* <div id="footerContentArea">
                 <div id="footerOutro">
                     <div>
                     <WIPFLogo />
@@ -52,7 +52,7 @@ const Footer = () =>{
                     <a href="https://www.instagram.com/womeninpoliticsforum/"><img src={InstagramLogo} alt="Go to WIPF Instagram Profile"/></a> 
                 </div>
             </div>
-            <p id="developer" className="p1">Developed By <span className="link">Kapagru Technology Solutions</span></p>            
+            <p id="developer" className="p1">Developed By <span className="link">Kapagru Technology Solutions</span></p>             */}
         </div>
     )
 }

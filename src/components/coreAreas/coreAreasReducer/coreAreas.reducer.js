@@ -4,7 +4,7 @@ const initialState = {
     coreAreas: []
 }
 
-export const coreAreasReducer = (state = initialState, action) => {
+export const coreAreasReducer = (state = initialState, action = {}) => {
     const {type, payload} = action;
 
     switch(type){

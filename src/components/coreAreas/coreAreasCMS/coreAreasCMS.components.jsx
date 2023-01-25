@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { updateCoreAreas } from "../../../reduxStore/actionDispatches";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import { addCollectionAndDocuments } from "../../../firestore/postToFirestore.utils";
 
 const CoreAreasCMS = () => {
 
@@ -23,12 +24,17 @@ const CoreAreasCMS = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formFields);
         dispatch(updateCoreAreas(formFields));
     }
 
-    const mentorshipAndT = useSelector((state)=> state.coreAreas.coreAreas.mentorship);
-    console.log(mentorshipAndT);
+    const coreAreas = useSelector((state)=> state.coreAreas.coreAreas);
+
+    useEffect(() => {
+        if(coreAreas.length != 0){
+            console.log(coreAreas);
+            addCollectionAndDocuments("CoreAreas", "CoreAreas", coreAreas, false);
+        }
+    }, [coreAreas]);
 
     return(        
         <div>
@@ -54,9 +60,9 @@ const CoreAreasCMS = () => {
                 <button>Add Core Area</button>
             </form>
 
-            <p1>Mentorship: {mentorshipAndT}</p1>
-            <p1>Advocacy: {advocacy}</p1>
-            <p1>activism: {activism}</p1>
+            <p1>Mentorship: {coreAreas.mentorship}</p1>
+            <p1>Advocacy: {coreAreas.advocacy}</p1>
+            <p1>activism: {coreAreas.activism}</p1>
         </div>
     )
 }
