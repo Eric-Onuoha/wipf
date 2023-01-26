@@ -9,7 +9,7 @@ import NavigationBar from "./components/navigationBar/navigationBar.components";
 import Footer from "./components/footer/footer.component";
 import ProgramsUpload from "./components/programsUpload/programsUpload.component";
 
-import CoreAreasCMS from "./components/coreAreas/coreAreasCMS/coreAreasCMS.components";
+import CoreAreasCMS from "./cms/landingPage/coreAreasCMS.components";
 
 function App() {
   return (

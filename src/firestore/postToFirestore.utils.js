@@ -1,12 +1,9 @@
 import {initializeApp} from "firebase/app";
-import {getAnalytics} from "firebase/analytics";
 
 import {
     getFirestore,
     doc,
     setDoc,
-    collection,
-    writeBatch
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -29,6 +26,10 @@ export const addCollectionAndDocuments = async (CollectionKey, docKey, docToAdd,
     await setDoc(doc(db, CollectionKey, docKey), docToAdd, mergeStatus);
     console.log("Added Succesfully");
 }
+
+// export const addMutipleDocuments = async (CollectionKey, docKeys, docsToAdd, mergeStatus = true) => {
+    
+// }
 
 
 

@@ -1,4 +1,4 @@
-import { coreAreasTypes } from "../../../reduxStore/actionTypes";
+import { coreAreasTypes } from "../../actionTypes";
 
 const initialState = {
     coreAreas: []

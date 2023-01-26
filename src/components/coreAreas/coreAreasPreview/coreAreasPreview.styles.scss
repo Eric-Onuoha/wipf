@@ -4,17 +4,23 @@
     row-gap: 20px;
     padding: 0 10vw;
 
-    // h1{
-    //     font-size: 38px;
-    //     line-height: 45px;
-    //     font-family: 'Yeseva One', sans-serif;
-    // }
-
     .coreAreaPreview{
-        background-color: #FC693A;
         padding: 0 40px 30px 40px;
         color: #FFFFFF;
         display: grid;
+
+                    
+        &:first-of-type{
+            background-color: #FC6539;
+        }
+
+        &:nth-of-type(2){
+            background-color: #001D23;
+        }
+
+        &:nth-of-type(3){
+            background-color: #FEA444;
+        }
     }
 
     #plainButton{
@@ -44,7 +50,6 @@
         padding: 0 10vw;
 
         .coreAreaPreview{
-            background-color: #FC693A;
             padding: 30px 40px;
             color: #FFFFFF;
             display: grid;

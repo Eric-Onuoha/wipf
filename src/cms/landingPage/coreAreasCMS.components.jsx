@@ -1,20 +1,16 @@
 import { useState, useEffect } from "react";
-import { updateCoreAreas } from "../../../reduxStore/actionDispatches";
+import { updateCoreAreas } from "../../reduxStore/actionDispatches";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { addCollectionAndDocuments } from "../../../firestore/postToFirestore.utils";
+import { addCollectionAndDocuments } from "../../firestore/postToFirestore.utils";
 
 const CoreAreasCMS = () => {
 
     const dispatch = useDispatch();
 
-    const defaultFormFields = {
-        mentorship: " ",
-        advocacy: " ",
-        activism: " "
-    };
+    const defaultFormFields = {};
 
-    const [formFields, setFormFields] = useState(defaultFormFields);
+    const [formFields, setFormFields] = useState({});
     const {mentorship, advocacy, activism} = formFields;
 
     const handleChange = (e) => {
@@ -27,11 +23,10 @@ const CoreAreasCMS = () => {
         dispatch(updateCoreAreas(formFields));
     }
 
-    const coreAreas = useSelector((state)=> state.coreAreas.coreAreas);
+    const coreAreas = useSelector((state) => state.coreAreas.coreAreas);
 
     useEffect(() => {
-        if(coreAreas.length != 0){
-            console.log(coreAreas);
+        if(coreAreas.length !== 0){
             addCollectionAndDocuments("LandingPage", "CoreAreas", coreAreas, false);
         }
     }, [coreAreas]);
@@ -47,15 +42,15 @@ const CoreAreasCMS = () => {
             <form onSubmit={handleSubmit}>
                 <label>Mentorship and Training</label>
                 <br />
-                <textarea onChange={handleChange} name="mentorship" cols={80} rows={4} value={mentorship}></textarea>
+                <textarea onChange={handleChange} name="Mentorship & Training" cols={80} rows={4} value={mentorship}></textarea>
                 <br />
                 <label>Political Advocacy</label>
                 <br />
-                <textarea onChange={handleChange} name="advocacy" cols={80} rows={4} value={advocacy}></textarea>
+                <textarea onChange={handleChange} name="Political Advocacy" cols={80} rows={4} value={advocacy}></textarea>
                 <br />
                 <label>Socio-Political Activism</label>
                 <br />
-                <textarea onChange={handleChange} name="activism" cols={80} rows={4} value={activism}></textarea>
+                <textarea onChange={handleChange} name="Socio-Political Activism" cols={80} rows={4} value={activism}></textarea>
                 <br />
                 <button>Add Core Area</button>
             </form>

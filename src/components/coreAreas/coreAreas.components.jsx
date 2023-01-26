@@ -1,13 +1,23 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import "./coreAreas.styles.scss";
 import CoreAreasPreview from './coreAreasPreview/coreAreasPreview.component';
-
-const areas = [{name:"Mentorship & Training", colour: "#FC6539"}, {name:"Political Advocacy", colour: "#001D23"}, {name: "Socio-Political Activism", colour: "#FEA444"}];
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { updateCoreAreas } from '../../reduxStore/actionDispatches';
 
 const CoreAreas = () => {
+    const dispatch = useDispatch();
+
+    const coreAreas = useSelector((state) => state.coreAreas.coreAreas);
+    console.log(coreAreas);
+
+    useEffect(() => {
+        dispatch(updateCoreAreas(coreAreas));
+    }, []);
+
     return(
         <div>
-            <CoreAreasPreview areas = {areas}></CoreAreasPreview>
+            <CoreAreasPreview areas = {coreAreas}></CoreAreasPreview>
         </div>
     )
 };
