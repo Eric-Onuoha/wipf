@@ -1,10 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import "./coreAreasPreview.styles.scss";
 
 import PlainButton from "../../plainButton/plainButton.component";
 
 const CoreAreasPreview = ({ areas }) => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/content/123");
+  }
+
   const areaTitles = Object.keys(areas);
   const areaContent = Object.values(areas);
   return (
@@ -16,7 +22,9 @@ const CoreAreasPreview = ({ areas }) => {
             <p className="p2">
               {areaContent[i]}
             </p>
-            <PlainButton text="Read Details "></PlainButton>
+            <span onClick={handleClick}>
+              <PlainButton text="Read Details "></PlainButton>
+            </span>
           </span>
         </div>
       ))}

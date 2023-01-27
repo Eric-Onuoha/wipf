@@ -7,3 +7,4 @@ const ViewOne = () => {
         </div>
     )
 }
+export default ViewOne;

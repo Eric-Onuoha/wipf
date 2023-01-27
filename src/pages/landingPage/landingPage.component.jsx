@@ -26,8 +26,12 @@ const LandingPage = () => {
         <div className="landingIntroDiv">
           <LandingIntro />
           <div className="introButtons">
-            <AnimatedButton text="Our Programs "></AnimatedButton>
-            <PlainButton text="Join Us "></PlainButton>
+            <form action="/programs">
+              <AnimatedButton text="Our Programs "></AnimatedButton>
+            </form>
+            <form action="/contactus">
+              <PlainButton text="Join Us "></PlainButton>
+            </form>
           </div>
         </div>
 
