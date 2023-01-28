@@ -7,12 +7,14 @@ import PlainButton from "../../plainButton/plainButton.component";
 
 const CoreAreasPreview = ({ areas }) => {
   const navigate = useNavigate();
+
   const handleClick = (path) => {
     navigate("/content?" + path);
   }
 
   const areaTitles = Object.keys(areas);
   const areaContent = Object.values(areas);
+
   return (
     <div className="coreAreaPreviewComponent">
       {areaTitles.map((areaTitle, i) => (

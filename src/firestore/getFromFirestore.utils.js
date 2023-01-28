@@ -25,37 +25,22 @@ const firebaseapp = initializeApp(firebaseConfig);
 export const db = getFirestore();
 
 export const getSingleDocument = async (collectionKey, documentKey) => {
-    const docRef = doc(db, collectionKey);
+    const docRef = doc(db, collectionKey, documentKey);
     const docSnap = await getDoc(docRef);
 
     if (!docSnap.exists()) {
         return {};
     } 
     const document = docSnap.data();
-    console.log(document);
     return document;
 }
 
 export const getMultipleDocuments = async (collectionKey) => {
     const querySnapshot = await getDocs(collection(db, collectionKey));
-    let documents = {};
+    let documents = {}
     querySnapshot.docs.map((doc) => ( 
         documents[doc.id] = doc.data())
     );
-
     return documents;
 }
-
-// const collectionRef = collection(db, collectionKey);
-// const q = query(collectionRef);
-
-// const querySnapshot = await getDocs(q);
-// const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
-//     const {title, newsContent, newsDate, newsSource, newsImage } = docSnapshot.data();
-//     acc[title] = {title, newsContent, newsDate, newsSource, newsImage};
-//     return acc;
-// }, {});
-
-// return categoryMap;
-
 

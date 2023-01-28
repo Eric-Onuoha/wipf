@@ -10,14 +10,14 @@ import { getMultipleDocuments } from '../../firestore/getFromFirestore.utils';
 const CoreAreas = () => {
     const dispatch = useDispatch();
 
+    
+    const coreAreas = useSelector((state) => state.coreAreas.coreAreas.CoreAreas) || {};
+
     useEffect(() => {
-        // getSingleDocument("LandingPage", "fgdhjb").then((coreAreasDB) => console.log(coreAreasDB));
-        getMultipleDocuments("LandingPage").then((coreAreasDB) => dispatch(coreAreasDB.CoreAreas));
+        // getSingleDocument("LandingPage", "CoreAreas").then((coreAreasDB) => dispatch(updateCoreAreas(coreAreasDB)));
+        getMultipleDocuments("LandingPage").then((coreAreasDB) => dispatch(updateCoreAreas(coreAreasDB)));
         
     }, []);
-
-    const coreAreas = useSelector((state) => state.coreAreas);
-    console.log(coreAreas);
 
     return(
         <div>

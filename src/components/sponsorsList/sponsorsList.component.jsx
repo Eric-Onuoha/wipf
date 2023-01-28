@@ -11,14 +11,14 @@ import NDILogo from "../../assets/images/ndi.jpg";
 
 
 let sponsors = [
-  {name: "NDI", logo: ActionAidLogo, link: "hhtps://www.ndi.org"},
-  {name: "MacArthur", logo: MacArthurLogo, link: "#"},
+  {name: "actionaid", logo: ActionAidLogo, link: "hhtps://www.ndi.org"},
+  {name: "macarthur", logo: MacArthurLogo, link: "#"},
   {name: "canada", logo: CanadaLogo, link:"#"},
-  {name: "USAID", logo: UsAIDLogo, link:"#"},
-  {name: "UkAID", logo: UkAIDLogo, link: "#"},
-  {name: "Wrappa", logo: WrappaLogo, link: "#"},
-  {name: "UN Women", logo: UNWomenLogo, link: "#"},
-  {name: "NDI", logo: NDILogo, link: "#"}
+  {name: "usaid", logo: UsAIDLogo, link:"#"},
+  {name: "ukaid", logo: UkAIDLogo, link: "#"},
+  {name: "wrappa", logo: WrappaLogo, link: "#"},
+  {name: "unwomen", logo: UNWomenLogo, link: "#"},
+  {name: "ndi", logo: NDILogo, link: "#"}
 ]
 
 const SponsorsList = () => {
