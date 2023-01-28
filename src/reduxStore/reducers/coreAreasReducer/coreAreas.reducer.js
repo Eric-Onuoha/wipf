@@ -1,7 +1,7 @@
 import { coreAreasTypes } from "../../actionTypes";
 
 const initialState = {
-    coreAreas: []
+    coreAreas: {}
 }
 
 export const coreAreasReducer = (state = initialState, action = {}) => {

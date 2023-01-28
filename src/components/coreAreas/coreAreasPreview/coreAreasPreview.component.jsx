@@ -7,8 +7,8 @@ import PlainButton from "../../plainButton/plainButton.component";
 
 const CoreAreasPreview = ({ areas }) => {
   const navigate = useNavigate();
-  const handleClick = () => {
-    navigate("/content/123");
+  const handleClick = (path) => {
+    navigate("/content?" + path);
   }
 
   const areaTitles = Object.keys(areas);
@@ -22,7 +22,7 @@ const CoreAreasPreview = ({ areas }) => {
             <p className="p2">
               {areaContent[i]}
             </p>
-            <span onClick={handleClick}>
+            <span onClick={() => handleClick("123")}>
               <PlainButton text="Read Details "></PlainButton>
             </span>
           </span>

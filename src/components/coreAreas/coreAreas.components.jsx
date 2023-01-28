@@ -4,17 +4,20 @@ import CoreAreasPreview from './coreAreasPreview/coreAreasPreview.component';
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { updateCoreAreas } from '../../reduxStore/actionDispatches';
-import { getDocument } from '../../firestore/getFromFirestore.utils';
+import { getSingleDocument } from '../../firestore/getFromFirestore.utils';
+import { getMultipleDocuments } from '../../firestore/getFromFirestore.utils';
 
 const CoreAreas = () => {
     const dispatch = useDispatch();
 
-    const coreAreas = useSelector((state) => state.coreAreas.coreAreas);
-    // console.log(coreAreas);
-
     useEffect(() => {
-        getDocument("LandingPage", "CoreAreas").then((coreAreasDB) => dispatch(updateCoreAreas(coreAreasDB)));
+        // getSingleDocument("LandingPage", "fgdhjb").then((coreAreasDB) => console.log(coreAreasDB));
+        getMultipleDocuments("LandingPage").then((coreAreasDB) => dispatch(coreAreasDB.CoreAreas));
+        
     }, []);
+
+    const coreAreas = useSelector((state) => state.coreAreas);
+    console.log(coreAreas);
 
     return(
         <div>
