@@ -17,7 +17,7 @@ import LatestPrograms from "../../components/latestPrograms/latestPrograms.compo
 
 const LandingPage = () => {
   return (
-    <div fluid id="landingPageBody">
+    <div fluid="true" id="landingPageBody">
       <img id="curvedLineBg1" src={curvedLineBg1} alt=""/>
       <img id="curvedLineBg2" src={curvedLineBg2} alt=""/>
 
