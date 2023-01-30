@@ -21,6 +21,14 @@
         &:nth-of-type(3){
             background-color: #FEA444;
         }
+        
+        #coreAreasText{
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
 
     #plainButton{

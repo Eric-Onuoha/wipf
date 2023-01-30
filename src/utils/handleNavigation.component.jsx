@@ -1,1 +1,1 @@
-export const handleNavigation = (path) => ("/content?" + path);
+export const handleNavigation = (path) => (path);
