@@ -12,7 +12,7 @@ const ViewOne = (props) => {
             <br />
             {areaTitles.map((areaTitle, i) => (
                 <div key={areaTitle}>
-                    <img src="" alt="" srcset="" />
+                    <img src="https://drive.google.com/uc?id=1OZffbUZMSvWzVsnwgFfZ712m5iw_EZMM" alt="" srcset="" />
                     <h1>{areaTitle}</h1>
                     <p>{areaContent[i]}</p>
                 </div>

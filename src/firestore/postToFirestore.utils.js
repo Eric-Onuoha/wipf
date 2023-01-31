@@ -1,4 +1,5 @@
 import {initializeApp} from "firebase/app";
+import objectHash from "object-hash";
 
 import {
     getFirestore,
@@ -22,14 +23,16 @@ const firebaseapp = initializeApp(firebaseConfig);
 
 export const db = getFirestore();
 
-export const addCollectionAndDocuments = async (CollectionKey, docKey, docToAdd, mergeStatus = true) => {
+// const hash = objectHash();
+
+export const addCollectionAndDocuments = async (CollectionKey, docKey, docToAdd, mergeStatus) => {
+    if (docKey == undefined){
+        docKey = objectHash.MD5(docToAdd);
+    }
     await setDoc(doc(db, CollectionKey, docKey), docToAdd, mergeStatus);
     console.log("Added Succesfully");
 }
 
-// export const addMutipleDocuments = async (CollectionKey, docKeys, docsToAdd, mergeStatus = true) => {
-    
-// }
 
 
 

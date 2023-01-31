@@ -1,4 +1,4 @@
-import { coreAreasTypes } from "../../actionTypes";
+import { coreAreasTypes } from "../actionTypes";
 
 const initialState = {
     coreAreas: {}

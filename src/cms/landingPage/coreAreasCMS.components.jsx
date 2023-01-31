@@ -54,10 +54,6 @@ const CoreAreasCMS = () => {
                 <br />
                 <button>Add Core Area</button>
             </form>
-
-            <p1>Mentorship: {coreAreas.mentorship}</p1>
-            <p1>Advocacy: {coreAreas.advocacy}</p1>
-            <p1>activism: {coreAreas.activism}</p1>
         </div>
     )
 }
