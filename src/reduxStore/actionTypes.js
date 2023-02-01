@@ -6,3 +6,7 @@ export const coreAreasTypes = {
 export const newsUpdatesTypes = {
     setNewsUpdates: "newsUpdates/setNewsUpdates"
 }
+
+export const programsTypes = {
+    setPrograms: "programs/setPrograms"
+}
