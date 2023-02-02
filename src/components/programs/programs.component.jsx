@@ -1,13 +1,17 @@
 import React from 'react';
 import "./programs.styles.scss";
-import LatestProgramsPreview from './programsPreview/programsPreview.component';
-
-const programDetails = [{title:"WIPF Academy: Bauchi", theme: "Mentorship and Training", date: "15 Januray"}, {title:"WIPF Academy: Bauchi", theme: "Mentorship and Training", date: "15 Januray"}, {title:"WIPF Academy: Bauchi", theme: "Mentorship and Training", date: "15 Januray"}];
+import ProgramsPreview from "./programsPreview/programsPreview.component";
+import { useSelector } from 'react-redux';
 
 const Programs = () => {
+    const programDetails = useSelector((state) => state.programs.programs);
+    const programs = [];
+    for (const program in programDetails){
+      programs.push(program);
+    }
     return(
         <div id='latestProgramsComponent'>
-            <LatestProgramsPreview programDetails = {programDetails}/>
+            <ProgramsPreview programDetails = {programDetails} programs = {programs}/>
         </div>
     )
 };

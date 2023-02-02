@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import { updateCoreAreas } from "./reduxStore/actionDispatches";
+import { addPrograms } from "./reduxStore/actionDispatches";
+import { addNewsUpdates } from "./reduxStore/actionDispatches";
 import { getMultipleDocuments } from "./firestore/getFromFirestore.utils";
 
 //Pages
@@ -13,6 +15,7 @@ import Programs from "./pages/programs/programs.component";
 import NavigationBar from "./components/navigationBar/navigationBar.components";
 import Footer from "./components/footer/footer.component";
 import ViewArea from "./components/coreAreas/viewArea.component.jsx";
+import ViewPrograms from "./components/programs/viewPrograms.component";
 
 import NewsUpdatesCMS from "./cms/landingPage/newsUpdatesCMS.component";
 import CoreAreasCMS from "./cms/landingPage/coreAreasCMS.components";
@@ -24,6 +27,8 @@ function App() {
 
   useEffect(() => {
     getMultipleDocuments("LandingPage").then((coreAreasDB) => dispatch(updateCoreAreas(coreAreasDB)));
+    getMultipleDocuments("NewsUpdates").then((NewsUpdatesDB) => dispatch(addNewsUpdates(NewsUpdatesDB)));
+    getMultipleDocuments("Programs").then((ProgramsDB) => dispatch(addPrograms(ProgramsDB)));
   }, []);
 
   return (
@@ -35,6 +40,7 @@ function App() {
           <Route path="aboutus" element={<AboutUs/>}></Route>
           <Route path="aboutus/*" element={<ViewArea/>}></Route>
           <Route path="programs" element={<Programs/>}></Route>
+          <Route path="programs/*" element={<ViewPrograms/>}></Route>
           <Route path="landingcms" element={<CoreAreasCMS/>}></Route>
           <Route path="newsupdatescms" element={<NewsUpdatesCMS/>}></Route>
           <Route path="programscms" element={<ProgramsCMS/>}></Route>
