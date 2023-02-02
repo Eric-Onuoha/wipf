@@ -1,9 +1,9 @@
-import "./latestProgramsPreview.styles.scss";
+import "./programsPreview.styles.scss";
 
 // import programImage from "../../assets/images/press\ conference.jpg";
-import PlainButton from "../plainButton/plainButton.component";
+import PlainButton from "../../plainButton/plainButton.component";
 
-const LatestProgramsPreview = ({programDetails}) =>{
+const ProgramsPreview = ({programDetails}) =>{
     return (
         <div id="latestProgramsPreviewComponent">
           {programDetails.map((programDetails) => (
@@ -19,7 +19,7 @@ const LatestProgramsPreview = ({programDetails}) =>{
                 <div className="latestProgramDetails">
                   <h2 className="theme">{programDetails.theme}</h2>
                   <h2 className="title">{programDetails.title}</h2>
-                  <p className="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, ad quam dolores in nisi!</p>
+                  <p className="content">Lorem ipsum dolor sit amet consectetur adipisicing elit6. Optio, ad quam dolores in nisi!</p>
                 </div>
                 <div className="cardReadMore">
                   <PlainButton text = "Read" />
@@ -31,4 +31,4 @@ const LatestProgramsPreview = ({programDetails}) =>{
       );
 }
 
-export default LatestProgramsPreview;
+export default ProgramsPreview;

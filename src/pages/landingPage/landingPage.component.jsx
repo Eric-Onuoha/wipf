@@ -13,7 +13,7 @@ import CoreAreas from "../../components/coreAreas/coreAreas.components";
 import Sponsors from "../../components/sponsors/sponsors.component";
 // import RecentEvents from "../../components/recentEvents/recentEvents.component";
 import NewsPreviews from "../../components/newsPreviews/newsPreviews.component";
-import LatestPrograms from "../../components/latestPrograms/latestPrograms.component";
+import Programs from "../../components/programs/programs.component";
 
 const LandingPage = () => {
   return (
@@ -48,7 +48,7 @@ const LandingPage = () => {
       </div>
 
       <div className="latestProgramsDiv">
-        <LatestPrograms/>
+        <Programs/>
       </div>
 
       <div className="sponsorsDiv">

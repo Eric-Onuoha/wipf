@@ -1,8 +1,7 @@
 import "./programs.styles.scss";
 
-import ProgramsNavigation from "../../components/programsNavigation/programsNavigation.component";
-import ProgramsViewPreview from "../../components/programsView/programsViewPreview/programsViewPreview.component";
-import LatestPrograms from "../../components/latestPrograms/latestPrograms.component";
+import ProgramsNavigation from "../../components/programs/programsNavigation/programsNavigation.component";
+import LatestPrograms from "../../components/programs/programs.component";
 import PageIntro from "../../components/pageIntro/pageIntro.component";
 
 const Programs = () => {
