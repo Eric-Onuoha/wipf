@@ -26,7 +26,7 @@ export const db = getFirestore();
 // const hash = objectHash();
 
 export const addCollectionAndDocuments = async (CollectionKey, docKey, docToAdd, mergeStatus) => {
-    if (docKey == undefined){
+    if (docKey === undefined){
         docKey = objectHash.MD5(docToAdd);
     }
     await setDoc(doc(db, CollectionKey, docKey), docToAdd, mergeStatus);

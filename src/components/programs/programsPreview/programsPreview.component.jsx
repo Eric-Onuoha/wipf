@@ -1,11 +1,12 @@
 import "./programsPreview.styles.scss";
 import { useNavigate } from "react-router-dom";
 import { handleNavigation } from "../../../utils/handleNavigation.component";
+import parse from "html-react-parser";
 
 // import programImage from "../../assets/images/press\ conference.jpg";
 import PlainButton from "../../plainButton/plainButton.component";
 
-const ProgramsPreview = ({programDetails, programs}) =>{
+const ProgramsPreview = ({programs}) =>{
     const navigate = useNavigate();
 
     return (
@@ -21,11 +22,11 @@ const ProgramsPreview = ({programDetails, programs}) =>{
               </div>
               <div className="cardBottom">
                 <div className="latestProgramDetails">
-                  <h2 className="theme">{programDetails[program].ProgramTheme}</h2>
-                  <h2 className="title">{programDetails[program].ProgramTitle}</h2>
-                  <p className="content">Lorem ipsum dolor sit amet consectetur adipisicing elit6. Optio, ad quam dolores in nisi!</p>
+                  <h2 className="theme">{program.ProgramTheme}</h2>
+                  <h2 className="title">{program.ProgramTitle}</h2>
+                  <p className="content">{parse(program.ProgramReport)}</p>
                 </div>
-                <div className="cardReadMore" onClick={() => navigate(handleNavigation("/programs/" + program))}>
+                <div className="cardReadMore" onClick={() => navigate(handleNavigation("/programs/" + program.ProgramTitle))}>
                   <PlainButton text = "Read" />
                 </div>
               </div>

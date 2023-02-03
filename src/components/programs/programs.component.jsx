@@ -7,11 +7,12 @@ const Programs = () => {
     const programDetails = useSelector((state) => state.programs.programs);
     const programs = [];
     for (const program in programDetails){
-      programs.push(program);
+      programs.push(programDetails[program]);
     }
+    console.log(programs);
     return(
         <div id='latestProgramsComponent'>
-            <ProgramsPreview programDetails = {programDetails} programs = {programs}/>
+            <ProgramsPreview programs = {programs}/>
         </div>
     )
 };

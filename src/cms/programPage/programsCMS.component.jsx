@@ -32,13 +32,9 @@ const ProgramsCMS = () => {
     }
     
     dispatch(addPrograms(formFields));
+    addCollectionAndDocuments("Programs", undefined, formFields);
   }
 
-  const programsDB = useSelector((state) => state.programs.programs);
-  
-  useEffect(() => {
-    addCollectionAndDocuments("Programs", undefined, programsDB);
-  }, [programsDB])
 
   return (
     <div>
