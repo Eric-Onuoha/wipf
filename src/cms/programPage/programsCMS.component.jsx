@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { DefaultEditor } from 'react-simple-wysiwyg';
 import { addPrograms } from '../../reduxStore/actionDispatches';
 import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
 import { addCollectionAndDocuments } from "../../firestore/postToFirestore.utils";
-import { useEffect } from 'react';
+
+import { getMultipleDocuments } from '../../firestore/getFromFirestore.utils';
 
 const ProgramsCMS = () => {
   const dispatch = useDispatch();
@@ -15,7 +15,6 @@ const ProgramsCMS = () => {
   const handleReportChange = (e) => {
     const {name, value} = e.target;
     setHtml(value);
-    console.log(formFields)
     setFormFields({...formFields, [name]:value});
   }
 
@@ -30,10 +29,18 @@ const ProgramsCMS = () => {
     if(formFields[0] === " "){
       delete formFields[0];
     }
-    
-    dispatch(addPrograms(formFields));
-    addCollectionAndDocuments("Programs", undefined, formFields);
+
+    try{
+      addCollectionAndDocuments("Programs", undefined, formFields);
+      getMultipleDocuments("Programs").then((ProgramsDB) => dispatch(addPrograms(ProgramsDB)));
+    } catch(err){
+      console.log(err);
+    }  
+
   }
+
+
+
 
 
   return (
