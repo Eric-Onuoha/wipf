@@ -31,7 +31,7 @@ function App() {
 
   useEffect(() => {
     getMultipleDocuments("NewsUpdates").then((NewsUpdatesDB) => dispatch(addNewsUpdates(NewsUpdatesDB)));
-  }, [])
+  }, []);
 
   useEffect(() => {
       getMultipleDocuments("Programs").then((ProgramsDB) => dispatch(addPrograms(ProgramsDB)));

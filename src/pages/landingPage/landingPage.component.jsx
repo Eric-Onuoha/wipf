@@ -12,8 +12,8 @@ import BannerImage from "../../components/bannerImage/bannerImage.component";
 import CoreAreas from "../../components/coreAreas/coreAreas.components";
 import Sponsors from "../../components/sponsors/sponsors.component";
 // import RecentEvents from "../../components/recentEvents/recentEvents.component";
-import NewsPreviews from "../../components/newsPreviews/newsPreviews.component";
 import Programs from "../../components/programs/programs.component";
+import News from "../../components/news/news.components";
 
 const LandingPage = () => {
   return (
@@ -44,7 +44,7 @@ const LandingPage = () => {
       </div>
 
       <div className="newsPreviewsDiv">
-         <NewsPreviews/>
+         <News/>
       </div>
 
       <div className="latestProgramsDiv">

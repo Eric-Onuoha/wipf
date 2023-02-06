@@ -1,7 +1,6 @@
 import "./ovalButton.styles.scss";
 
 import arrowLeftOrange from "../../assets/images/arrowLeftOrange.png";
-import arrowRightOrange from "../../assets/images/arrowRightOrange.png";
 
 const OvalButton = () =>{
     return (

@@ -51,15 +51,15 @@ const NewsUpdatesCMS = () => {
             <form onSubmit={handleSubmit}>
                 <label>Title</label>
                 <br />
-                <input onChange={handleChange} name="title" cols={80} rows={4} value={title}></input>
+                <textarea onChange={handleChange} name="title" cols={60} rows={2} value={title}></textarea>
                 <br />
                 <label>News Report Link</label>
                 <br />
-                <input onChange={handleChange} name="link" cols={80} rows={4} value={link}></input>
+                <textarea onChange={handleChange} name="link" cols={60} rows={2} value={link}></textarea>
                 <br />
                 <label>Video Embed Link</label>
                 <br />
-                <input onChange={handleChange} name="videoLink" cols={80} rows={4} value={videoLink}></input>
+                <textarea onChange={handleChange} name="videoLink" cols={60} rows={1} value={videoLink}></textarea>
                 <br />
                 <label>Report Summary</label>
                 <br />
@@ -67,11 +67,11 @@ const NewsUpdatesCMS = () => {
                 <br />
                 <label>Source e.g. Thisday Newspapers</label>
                 <br />
-                <input onChange={handleChange} name="source" cols={80} rows={4} value={source}></input>
+                <textarea onChange={handleChange} name="source" cols={60} rows={1} value={source}></textarea>
                 <br />
                 <label>Date e.g. 12th June 2021</label>
                 <br />
-                <input onChange={handleChange} name="date" cols={80} rows={4} value={date}></input>
+                <textarea onChange={handleChange} name="date" cols={60} rows={1} value={date}></textarea>
                 <br />
                 <button>Add News Updates</button>
             </form>

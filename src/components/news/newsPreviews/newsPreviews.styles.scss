@@ -54,6 +54,14 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             margin: 15px auto 5px auto;
+
+            
+            #nextNews{
+                margin: 0;
+
+                transform: rotate(180deg);
+            }
+
         }
 
         #ovalButtonComponent{
@@ -67,9 +75,6 @@
                 background-color: #283E42;
             }
 
-            &:last-child button{
-                transform: rotate(180deg);
-            }
         }
     }
 }
