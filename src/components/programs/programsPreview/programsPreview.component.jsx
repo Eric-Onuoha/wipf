@@ -26,7 +26,7 @@ const ProgramsPreview = ({programs}) =>{
                   <h2 className="title">{program.ProgramTitle}</h2>
                   <p className="content">{parse(program.ProgramReport)}</p>
                 </div>
-                <div className="cardReadMore" onClick={() => navigate(handleNavigation("/programs/" + program.ProgramTitle))}>
+                <div className="cardReadMore" onClick={() => navigate(handleNavigation("/programs/" + program.id))}>
                   <PlainButton text = "Read" />
                 </div>
               </div>

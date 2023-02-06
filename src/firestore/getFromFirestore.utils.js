@@ -38,9 +38,9 @@ export const getSingleDocument = async (collectionKey, documentKey) => {
 export const getMultipleDocuments = async (collectionKey) => {
     const querySnapshot = await getDocs(collection(db, collectionKey));
     let documents = {}
-    querySnapshot.docs.map((doc) => ( 
-        documents[doc.id] = doc.data())
-    );
+    querySnapshot.docs.map((doc) => { 
+        documents[doc.id] = doc.data()
+    });
     return documents;
 }
 

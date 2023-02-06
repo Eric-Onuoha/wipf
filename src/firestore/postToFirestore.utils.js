@@ -29,6 +29,7 @@ export const addCollectionAndDocuments = async (CollectionKey, docKey, docToAdd,
     if (docKey === undefined){
         docKey = objectHash.MD5(docToAdd);
     }
+    docToAdd["id"] = docKey;
     await setDoc(doc(db, CollectionKey, docKey), docToAdd, mergeStatus);
     console.log("Added Succesfully");
 }

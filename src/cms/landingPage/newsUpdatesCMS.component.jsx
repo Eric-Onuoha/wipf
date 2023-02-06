@@ -1,32 +1,43 @@
-import React, {useState, useEffect} from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, {useState, } from "react";
+import { useDispatch } from "react-redux";
 import { addNewsUpdates } from "../../reduxStore/actionDispatches";
 import { addCollectionAndDocuments } from "../../firestore/postToFirestore.utils";
+import { getMultipleDocuments } from "../../firestore/getFromFirestore.utils";
+import { DefaultEditor } from 'react-simple-wysiwyg';
 
 const NewsUpdatesCMS = () => {
     const dispatch = useDispatch();
-    const defaultFormFields = {};
+    const [html, setHtml] = useState(" ");
 
     const [formFields, setFormFields] = useState({});
-    const {title, videoLink, summary, source, date, link} = formFields;
+    const {title, videoLink, source, date, link} = formFields;
 
     const handleChange = (e) => {
         const {name, value} = e.target;
         setFormFields({...formFields, [name]:value});
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        dispatch(addNewsUpdates(formFields));
+    const handleReportChange = (e) => {
+        const {name, value} = e.target;
+        setHtml(value);
+        setFormFields({...formFields, [name]:value});
     }
 
-    const newsUpdates = useSelector((state) => state.newsUpdates.newsUpdates) || {};
-    
-    useEffect(() => {
-        if(newsUpdates.length !== 0){
-        addCollectionAndDocuments("NewsUpdates", undefined, newsUpdates);
-        }
-    }, [newsUpdates])
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if(formFields[0] === " "){
+            delete formFields[0];
+          }
+      
+          try{
+            addCollectionAndDocuments("NewsUpdates", undefined, formFields);
+            getMultipleDocuments("NewsUpdates").then((NewsUpdatesDB) => dispatch(addNewsUpdates(NewsUpdatesDB)));
+          } catch(err){
+            console.log(err);
+          }
+    }
+
 
 
     return (
@@ -50,9 +61,9 @@ const NewsUpdatesCMS = () => {
                 <br />
                 <input onChange={handleChange} name="videoLink" cols={80} rows={4} value={videoLink}></input>
                 <br />
-                <label>Report Summart</label>
+                <label>Report Summary</label>
                 <br />
-                <textarea onChange={handleChange} name="summary" cols={80} rows={4} value={summary}></textarea>
+                <DefaultEditor name='summary' value={html} onChange={handleReportChange} />
                 <br />
                 <label>Source e.g. Thisday Newspapers</label>
                 <br />

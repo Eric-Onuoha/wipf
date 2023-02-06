@@ -10,7 +10,7 @@ const Programs = () => {
     for (const program in programDetails){
       programs.push(programDetails[program]);
     }
-    console.log(programs);
+
     return(
         <div id='latestProgramsComponent'>
             <ProgramsPreview programs = {programs}/>
