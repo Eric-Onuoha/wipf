@@ -11,27 +11,27 @@ const NewsPreviews = ({newsContent}) => {
 
     const newsMin = 0;
     const newsMax = newsContent.length;
-    let x = 0;
-    let y = 1;
+    let [x , setX] = useState(0);
+    let [y, setY] = useState(1);
 
     const nextNews = (e) => {
         if (y < newsMax){
-            x+=1;
-            y+=1;
+            setX(x+=1);
+            setY(y+=1);
         } else {
-            x = newsMin;
-            y = newsMin + 1;
+            setX(newsMin);
+            setY(newsMin + 1);
         }
         console.log(x + " - " + y);
     }
 
     const prevNews = () => {
         if(x === newsMin){
-            x = newsMax - 1;
-            y = newsMax;
+            setX(newsMax - 1);
+            setY(newsMax);
         } else {
-            x-=1;
-            y-=1;
+            setX(x-=1);
+            setY(y-=1);
         }
         console.log(x + " - " + y);
     }
@@ -54,12 +54,12 @@ const NewsPreviews = ({newsContent}) => {
                 </div>
                 <div id="newsPreview">
                     <div id="newsPreviewCover">
-                    {/* <p className="p1">{NewsUpdates[news[i]].summary}</p> 
+                    <p className="p1">{news.summary}</p> 
                         <div id="newsMetadata">
                             <img src={Divider} alt="" />
-                            <h4 className="h4">{NewsUpdates[news[i]].source}</h4>
-                            <h5 className="h5">{NewsUpdates[news[i]].date}</h5>
-                        </div> */}
+                            <h4 className="h4">{news.source}</h4>
+                            <h5 className="h5">{news.date}</h5>
+                        </div>
                     </div>                       
                     <div id="newsToggle" >
                         <span onClick={prevNews} id="prevNews"><OvalButton /></span>
