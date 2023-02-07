@@ -10,3 +10,7 @@ export const newsUpdatesTypes = {
 export const programsTypes = {
     setPrograms: "programs/setPrograms"
 }
+
+export const mandateTypes = {
+    setMandate: "mandate/setMandate"
+}

@@ -2,13 +2,10 @@ import "./newsPreviews.styles.scss";
 
 import NewsImage from "../../../assets/images/press conference.jpg";
 import Divider from "../../../assets/images/divider.webp";
-
+import { useState } from "react";
 import OvalButton from "../../ovalButton/ovalButton.component";
-import { useSelector } from "react-redux";
-import { useEffect, useState } from "react";
 
 const NewsPreviews = ({newsContent}) => {
-
     const newsMin = 0;
     const newsMax = newsContent.length;
     let [x , setX] = useState(0);
@@ -22,7 +19,6 @@ const NewsPreviews = ({newsContent}) => {
             setX(newsMin);
             setY(newsMin + 1);
         }
-        console.log(x + " - " + y);
     }
 
     const prevNews = () => {
@@ -33,7 +29,6 @@ const NewsPreviews = ({newsContent}) => {
             setX(x-=1);
             setY(y-=1);
         }
-        console.log(x + " - " + y);
     }
 
     return (
@@ -57,7 +52,7 @@ const NewsPreviews = ({newsContent}) => {
                     <p className="p1">{news.summary}</p> 
                         <div id="newsMetadata">
                             <img src={Divider} alt="" />
-                            <h4 className="h4">{news.source}</h4>
+                            <a href={news.link} target="_blank"><h4 className="h4">{news.source}</h4></a>
                             <h5 className="h5">{news.date}</h5>
                         </div>
                     </div>                       

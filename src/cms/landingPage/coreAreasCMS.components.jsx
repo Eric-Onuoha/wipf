@@ -8,8 +8,6 @@ const CoreAreasCMS = () => {
 
     const dispatch = useDispatch();
 
-    const defaultFormFields = {};
-
     const [formFields, setFormFields] = useState({});
     const {mentorship, advocacy, activism} = formFields;
 
