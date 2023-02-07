@@ -1,4 +1,3 @@
-
 import "./aboutUs.styles.scss";
 
 import WIPFTeamPreview from "../../components/WIPFTeam/WIPFTeamPreview/WIPFTeamPreview.component";

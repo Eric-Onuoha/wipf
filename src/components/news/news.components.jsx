@@ -12,6 +12,6 @@ const News = () => {
     }
 
     return(
-        <NewsPreviews newsUpdates = {newsUpdates} newsContent = {newsContent} ></NewsPreviews>
+        <NewsPreviews newsContent = {newsContent} ></NewsPreviews>
     )
 }; export default News;

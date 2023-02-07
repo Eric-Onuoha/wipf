@@ -1,5 +1,5 @@
 import { createAction } from "./createAction";
-import { coreAreasTypes, mandateTypes, newsUpdatesTypes, programsTypes } from "./actionTypes";
+import { coreAreasTypes, mandateTypes, newsUpdatesTypes, programsTypes, aboutWIPFTypes } from "./actionTypes";
 
 export const updateCoreAreas = (coreAreas) => (
     createAction(coreAreasTypes.setCoreAreas,coreAreas)
@@ -15,4 +15,8 @@ export const addPrograms = (programs) => (
 
 export const updateMandate = (mandate) => (
     createAction(mandateTypes.setMandate, mandate)
+)
+
+export const updateAboutWIPF = (about) => (
+    createAction(aboutWIPFTypes.setAboutWIPF, about)
 )

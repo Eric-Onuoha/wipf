@@ -14,3 +14,7 @@ export const programsTypes = {
 export const mandateTypes = {
     setMandate: "mandate/setMandate"
 }
+
+export const aboutWIPFTypes = {
+    setAboutWIPF: "about/setAboutWIPF"
+}

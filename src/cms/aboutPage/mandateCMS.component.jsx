@@ -23,8 +23,6 @@ const MandateCMS = () => {
     const mandate = useSelector((state) => state.mandate.mandate);
 
     useEffect(() => {
-        console.log(mandate);
-
         if(Object.keys(mandate).length !== 0){
             addCollectionAndDocuments("aboutUs", "Mandate", mandate, false);
         }
