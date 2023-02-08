@@ -1,6 +1,6 @@
 import "./aboutUs.styles.scss";
 
-import WIPFTeamPreview from "../../components/WIPFTeam/WIPFTeamPreview/WIPFTeamPreview.component";
+import WIPFTeam from "../../components/WIPFTeam/WIPFTeam.component";
 import PageIntro from "../../components/pageIntro/pageIntro.component";
 import AboutWIPF from "../../components/aboutWIPF/aboutWIPF.component";
 import CoreAreas from "../../components/coreAreas/coreAreas.components";
@@ -11,7 +11,7 @@ const AboutUs = () =>{
         <div id="aboutUsPage">
             <PageIntro pageTitle="About Us"></PageIntro>
             <AboutWIPF></AboutWIPF>
-            <WIPFTeamPreview></WIPFTeamPreview>
+            <WIPFTeam></WIPFTeam>
             <CoreAreas></CoreAreas>
             <Sponsors></Sponsors>
         </div>

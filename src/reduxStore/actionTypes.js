@@ -18,3 +18,7 @@ export const mandateTypes = {
 export const aboutWIPFTypes = {
     setAboutWIPF: "about/setAboutWIPF"
 }
+
+export const staffTypes = {
+    setStaff: "staff/setStaff"
+}

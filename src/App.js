@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
-import { updateCoreAreas, updateMandate, updateAboutWIPF } from "./reduxStore/actionDispatches";
+import { updateCoreAreas, updateMandate, updateAboutWIPF, addStaff } from "./reduxStore/actionDispatches";
 import { addPrograms } from "./reduxStore/actionDispatches";
 import { addNewsUpdates } from "./reduxStore/actionDispatches";
 import { getMultipleDocuments } from "./firestore/getFromFirestore.utils";
@@ -22,6 +22,7 @@ import CoreAreasCMS from "./cms/landingPage/coreAreasCMS.components";
 import ProgramsCMS from "./cms/programPage/programsCMS.component";
 import MandateCMS from "./cms/aboutPage/mandateCMS.component";
 import AboutCMS from "./cms/aboutPage/aboutCMS.component";
+import StaffCMS from "./cms/aboutPage/staffCMS.component";
 
 function App() {
 
@@ -41,11 +42,15 @@ function App() {
 
   useEffect(()=> {
     getMultipleDocuments("aboutUs").then((MandateDB) => dispatch(updateMandate(MandateDB)));
-  }, [])
+  }, []);
 
   useEffect(()=>{
     getMultipleDocuments("aboutUs").then((AboutDB) => dispatch(updateAboutWIPF(AboutDB)));
-  })
+  });
+
+  useEffect(()=>{
+    getMultipleDocuments("Staff").then((StaffDB) => dispatch(addStaff(StaffDB)));
+  });
 
   return (
     <div className="App">
@@ -62,6 +67,7 @@ function App() {
           <Route path="programscms" element={<ProgramsCMS/>}></Route>
           <Route path="mandatecms" element={<MandateCMS/>}></Route>
           <Route path="aboutcms" element={<AboutCMS/>}></Route>
+          <Route path="staffcms" element={<StaffCMS/>}></Route>
         </Route>
       </Routes>
         {/* <Footer/> */}
