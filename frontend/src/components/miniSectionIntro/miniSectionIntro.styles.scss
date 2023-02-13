@@ -1,0 +1,24 @@
+#miniSectionIntroComponent{
+    
+    h4{
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 700;
+        color: #FC6539;
+        position: relative;
+        display: inline-block;
+        padding-left: 60px;
+
+        &::before{
+            // display: inline-block;
+            content: "";
+            height: 3px;
+            width: 43px;
+            background-color: #FC6539;
+            position: absolute;
+            top: calc(50% - 1.5px);
+            left: 0;
+        }
+    }
+}

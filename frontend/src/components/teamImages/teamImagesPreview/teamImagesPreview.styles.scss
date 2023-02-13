@@ -1,0 +1,39 @@
+#teamImagesPreviewComponent {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 20px;
+
+.profile {
+  text-align: center;
+
+  img {
+    width: 290px;
+    height: 390px;
+    object-fit: cover;
+    margin-bottom: 12px;
+  }
+
+  h4{
+    font-family: 'Yeseva One', cursive;
+    font-size: 25px;
+    line-height: 28px;
+    text-transform: capitalize;
+  }
+
+  p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+    color: #909090;
+    text-transform: uppercase;
+  }
+}
+}
+
+@media(min-width:900px){
+  #teamImagesPreviewComponent {
+    grid-template-columns: 0.33fr 0.33fr 0.33fr;
+  }
+}
+

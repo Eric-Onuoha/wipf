@@ -1,0 +1,60 @@
+#programsNavigationPreviewComponent{
+    margin-top: 50px;
+
+    #programSearch{
+        width: 100%;
+        margin-bottom: 40px;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr 0.8fr;
+        column-gap: 100px;
+
+        #searchTitle{
+            background-color: #FFFFFF;
+            border: 1px solid #D4D4D8;
+            box-shadow: 0 0 1px #D4D4D8;
+            height: 37px;
+            padding: 0 10px;
+            background: url("../../../../assets/images/searchIcon.png");
+            background-size: 18px;
+            background-repeat: no-repeat;
+            background-position: 14px 50%;
+            padding: 0 40px;
+        }
+
+        #searchTheme{
+            background-color: #FFFFFF;
+            border: 1px solid #D4D4D8;
+            color: #4f4e4e;
+            padding: 0 20px;
+        }
+
+        #searchYear{
+            background-color: #FFFFFF;
+            border: 1px solid #D4D4D8;
+            color: #4f4e4e;
+            padding: 0 20px;
+        }
+    }
+
+    // #yearGroups{
+    //     display: grid;
+    //     grid-template-columns: 1fr 1fr;
+
+    //     p{
+    //         text-decoration: none;
+    //         background-color: #FFFFFF;
+    //         border: 1px solid #F7F7F7;
+    //         height: 50px;
+    //         margin: 1px;
+    //         text-align: center;
+    //         padding-top: 10px;
+    //         cursor: pointer;
+
+    //         &:first-of-type{
+    //             background-image: linear-gradient(to top right, #FEA244, #FC693A);
+    //             border: 0;
+    //             color: #FFFFFF;
+    //         }
+    //     }
+    // }
+}

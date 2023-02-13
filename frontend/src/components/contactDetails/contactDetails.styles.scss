@@ -1,0 +1,60 @@
+#contactDetailsComponent{
+    background-image: linear-gradient(to top right, #FEA244, #FC693A);
+    padding: 0 20px;
+
+    hr{
+        border: 1px solid #FFFFFF;
+    }
+
+    #contactDetails{
+        color: #FFFFFF;
+
+        #phoneDetails, #addressDetails, #emailDetails{
+            margin: 50px 0 30px 15px;
+            position: relative;
+            display: grid;
+            grid-template-columns: 0.2fr 0.8fr;
+            column-gap: 40px;
+
+            img{
+                position: absolute;
+                height: 40px;
+                top: calc(50% - 25px);
+            }
+
+            h2{
+                font-family: 'Yeseva One', cursive;
+                font-size: 32px;
+                line-height: 38px;
+            }
+
+            p, a{
+                color: #FFFFFF;
+            }
+
+            a:hover{
+                color: black;
+            }
+        }
+    }
+}
+
+@media(min-width:900px){
+    #contactDetailsComponent{
+        padding: 0 50px;
+    
+        #contactDetails{
+            color: #FFFFFF;
+    
+            #phoneDetails, #addressDetails, #emailDetails{
+                margin: 50px 0 30px 30px;
+    
+                h2{
+                    font-family: 'Yeseva One', cursive;
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+}
+
