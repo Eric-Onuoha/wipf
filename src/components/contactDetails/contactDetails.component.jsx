@@ -1,4 +1,4 @@
-import "../contactDetails/contactDetails.styles.scss";
+import "./contactDetails.styles.scss";
 
 import c1 from "../../assets/images/c1.png";
 import c2 from "../../assets/images/c2.png";
@@ -14,7 +14,7 @@ const ContactDetails = () => {
                     </div>
                     <div>
                         <h2 className="h2">Phone</h2>
-                        <p className="p2">+234 903 4034 985</p>
+                        <a href="tel:+234 903 4034 985" className="p2">+234 903 4034 985</a>
                     </div>
                 </div>
                 <hr />
@@ -24,7 +24,7 @@ const ContactDetails = () => {
                     </div>
                     <div id="emailDetailsContent">
                         <h2>Email</h2>
-                        <p className="p2">womeninpoliticsforum@gmail</p>
+                        <a href="mailto:womeninpoliticsforum@gmail.com" className="p2">womeninpoliticsforum@gmail.com</a>
                     </div>
                 </div>
                 <hr />

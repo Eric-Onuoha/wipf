@@ -1,4 +1,4 @@
-import "../footer/footer.styles.scss";
+import "./footer.styles.scss";
 import {Timeline} from 'react-twitter-widgets';
 import { InstagramEmbed } from 'react-social-media-embed';
 import MiniSectionIntro from "../miniSectionIntro/miniSectionIntro.component";

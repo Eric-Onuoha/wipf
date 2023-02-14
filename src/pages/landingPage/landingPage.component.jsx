@@ -3,7 +3,7 @@ import React from "react";
 import curvedLineBg1 from "../../assets/images/bannerCurvedLine.webp";
 import curvedLineBg2 from "../../assets/images/bannerCurvedLine.png";
 
-import "../landingPage/landingPage.styles.scss";
+import "./landingPage.styles.scss";
 
 import AnimatedButton from "../../components/animatedButton/animatedButton.component";
 import PlainButton from "../../components/plainButton/plainButton.component";

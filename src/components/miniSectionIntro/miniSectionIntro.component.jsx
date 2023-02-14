@@ -1,4 +1,4 @@
-import "../miniSectionIntro/miniSectionIntro.styles.scss";
+import "./miniSectionIntro.styles.scss";
 
 const MiniSectionIntro = (props) => {
     return(

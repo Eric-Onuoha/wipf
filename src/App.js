@@ -9,12 +9,12 @@ import { getMultipleDocuments } from "./firestore/getFromFirestore.utils";
 
 //Pages
 import LandingPage from "./pages/landingPage/landingPage.component";
-import ContactUs from "./pages/contactUs/contactUs.component";
+import ContactUsPage from "./pages/contactUs/contactUs.component";
 import AboutUs from "./pages/aboutUs/aboutUs.component";
 import Programs from "./pages/programs/programs.component";
 import NavigationBar from "./components/navigationBar/navigationBar.components";
 import Footer from "./components/footer/footer.component";
-import ViewArea from "./components/coreAreas/viewArea.component.jsx";
+import ViewArea from "./components/coreAreas/viewArea.component.jsx.jsx";
 import ViewPrograms from "./components/programs/viewPrograms.component";
 
 import NewsUpdatesCMS from "./cms/landingPage/newsUpdatesCMS.component";
@@ -57,7 +57,7 @@ function App() {
       <Routes>
         <Route path = "/" element={[<NavigationBar/>, <Footer/>]}>
           <Route index element={<LandingPage/>}></Route>
-          <Route path="contactus" element={<ContactUs/>}></Route>
+          <Route path="contactus" element={<ContactUsPage/>}></Route>
           <Route path="aboutus" element={<AboutUs/>}></Route>
           <Route path="aboutus/*" element={<ViewArea/>}></Route>
           <Route path="programs" element={<Programs/>}></Route>

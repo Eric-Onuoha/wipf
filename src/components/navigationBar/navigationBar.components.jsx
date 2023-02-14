@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { Outlet, NavLink, } from "react-router-dom";
-import "../navigationBar/navigationBar.styles.scss";
+import "./navigationBar.styles.scss";
 import "../../index.css";
 
 import Logo from "../../assets/images/wipfnewlogo.png";

@@ -1,15 +1,15 @@
 import React from 'react';
 
-import "../contactUs/contactUs.styles.scss";
+import "./contactUs.styles.scss";
 
 // import "../landingPage/landingPage.styles.scss";
 
 import ContactUsBanner from "../../assets/images/contactUsBanner.jpg";
 
-import ContactUsPreview from '../../components/contactUsForm/contatctUsPreview/contactUsPreview.component';
+import ContactUs from '../../components/contactUsForm/contactUs.component';
 import ContactDetails from '../../components/contactDetails/contactDetails.component';
 
-const ContactUs = () => {
+const ContactUsPage = () => {
     return(
         <div id ="contactUsComponent">
             <div id='contactUsBanner'>
@@ -17,11 +17,11 @@ const ContactUs = () => {
                 <h2 className='h2'>Contact Us</h2>
             </div>
             <div id='contactUs'>
-                <ContactUsPreview></ContactUsPreview>
+                <ContactUs></ContactUs>
                 <ContactDetails></ContactDetails>
             </div>
         </div>
     );
 };
 
-export default ContactUs;
+export default ContactUsPage;

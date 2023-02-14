@@ -1,5 +1,5 @@
 import React from "react";
-import "../bannerImage/bannerImage.styles.scss";
+import "./bannerImage.styles.scss";
 import bannerImage from "../../assets/images/press conference.jpg";
 import circleWBg from "../../assets/images/ngMap.png";
 import circle from "../../assets/images/circle1.webp";

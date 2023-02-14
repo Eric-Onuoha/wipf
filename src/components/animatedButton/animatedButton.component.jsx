@@ -1,6 +1,6 @@
 import React from "react";
 import rightArrow from "../../assets/images/arrowRightWhite.png";
-import "../animatedButton/animatedButton.styles.scss";
+import "./animatedButton.styles.scss";
 
 const AnimatedButton = (prop)=>{
     return(

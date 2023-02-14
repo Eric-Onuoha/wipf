@@ -1,5 +1,5 @@
 import React from "react";
-import "../bannerText/bannerText.styles.scss";
+import "./bannerText.styles.scss";
 
 const BannerText = (prop)=>{
     return(

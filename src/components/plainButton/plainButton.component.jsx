@@ -2,7 +2,7 @@ import React from "react";
 // import rightArrow from "../../assets/images/arrowRight.png";
 import rightArrowD from "../../assets/images/arrowRightDark.png";
 import rightArrowW from "../../assets/images/arrowRightWhite.png";
-import "../plainButton/plainButton.styles.scss";
+import "./plainButton.styles.scss";
 
 const PlainButton = (prop)=>{
     return(
