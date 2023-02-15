@@ -10,6 +10,9 @@ const WIPFTeamPreview = () =>{
         <div id="WIPFTeamPreviewComponent">
             <div id="teamIntro">
                 <MiniSectionIntro sectionTitle="Our Vibrant Team"></MiniSectionIntro>
+                <SectionIntro header="Our Vibrant Team"></SectionIntro>
+                <p>Explicabo impedit tempora repudiandae vitae nemo eligendi natus voluptate labore magnam animi molestiae. Architecto saepe perspiciatis hic debitis rerum!</p>
+                <AnimatedButton text="Join Our Team "></AnimatedButton>
             </div>
             <div id="teamImages">
                 <TeamImages></TeamImages>
