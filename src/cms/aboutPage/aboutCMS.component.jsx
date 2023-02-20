@@ -1,26 +1,41 @@
-import { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { addCollectionAndDocuments } from "../../firestore/postToFirestore.utils";
-import { updateAboutWIPF } from "../../reduxStore/actionDispatches";
+import React, { useState } from "react";
+import { uploadDocWithImage } from "../../firestore/uploadImage.utils";
+import { DefaultEditor } from 'react-simple-wysiwyg';
+
 
 const AboutCMS = () => {
 
-    const dispatch = useDispatch();
-
     const [formFields, setFormFields] = useState({});
     const {intro, content, image} = formFields;
+    const [imageUpload, setImageUpload] = useState(null);
+    const [html, setHtml] = useState(" ");
+
 
     const handleChange = (e) => {
         const {name, value} = e.target;
         setFormFields({...formFields, [name]:value});
+
+        if(e.target.files !== null) {
+            setImageUpload(e.target.files[0]);
+        }
     }
 
+    const handleReportChange = (e) => {
+        const {name, value} = e.target;
+        setHtml(value);
+        setFormFields({...formFields, [name]:value});
+      }
+
     const handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault();    
+        
+        if(formFields[0] === " "){
+            delete formFields[0];
+        }
+
         try{
-            dispatch(updateAboutWIPF(formFields));
-            addCollectionAndDocuments("aboutUs", "About", formFields, false);
-        } catch (err){
+            uploadDocWithImage(imageUpload, "aboutUs", "About", formFields, false);          
+        } catch(err){
             console.log(err);
         }
     }
@@ -40,11 +55,11 @@ const AboutCMS = () => {
                 <br />
                 <label>Content</label>
                 <br />
-                <textarea onChange={handleChange} name="content" cols={60} rows={3} value={content}></textarea>
+                <DefaultEditor name='content' value={html} onChange={handleReportChange} />
                 <br />
-                <label>Image Url</label>
+                <label>Upload Image</label>
                 <br />
-                <textarea onChange={handleChange} name="image" cols={60} rows={3} value={image}></textarea>
+                <input required onChange={handleChange} type="file" name="image"/>
                 <br />
                 <button>Update About WIPF</button>
             </form>

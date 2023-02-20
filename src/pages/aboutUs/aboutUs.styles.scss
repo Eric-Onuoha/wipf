@@ -1,3 +1,11 @@
 #aboutUsPage{
     padding-top: 6.5em;
+
+    #principlesPreviewComponent{
+        padding: 0 80px;
+        display: grid;
+        column-gap: 50px;
+        row-gap: 50px;
+        margin-bottom: 40px;
+    }
 }

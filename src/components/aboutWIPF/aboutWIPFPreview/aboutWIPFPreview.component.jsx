@@ -1,7 +1,6 @@
 import "./aboutWIPFPreview.styles.scss";
-
+import parse from "html-react-parser";
 import MiniSectionIntro from "../../miniSectionIntro/miniSectionIntro.component";
-import Principles from "../../principles/principles.component";
 import AboutUsImage from "../../../assets/images/press conference.jpg";
 
 
@@ -18,16 +17,14 @@ const AboutWIPFPreview = ({aboutContent}) => {
             </div>
 
             <div id="content">
-              <div id="aboutUsImage"><img src={AboutUsImage} alt="" /></div>
+              <div id="aboutUsImage"><img src={about.image} alt="" /></div>
 
                 <div>
                   <div id="textContent">
-                    <h2>{about.intro}</h2>{about.content}
+                    <h2>{parse(about.intro)}</h2>{parse(about.content)}
                   </div>
-                  <Principles></Principles>
               </div>
             </div>
-
         </div>
       ))}
       </div>

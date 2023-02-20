@@ -9,7 +9,7 @@ const AboutWIPF = () => {
     for (const about in aboutDB){
         aboutContent.push(aboutDB[about]);
     }    
-
+    console.log(aboutContent);
 
     return(
         <AboutWIPFPreview aboutContent = {aboutContent}></AboutWIPFPreview>

@@ -17,16 +17,15 @@ const MandateCMS = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(updateMandate(formFields));
-    }
 
-    const mandate = useSelector((state) => state.mandate.mandate);
-
-    useEffect(() => {
-        if(Object.keys(mandate).length !== 0){
-            addCollectionAndDocuments("aboutUs", "Mandate", mandate, false);
+        try{
+            dispatch(updateMandate(formFields));
+            addCollectionAndDocuments("aboutUs", "Mandate", formFields, false);
+        } catch (err){
+            console.log(err);
         }
-    }, [mandate]);
+
+    }
 
     return(        
         <div>

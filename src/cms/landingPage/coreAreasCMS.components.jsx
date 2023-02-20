@@ -18,16 +18,15 @@ const CoreAreasCMS = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(updateCoreAreas(formFields));
+        try{
+            dispatch(updateCoreAreas(formFields));
+            addCollectionAndDocuments("LandingPage", "CoreAreas", formFields, false);
+        } catch (err){
+            console.log(err);
+        }
+
     }
 
-    const coreAreas = useSelector((state) => state.coreAreas.coreAreas);
-
-    useEffect(() => {
-        if(coreAreas.length !== 0){
-            addCollectionAndDocuments("LandingPage", "CoreAreas", coreAreas, false);
-        }
-    }, [coreAreas]);
 
     return(        
         <div>

@@ -23,10 +23,10 @@ const Footer = () =>{
                         <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script> 
                         <Timeline/>  
                     </div>
-                    {/* <div id="instagram">
+                    <div id="instagram">
                         <p className="p3">Follow on Instagram</p>
                         <InstagramEmbed url="https://www.instagram.com/p/ClOEgO4Ko-e/" height={54} />
-                    </div> */}
+                    </div>
                 </div>
                 <div id="footerQuickLinks">
                     <MiniSectionIntro sectionTitle="Quick Links"></MiniSectionIntro>
