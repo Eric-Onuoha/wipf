@@ -24,7 +24,8 @@ const AboutWIPFPreview = ({aboutContent}) => {
 
                 <div>
                   <div id="textContent">
-                    <h2>{parse(about.intro)}</h2>{parse(about.content)}
+                    <h2>{parse(about.intro)}</h2>
+                    <p className="p1">{parse(about.content)}</p>
                   </div>
               </div>
             </div>

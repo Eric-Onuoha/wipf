@@ -8,7 +8,7 @@ const PrinciplesPreview = ({ principles }) => {
 
   const principleTitles = Object.keys(principles);
   const principleContent = Object.values(principles);
-  const principleColors = ["#FC6539","#FEA444","#FEA444","#FC6539"]
+  const principleColors = ["#FC6539","#FEA444","#FC6539","#FEA444"];
 
   return (
     <div id="principlesPreviewComponent">

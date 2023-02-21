@@ -35,7 +35,7 @@ const ContactDetails = () => {
                     <div>
                         <h2>Address</h2>
                         <p className="p2">Amb. Albert I. Osakwe House, 1473 Inner Block St, Central Business Dis 900103, Abuja</p>
-                        <a className="p2" href="#">View on google</a>
+                        <a className="p2" href="https://goo.gl/maps/5QnwHgaYnLqN2X6p6" target="_blank">View on google</a>
                     </div>
                 </div>
             </div>

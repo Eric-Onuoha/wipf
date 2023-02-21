@@ -1,7 +1,9 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { Outlet, NavLink, } from "react-router-dom";
+import { Outlet, NavLink, useNavigate, } from "react-router-dom";
 import "./navigationBar.styles.scss";
 import "../../index.css";
+import { handleNavigation } from "../../utils/handleNavigation.component";
+
 
 import Logo from "../../assets/images/wipfnewlogo.png";
 import HamburgerMenu from "../../assets/images/hamburgermenu.png";
@@ -9,11 +11,12 @@ import HamburgerMenu from "../../assets/images/hamburgermenu.png";
 import AnimatedButton from "../animatedButton/animatedButton.component";
 
 const NavigationBar = (props) => {
-  
+  const navigate = useNavigate();
   const [showNav, setShowNav] = useState("navItemsMobile");
   const [navFocus, setNavFocus] = useState(" ");
 
   const toggleMenu = () => {
+
     (showNav === "navItemsMobile" ? setShowNav(" ") : setShowNav("navItemsMobile"));
     (navFocus === " " ? setNavFocus("navModal") : setNavFocus(" "));
   }
@@ -40,9 +43,10 @@ const NavigationBar = (props) => {
           <NavLink activeclassname="active" to={"contactus"} onClick={toggleMenu}><ul>Contact Us</ul></NavLink>
           {/* <NavLink to={"programsupload"}><ul>Upload Programs</ul></NavLink> */}
         </div>
-        <div className="nwaLink">
+        <a href="https://www.nigerianwomenaspirants.com/" target="_blank"><div className="nwaLink">
           <AnimatedButton text= "Nigerian Women Aspirants "/>
         </div>
+        </a>
       </div>
       <Outlet/>
     </Fragment>
