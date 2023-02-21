@@ -1,8 +1,7 @@
 import "./newsPreviews.styles.scss";
 
-import NewsImage from "../../../assets/images/press conference.jpg";
 import Divider from "../../../assets/images/divider.webp";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import OvalButton from "../../ovalButton/ovalButton.component";
 
 const NewsPreviews = ({newsContent}) => {
@@ -34,11 +33,21 @@ const NewsPreviews = ({newsContent}) => {
     return (
         <div id="newsPreviewsComponent" >
             {newsContent.slice(x,y).map((news)=>(
-
-                <div id="newsImageCover">
-                    <img id="newsImage" src={NewsImage} alt="" />
-                </div>
-
+                
+                    <div id="newsImageCover">
+                        {(news.videoLink ? (
+                        <iframe src={news.videoLink} 
+                            width = "100%"
+                            height="100%"
+                            frameborder='0'
+                            allow='autoplay; encrypted-media'
+                            allowfullscreen
+                            title='video'>
+                        </iframe>
+                        ):(
+                            <img id="newsImage" src={news.image} alt="" />
+                        ))}
+                    </div>
             ))}
 
 
