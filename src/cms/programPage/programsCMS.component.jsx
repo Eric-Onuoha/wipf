@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { DefaultEditor } from 'react-simple-wysiwyg';
-import { addPrograms } from '../../reduxStore/actionDispatches';
 import { useDispatch } from "react-redux";
-import { addCollectionAndDocuments } from "../../firestore/postToFirestore.utils";
+import { uploadDocWithImage } from '../../firestore/uploadImage.utils';
 
-import { getMultipleDocuments } from '../../firestore/getFromFirestore.utils';
 
 const ProgramsCMS = () => {
   const dispatch = useDispatch();
   const [html, setHtml] = useState(" ");
   const [formFields, setFormFields] = useState(" ");
   const {title, date, theme, image} = formFields;
+  const [imageUpload, setImageUpload] = useState(null);
+
   
   const handleReportChange = (e) => {
     const {name, value} = e.target;
@@ -20,7 +20,11 @@ const ProgramsCMS = () => {
 
   const handleChange = (e) => {
     const {name, value} = e.target;
-    setFormFields({...formFields, [name]:value})
+    setFormFields({...formFields, [name]:value});
+
+    if(e.target.files !== null) {
+      setImageUpload(e.target.files[0]);
+    }
   }
 
   const handleSubmit = (e) => {
@@ -31,8 +35,7 @@ const ProgramsCMS = () => {
     }
 
     try{
-      addCollectionAndDocuments("Programs", undefined, formFields);
-      getMultipleDocuments("Programs").then((ProgramsDB) => dispatch(addPrograms(ProgramsDB)));
+      uploadDocWithImage(imageUpload, "Programs", undefined, formFields);          
     } catch(err){
       console.log(err);
     }  
@@ -60,9 +63,9 @@ const ProgramsCMS = () => {
           <br />
           <input onChange={handleChange} name='ProgramTheme' value={theme} type="text" />
           <br />
-          <label htmlFor="ProgramImage">Program Image Url</label>
+          <label htmlFor="ProgramImage">Upload Program Image</label>
           <br />
-          <input onChange={handleChange} name='ProgramImage' value={image} type="text" />
+          <input required onChange={handleChange} type="file" name="image"/>
           <br />
           <label htmlFor="ProgramReport">Program Report</label>
           <DefaultEditor name='ProgramReport' value={html} onChange={handleReportChange} />

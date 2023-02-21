@@ -13,7 +13,7 @@ const ProgramsPreview = ({programs}) =>{
         <div id="latestProgramsPreviewComponent">
           {programs.map((program) => (
             <div className="latestProgram" key={Math.random(0, 10)}>
-              <div className="cardTop">
+              <div className="cardTop" style={{backgroundImage: `url(${program.image})`}}>
                 <div className="date">
                   <h2 className="day">30</h2>
                   <h2 className="month">January</h2>

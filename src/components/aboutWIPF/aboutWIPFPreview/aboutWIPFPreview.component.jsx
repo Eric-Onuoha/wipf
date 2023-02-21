@@ -17,7 +17,10 @@ const AboutWIPFPreview = ({aboutContent}) => {
             </div>
 
             <div id="content">
-              <div id="aboutUsImage"><img src={about.image} alt="" /></div>
+              <div id="aboutUsImage">
+                <img src={about.image} alt="" />
+                  <p>Barr. Ebere Ifendu, President, Women In Politics Forum</p>
+              </div>
 
                 <div>
                   <div id="textContent">

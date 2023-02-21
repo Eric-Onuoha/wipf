@@ -51,11 +51,11 @@ const AboutCMS = () => {
             <form onSubmit={handleSubmit}>
                 <label>Introduction</label>
                 <br />
-                <textarea onChange={handleChange} name="intro" cols={60} rows={3} value={intro}></textarea>
+                <textarea required onChange={handleChange} name="intro" cols={60} rows={3} value={intro}></textarea>
                 <br />
                 <label>Content</label>
                 <br />
-                <DefaultEditor name='content' value={html} onChange={handleReportChange} />
+                <DefaultEditor required name='content' value={html} onChange={handleReportChange} />
                 <br />
                 <label>Upload Image</label>
                 <br />
