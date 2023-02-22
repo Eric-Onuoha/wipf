@@ -2,10 +2,24 @@
     padding-top: 6.5em;
 
     #principlesPreviewComponent{
-        padding: 0 80px;
+        padding: 0 40px;
         display: grid;
         column-gap: 50px;
         row-gap: 50px;
         margin-bottom: 40px;
+    }
+}
+
+@media(min-width:900px){
+    #aboutUsPage{
+        padding-top: 6.5em;
+    
+        #principlesPreviewComponent{
+            padding: 0 80px;
+            display: grid;
+            column-gap: 50px;
+            row-gap: 50px;
+            margin-bottom: 40px;
+        }
     }
 }

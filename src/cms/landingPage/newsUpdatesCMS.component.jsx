@@ -67,15 +67,14 @@ const NewsUpdatesCMS = () => {
                 <label>Title</label>
                 <br />
                 <textarea required onChange={handleChange} name="title" cols={60} rows={2} value={title}></textarea>
-
+                <br />
+                <br />
+                <label>News Report Link</label>
+                <br />
+                <textarea required onChange={handleChange} name="link" cols={60} rows={2} value={link}></textarea>
 
                 {(type === "News Article" ? (
                     <div>
-                        <br />
-                        <br />
-                        <label>News Report Link</label>
-                        <br />
-                        <textarea required onChange={handleChange} name="link" cols={60} rows={2} value={link}></textarea>
                         <br />
                         <label>Upload Image for the Report</label>
                         <br />

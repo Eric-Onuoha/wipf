@@ -1,8 +1,9 @@
 import "./newsPreviews.styles.scss";
 
 import Divider from "../../../assets/images/divider.webp";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import OvalButton from "../../ovalButton/ovalButton.component";
+import parse from "html-react-parser";
 
 const NewsPreviews = ({newsContent}) => {
     const newsMin = 0;
@@ -58,10 +59,10 @@ const NewsPreviews = ({newsContent}) => {
                 </div>
                 <div id="newsPreview">
                     <div id="newsPreviewCover">
-                    <p className="p1">{news.summary}</p> 
+                    <p className="p1">{parse(news.summary)}</p> 
                         <div id="newsMetadata">
                             <img src={Divider} alt="" />
-                            <a href={news.link} target="_blank"><h4 className="h4">{news.source}</h4></a>
+                            <a href={news.link} target="_blank" rel="noreferrer"><h4 className="h4">{news.source}</h4></a>
                             <h5 className="h5">{news.date}</h5>
                         </div>
                     </div>                       

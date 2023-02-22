@@ -12,14 +12,13 @@
         padding: 50px 0 0 0;
 
         #intro{
-            width: 90%;
+            width: 100%;
 
             span{
                 background: linear-gradient(to top right, #FEA244, #FC693A);
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
-
         }
 
         #content{
@@ -38,13 +37,12 @@
                     font-weight: 700;
                     color: #909090;
                     text-transform: uppercase;
-                    margin: 4px;
                     text-align: center;
                   }
 
                 img{
-                    width: 300px;
-                    height: 300px;
+                    width: 370px;
+                    height: 250px;
                     display: block;
                     object-fit: cover;
                     margin-bottom: 12px;
@@ -58,9 +56,11 @@
 
                 p{
                     font-size: 17px;
+                    margin-top: 10px;
                 }
 
                 h2{
+                    margin-top: 20px;
                     font-family: 'Yeseva One', cursive;
                     font-size: 21px;
                     line-height: 28px;
@@ -133,6 +133,12 @@
                         height: 400px;
                         display: block;
                         object-fit: cover;
+                    }
+                }
+
+                #textContent{
+                    h2{
+                        margin-top: 10px;
                     }
                 }
             }

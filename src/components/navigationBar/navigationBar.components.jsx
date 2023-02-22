@@ -43,7 +43,8 @@ const NavigationBar = (props) => {
           <NavLink activeclassname="active" to={"contactus"} onClick={toggleMenu}><ul>Contact Us</ul></NavLink>
           {/* <NavLink to={"programsupload"}><ul>Upload Programs</ul></NavLink> */}
         </div>
-        <a href="https://www.nigerianwomenaspirants.com/" target="_blank"><div className="nwaLink">
+        <a className="nwaLink" href="https://www.nigerianwomenaspirants.com/" target="_blank">
+          <div className="nwaLink">
           <AnimatedButton text= "Nigerian Women Aspirants "/>
         </div>
         </a>

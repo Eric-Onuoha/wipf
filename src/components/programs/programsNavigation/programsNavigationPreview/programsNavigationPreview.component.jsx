@@ -13,6 +13,7 @@ const ProgramsNavigationPreview = ({ programs }) => {
           placeholder="Search Programs by Title"
         />
 
+      <div id="searchCriteria">
       <select name="theme" id="searchTheme">
         <option disabled selected value="search">Search by Theme</option>
         <option value="Political Advocacy">Political Advocacy</option>
@@ -26,6 +27,7 @@ const ProgramsNavigationPreview = ({ programs }) => {
           <option value={program.year}>{program.year}</option>
         ))}
       </select>
+      </div>
 
       </div>
 

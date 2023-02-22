@@ -14,13 +14,19 @@ const WIPFTeamPreview = () =>{
             <div id="teamIntro">
                 <MiniSectionIntro sectionTitle="Our Vibrant Team"></MiniSectionIntro>
                 <SectionIntro header="Our Vibrant Team"></SectionIntro>
-                <p className="p2">Women in Politics forum is staffed by brilliant young minds with expertise in Accounting, Program Development, Communication and Design, Politics and many more. Want to join our team? Keep an eye out on this page for opennings!</p>
+                <p id="joinUs" className="p2">Women in Politics forum is staffed by brilliant young minds with expertise in Accounting, Program Development, 
+                Communication and Design, Politics and many more. Want to join our team? Keep an eye out on this page for opennings!</p>
                 <span onClick={() => navigate(handleNavigation("/contactus"))}>
                 <AnimatedButton text="Join Our Team "></AnimatedButton>
                 </span>
             </div>
             <div id="teamImages">
                 <TeamImages></TeamImages>
+                <p id="joinUs" className="p2">Women in Politics forum is staffed by brilliant young minds with expertise in Accounting, Program Development, 
+                Communication and Design, Politics and many more. Want to join our team? Keep an eye out on this page for opennings!</p>
+                <span onClick={() => navigate(handleNavigation("/contactus"))}>
+                <AnimatedButton text="Join Our Team "></AnimatedButton>
+                </span>
             </div>
         </div>
     )
