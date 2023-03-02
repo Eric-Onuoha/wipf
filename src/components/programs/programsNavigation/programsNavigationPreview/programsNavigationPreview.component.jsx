@@ -13,21 +13,21 @@ const ProgramsNavigationPreview = ({ programs }) => {
           placeholder="Search Programs by Title"
         />
 
-      <div id="searchCriteria">
-      <select name="theme" id="searchTheme">
-        <option disabled selected value="search">Search by Theme</option>
-        <option value="Political Advocacy">Political Advocacy</option>
-        <option value="Mentorship & Training">Mentorship & Training</option>
-        <option value="Socio-Political Activism">Socio-Political Activism</option>
-      </select>
+        <div id="searchCriteria">
+        <select name="theme" id="searchTheme">
+          <option disabled selected value="search">Search by Theme</option>
+          <option value="Political Advocacy">Political Advocacy</option>
+          <option value="Mentorship & Training">Mentorship & Training</option>
+          <option value="Socio-Political Activism">Socio-Political Activism</option>
+        </select>
 
-      <select name="year" id="searchYear">
-      <option disabled selected value="search">Search by Year</option>
-        {programs.map((program)=>(
-          <option value={program.year}>{program.year}</option>
-        ))}
-      </select>
-      </div>
+        <select name="year" id="searchYear">
+        <option disabled selected value="search">Search by Year</option>
+          {programs.map((program)=>(
+            <option value={program.year}>{program.year}</option>
+          ))}
+        </select>
+        </div>
 
       </div>
 
