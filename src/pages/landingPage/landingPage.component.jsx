@@ -48,7 +48,7 @@ const LandingPage = () => {
       </div>
 
       <div className="latestProgramsDiv">
-        <Programs/>
+        <Programs number = "4"/>
       </div>
 
       <div className="sponsorsDiv">
