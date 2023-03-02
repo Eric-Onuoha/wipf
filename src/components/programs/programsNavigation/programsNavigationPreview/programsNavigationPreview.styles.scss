@@ -1,6 +1,5 @@
 #programsNavigationPreviewComponent{
-    margin-top: 50px;
-    
+    margin-top: 30px;    
 
     #programSearch{
         width: 100%;
@@ -52,7 +51,8 @@
 
 @media(min-width:900px){
     #programsNavigationPreviewComponent{
-    
+        margin-top: 50px;
+
         #programSearch{
             grid-template-columns: 0.4fr 0.6fr;
             column-gap: 100px;

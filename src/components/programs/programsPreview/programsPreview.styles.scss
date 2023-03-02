@@ -1,8 +1,8 @@
 #latestProgramsPreviewComponent{
     display: grid;
-    grid-template-columns: 1fr;
-    margin-bottom: 150px;
-    row-gap: 250px;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+    row-gap: 150px;
     background-color: #FFFFFF;
 
     .latestProgram{
@@ -10,20 +10,20 @@
         margin: 0 auto;
 
         .cardTop{
-            height: 300px;
-            width: 325px;
+            height: 160px;
+            width: 173px;
             background-size: cover;
             background-repeat: no-repeat;
-            padding: 22px 0 0 26px;
+            padding: 11px 0 0 11px;
 
             .date{
-                width: 90px;
-                height: 80px;
+                width: 55px;
+                height: 50px;
                 background-color: #FC6539;
                 overflow: hidden;
                 text-align: center;
                 color: #FFFFFF;
-                padding-top: 6px;
+                padding-top: 5px;
 
                 h2{
                     padding: 0;
@@ -31,45 +31,41 @@
                 }
         
                 .day{
-                    font-weight: 400;
+                    font-weight: 300;
                     font-family: "Yeseva One", "sans-serrif";
-                    font-size: 28px;
-                    line-height: 28px;
+                    font-size: 16px;
+                    line-height: 15px;
                 }
         
                 .month{
                     display: block;
                     font-family: "Roboto", "sans-serrif";
-                    font-size: 13px;
-                    line-height: 20px;
-                    font-weight: 500;
-                    letter-spacing: 1px;
+                    font-size: 12px;
+                    line-height: 12px;
+                    font-weight: 300;
+                    letter-spacing: 1.2px;
                 }
         
                 .year{
-                    font-weight: 400;
+                    font-weight: 300;
                     font-family: "Yeseva One", "sans-serrif";
-                    font-size: 22px;
-                    line-height: 28px;
+                    font-size: 14px;
+                    line-height: 16px;
                 }
             }
         }
     
         .cardBottom{
             background-color: #F7F7F7;
-            width: 270px;
+            width: 142px;
             position: absolute;
-            top: 200px;
-            left: 17px;
-            padding: 25px 25px 0 25px;
+            top: 85px;
+            left: 8.5px;
+            padding: 12px 12px 0 12px;
             cursor: pointer;
 
-            p{
-                display: -webkit-box;
-                -webkit-line-clamp: 4;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-                text-overflow: ellipsis;
+            .content{
+                display: none
             }
 
             .cardReadMore{
@@ -77,38 +73,43 @@
             }
 
             &:hover{
-                top: 160px;
+                top: 75px;
 
                 .cardReadMore{
                     display: block;
-                    padding-bottom: 25px;
+                    padding-bottom: 12.5px;
                 }
             }    
 
             .theme{
                 font-family: "Roboto", "Sans-serrif";
                 font-size: 13px;
-                line-height: 24px;
+                line-height: 12px;
                 font-weight: 600;
-                letter-spacing: 0.7px;
+                letter-spacing: 0.4px;
                 width:fit-content;
-                padding: 3px 8px;
+                padding: 2px 4px;
                 color: #EE6B44;
                 background-color: #E5E5E8;
             }
 
             .title{
                 font-family: "Yeseva One", "Sans-serrif";
-                font-size: 25px;
-                line-height: 35px;
-                font-weight: 400;
+                font-size: 18px;
+                line-height: 18px;
+                font-weight: 300;
+                display: -webkit-box;
+                -webkit-line-clamp: 6;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
 
             .content{
                 font-family: "Roboto", "Sans-serrif";
-                font-size: 15px;
-                line-height: 27px;
-                font-weight: 400;
+                font-size: 14px;
+                line-height: 14px;
+                font-weight: 200;
             }
 
             #plainButton{
@@ -122,12 +123,125 @@
 @media(min-width: 900px){
     #latestProgramsPreviewComponent{
         column-gap: 24px;
-        grid-template-columns: 1fr 1fr 1fr;
-        padding: 0 10%;
+        margin: 60px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 0 5%;
+        display: grid;
+        margin-bottom: 150px;
+        row-gap: 250px;
+        background-color: #FFFFFF;
 
         .latestProgram{
             position: relative;
             margin: 0;
+
+            .cardTop{
+                height: 300px;
+                width: 325px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                padding: 22px 0 0 26px;
+    
+                .date{
+                    width: 90px;
+                    height: 80px;
+                    background-color: #FC6539;
+                    overflow: hidden;
+                    text-align: center;
+                    color: #FFFFFF;
+                    padding-top: 6px;
+    
+                    h2{
+                        padding: 0;
+                        margin: 0;
+                    }
+            
+                    .day{
+                        font-weight: 400;
+                        font-family: "Yeseva One", "sans-serrif";
+                        font-size: 28px;
+                        line-height: 28px;
+                    }
+            
+                    .month{
+                        display: block;
+                        font-family: "Roboto", "sans-serrif";
+                        font-size: 13px;
+                        line-height: 20px;
+                        font-weight: 500;
+                        letter-spacing: 1px;
+                    }
+            
+                    .year{
+                        font-weight: 400;
+                        font-family: "Yeseva One", "sans-serrif";
+                        font-size: 22px;
+                        line-height: 28px;
+                    }
+                }
+            }
+        
+            .cardBottom{
+                background-color: #F7F7F7;
+                width: 270px;
+                position: absolute;
+                top: 200px;
+                left: 17px;
+                padding: 25px 25px 0 25px;
+                cursor: pointer;
+    
+                .content{
+                    display: -webkit-box;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+    
+                .cardReadMore{
+                    display: none;
+                }
+    
+                &:hover{
+                    top: 160px;
+    
+                    .cardReadMore{
+                        display: block;
+                        padding-bottom: 25px;
+                    }
+                }    
+    
+                .theme{
+                    font-family: "Roboto", "Sans-serrif";
+                    font-size: 13px;
+                    line-height: 24px;
+                    font-weight: 600;
+                    letter-spacing: 0.7px;
+                    width:fit-content;
+                    padding: 3px 8px;
+                    color: #EE6B44;
+                    background-color: #E5E5E8;
+                }
+    
+                .title{
+                    font-family: "Yeseva One", "Sans-serrif";
+                    font-size: 25px;
+                    line-height: 35px;
+                    font-weight: 400;
+                }
+    
+                .content{
+                    font-family: "Roboto", "Sans-serrif";
+                    font-size: 15px;
+                    line-height: 27px;
+                    font-weight: 400;
+                }
+    
+                #plainButton{
+                    height: 40px;
+                    border: 1.5px solid #EE6B44;
+                }
+            }
         }
     }
 }
