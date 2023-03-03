@@ -4,7 +4,7 @@ import ProgramsPreview from "./programsPreview/programsPreview.component";
 import { useSelector } from 'react-redux';
 
 
-const Programs = () => {
+const Programs = ({number}) => {
     const programDetails = useSelector((state) => state.programs.programs);
     const programs = [];
     for (const program in programDetails){
@@ -13,7 +13,7 @@ const Programs = () => {
 
     return(
         <div id='latestProgramsComponent'>
-            <ProgramsPreview programs = {programs}/>
+            <ProgramsPreview programs = {programs} number = {number}/>
         </div>
     )
 };

@@ -6,12 +6,12 @@ import parse from "html-react-parser";
 // import programImage from "../../assets/images/press\ conference.jpg";
 import PlainButton from "../../plainButton/plainButton.component";
 
-const ProgramsPreview = ({programs, number}) =>{
+const ProgramsPreview = ({programs, number = programs.length}) =>{
     const navigate = useNavigate();
-
+    console.log(number);
     return (
         <div id="latestProgramsPreviewComponent">
-          {programs.map((program) => (
+          {programs.slice(0,number).map((program) => (
             <div className="latestProgram" key={Math.random(0, 10)}>
               <div className="cardTop" style={{backgroundImage: `url(${program.image})`}}>
                 <div className="date">
