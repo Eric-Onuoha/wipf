@@ -37,8 +37,8 @@ function App() {
   }, []);
 
   useEffect(() => {
-      getMultipleDocuments("Programs").then((ProgramsDB) => dispatch(addPrograms(ProgramsDB)));
-  }, []);
+    getMultipleDocuments("Programs").then((ProgramsDB) => dispatch(addPrograms(ProgramsDB)));
+}, []);
 
   useEffect(()=> {
     getMultipleDocuments("aboutUs").then((MandateDB) => dispatch(updateMandate(MandateDB)));

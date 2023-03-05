@@ -30,6 +30,15 @@ export const addCollectionAndDocuments = async (CollectionKey, docKey, docToAdd,
         docKey = objectHash.MD5(docToAdd);
         docToAdd["id"] = docKey;
     }
+
+    if(docToAdd.ProgramDate && docToAdd.ProgramDate !== undefined){
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        const date = new Date(docToAdd.ProgramDate);
+        docToAdd["day"] = date.getDay();
+        docToAdd["month"] = months[date.getMonth()];
+        docToAdd["year"] = date.getFullYear();
+    }
+
     await setDoc(doc(db, CollectionKey, docKey), docToAdd, mergeStatus);
     console.log("Added Succesfully");
 }

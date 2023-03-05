@@ -5,11 +5,17 @@ import ViewOne from "../viewOne/viewOne.component";
 
 const ViewPrograms = () => {
     const programsDB = useSelector((state) => state.programs.programs);
+
     const pathName = window.location.pathname;
     const paths = pathName.split("/");
     const path = paths[2];
-    console.log(path);
+
+    const programs = [];
+    for (const program in programsDB){
+      programs.push(programsDB[program]);
+    }
+
     return(
-        <ViewOne content = {programsDB[path]}></ViewOne>
+        <ViewOne content = {programs} path = {path}></ViewOne>
     )
 }; export default ViewPrograms;

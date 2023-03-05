@@ -35,7 +35,8 @@ const ProgramsCMS = () => {
     }
 
     try{
-      uploadDocWithImage(imageUpload, "Programs", undefined, formFields);          
+      uploadDocWithImage(imageUpload, "Programs", undefined, formFields);
+        alert("Program Added");  
     } catch(err){
       console.log(err);
     }  
@@ -57,7 +58,7 @@ const ProgramsCMS = () => {
           <br />
           <label htmlFor="ProgramDate">Date of Program</label>
           <br />
-          <input onChange={handleChange} name='ProgramDate' value={date} type="text" />
+          <input onChange={handleChange} name='ProgramDate' value={date} type="date" />
           <br />
           <label htmlFor="ProgramTheme">Program Theme</label>
           <br />
