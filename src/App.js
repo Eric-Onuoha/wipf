@@ -60,7 +60,9 @@ function App() {
           <Route path="contactus" element={<ContactUsPage/>}></Route>
           <Route path="aboutus" element={<AboutUs/>}></Route>
           <Route path="aboutus/*" element={<ViewArea/>}></Route>
-          <Route path="programs" element={<Programs/>}></Route>
+          <Route path="programs" element={<Programs/>}>
+            <Route path="programs?" element={<Programs/>}></Route>
+          </Route>
           <Route path="programs/*" element={<ViewPrograms/>}></Route>
           <Route path="landingcms" element={<CoreAreasCMS/>}></Route>
           <Route path="newsupdatescms" element={<NewsUpdatesCMS/>}></Route>
