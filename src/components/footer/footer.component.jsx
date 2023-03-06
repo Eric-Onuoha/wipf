@@ -2,19 +2,23 @@ import "./footer.styles.scss";
 import {Timeline} from 'react-twitter-widgets';
 import { InstagramEmbed } from 'react-social-media-embed';
 import MiniSectionIntro from "../miniSectionIntro/miniSectionIntro.component";
-
+import { useNavigate } from "react-router-dom";
 import WIPFLogo from "../wipfLogo/wipfLogo.component";
 import TwitterLogo from "../../assets/images/twitterLogo.png"
 import InstagramLogo from "../../assets/images/instagramLogo.png"
 
 const Footer = () =>{
+    const navigate = useNavigate();
     return(
         <div id="footerComponent">
             <div id="footerContentArea">
                 <div id="footerOutro">
                     <div>
                     <WIPFLogo />
-                    <p className="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste harum nihil maxime sit quas non dicta numquam minima fuga tempora quae dolores dolor, pariatur ad porro perspiciatis illum aperiam reiciendis.</p>
+                    <p className="p2">
+                    strengthenning the voices and capacity of female politicians 
+                    as well as organizations and individuals working to influence and advocate for women’s participation in politics, towards achieving an equitable society and democratic governance for women.
+                        </p>
                     </div>
                 </div>
                 <div id="footerSocials">
@@ -32,18 +36,18 @@ const Footer = () =>{
                     <MiniSectionIntro sectionTitle="Quick Links"></MiniSectionIntro>
                     <div id="link">
                         <div className="links">
-                            <a href="#"><p className="p2">Join Us</p></a>
-                            <a href="#"><p className="p2">Support</p></a>
-                            <a href="#"><p className="p2">Programs</p></a>
-                            <a href="#"><p className="p2">Contact Us</p></a>
-                            <a href="#"><p className="p2">Contact Us</p></a>
+                            <a href="/"><p className="p2">Home</p></a>
+                            <a href="/contactus"><p className="p2">Contact Us</p></a>
+                            <a href="/programs"><p className="p2">Programs</p></a>
+                            <a href="/aboutus"><p className="p2">About Us</p></a>
+                            <a href="/aboutus/coreareas"><p className="p2">Core Areas</p></a>
                         </div>
                         <div className="links">
-                            <a href="#"><p className="p2">Join Us</p></a>
-                            <a href="#"><p className="p2">Support</p></a>
-                            <a href="#"><p className="p2">Programs</p></a>
-                            <a href="#"><p className="p2">Contact Us</p></a>
-                            <a href="#"><p className="p2">Contact Us</p></a>
+                            <a href="https://www.instagram.com/womeninpoliticsforum/" target="_blank"><p className="p2">Instagram</p></a>
+                            <a href="https://twitter.com/wipfng" target="_blank"><p className="p2">Twitter</p></a>
+                            <a href="https://www.youtube.com/@womenforum7614" target="_blank"><p className="p2">Youtube</p></a>
+                            <a href="https://www.facebook.com/WIPFNg" target="_blank"><p className="p2">Facebook</p></a>
+                            <a href="https://www.nigerianwomenaspirants.com/" target="_blank"><p className="p2">Aspirants</p></a>
                         </div>
                     </div>
                 </div>
