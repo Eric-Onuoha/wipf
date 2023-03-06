@@ -14,8 +14,8 @@ import AboutUs from "./pages/aboutUs/aboutUs.component";
 import Programs from "./pages/programs/programs.component";
 import NavigationBar from "./components/navigationBar/navigationBar.components";
 import Footer from "./components/footer/footer.component";
-import ViewArea from "./components/coreAreas/viewArea.component.jsx.jsx";
-import ViewPrograms from "./components/programs/viewPrograms.component";
+import ViewProgram from "./components/programs/viewProgram/viewProgram.component";
+import ViewArea from "./components/coreAreas/viewArea.component.jsx";
 
 import NewsUpdatesCMS from "./cms/landingPage/newsUpdatesCMS.component";
 import CoreAreasCMS from "./cms/landingPage/coreAreasCMS.components";
@@ -63,7 +63,7 @@ function App() {
           <Route path="programs" element={<Programs/>}>
             <Route path="programs?" element={<Programs/>}></Route>
           </Route>
-          <Route path="programs/*" element={<ViewPrograms/>}></Route>
+          <Route path="programs/*" element={<ViewProgram/>}></Route>
           <Route path="landingcms" element={<CoreAreasCMS/>}></Route>
           <Route path="newsupdatescms" element={<NewsUpdatesCMS/>}></Route>
           <Route path="programscms" element={<ProgramsCMS/>}></Route>
