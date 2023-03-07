@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { initializeApp } from "firebase/app";
 import {getStorage} from "firebase/storage";
-import {getDownloadURL, ref, uploadBytesResumable} from "firebase/storage";
+import {getDownloadURL, ref, uploadBytesResumable, uploadBytes} from "firebase/storage";
 import {v4} from "uuid";
 import { addCollectionAndDocuments } from "./postToFirestore.utils";
 
@@ -28,5 +29,57 @@ export const uploadDocWithImage = (fileToUpload, CollectionKey, docKey, docToAdd
                 addCollectionAndDocuments(CollectionKey, docKey, docToAdd, mergeStatus);
             });
         })
+        alert("Succesfully Added To Database"); 
 }
+
+export const uploadDocWithImages = (filesToUpload, CollectionKey, docKey, docToAdd, mergeStatus) => {
+        let imageList = [];
+        filesToUpload.forEach(fileToUpload => {
+            const reference = ref(Storage, `wipf/images/${CollectionKey}/${fileToUpload.name + v4()}`)
+            uploadBytes(reference, fileToUpload)
+            .then(snapshot => {
+            return getDownloadURL(snapshot.ref)
+            })
+            .then(downloadURL => {
+            console.log('Download URL', downloadURL)
+            imageList.push(downloadURL)
+            })
+        }); 
+
+        setTimeout(
+            function () {
+                console.log(imageList);
+                docToAdd["images"] = imageList;
+                console.log("doc", docToAdd);
+                addCollectionAndDocuments(CollectionKey, docKey, docToAdd, mergeStatus);
+            }
+            .bind(this),
+            10000
+        );
+}
+
+
+
+
+//     // let imageList = [];
+//     // filesToUpload.forEach(fileToUpload => {
+//     //     const fileRef = ref(Storage, `wipf/images/${CollectionKey}/${fileToUpload.name + v4()}`);
+//     //     const uploadTask = uploadBytesResumable(fileRef, fileToUpload)
+//     //         uploadTask.on("state_changed", (snapshot) => {}, (error) => {
+//     //             console.log("Error in image upload", error)
+//     //         }, ()=>{
+//     //             getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+//     //                 console.log(downloadURL);
+//     //                 // imageList.push(downloadURL);
+//     //             });
+//     //         })
+//     };
+
+//     // console.log(imageList);
+
+//     // docToAdd["image"] = ["one", "two", "three"];
+//     // addCollectionAndDocuments(CollectionKey, docKey, docToAdd, mergeStatus);
+//     alert("Succesfully Added To Database"); 
+
+// }
 

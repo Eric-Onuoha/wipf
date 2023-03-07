@@ -2,13 +2,12 @@
     padding-top: 6.2em;
     
     #viewProgramContent{
-
         #header{
             text-align: center;
             background-color: #001D23;
             width: 100%;
             color: #FFFFFF;
-            padding: 20px 0;
+            padding: 2px 0;
             overflow-x: hidden;
 
             #programImages{            
@@ -19,8 +18,8 @@
                 column-gap: 5px;
 
                 #headerImage{
-                    width: 700px;
-                    height: 400px;
+                    width: 500px;
+                    height: 250px;
                     object-fit: cover;
                 }
 
@@ -53,15 +52,15 @@
             #programTitle{
                 color: #FD793D;
                 font-family: 'Yeseva One', cursive;
-                font-size: 25px;
-                line-height: 28px;
+                font-size: 20px;
+                line-height: 20px;
                 text-transform: capitalize;
-                margin: 15px 0 0 0;
+                margin: 8px 0 0 0;
             }
 
             #programDate{
                 font-family: 'Roboto', sans-serif;
-                font-size: 14px;
+                font-size: 12px;
                 line-height: 14px;
                 font-weight: 700;
                 color: #909090;
@@ -70,7 +69,100 @@
             }
         }
         #body{
-            padding: 0 15vw 0 15vw;;
+            padding: 0 5vw;
+            
+            p{
+                font-family: 'Roboto', sans-serif;
+                font-size: 14px;
+                line-height: 16px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+@media(min-width:900px){
+    #viewProgramComponent{
+        padding-top: 6.2em;
+        
+        #viewProgramContent{
+    
+            #header{
+                text-align: center;
+                background-color: #001D23;
+                width: 100%;
+                color: #FFFFFF;
+                padding: 20px 0;
+                overflow-x: hidden;
+    
+                #programImages{            
+                    position: relative;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    justify-content: center;
+                    column-gap: 5px;
+    
+                    #headerImage{
+                        width: 700px;
+                        height: 400px;
+                        object-fit: cover;
+                    }
+    
+                    .next{
+                        position: absolute;
+                        background-color: #192A2D;
+                        z-index: 10;
+                        cursor: pointer;
+                        background-repeat: no-repeat;
+                        background-size: 25px;
+                        background-position: 10px 15px;
+                        height: 52px;
+                        width: 50px;
+                    }
+                    
+                    #left{
+                        top: 50%;
+                        left: 0;
+                        background-image: url("../../../assets/images/arrowLeftOrange.png");
+                    }
+    
+                    #right{
+                        top: 50%;
+                        right: 0;
+                        background-image: url("../../../assets/images/arrowRightOrange.png");
+                        background-position: 14px 15px;
+                    }
+                }
+    
+                #programTitle{
+                    color: #FD793D;
+                    font-family: 'Yeseva One', cursive;
+                    font-size: 25px;
+                    line-height: 28px;
+                    text-transform: capitalize;
+                    margin: 15px 0 0 0;
+                }
+    
+                #programDate{
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 14px;
+                    line-height: 14px;
+                    font-weight: 700;
+                    color: #909090;
+                    text-transform: uppercase;
+                    margin: 5px 0 0 0;
+                }
+            }
+            #body{
+                padding: 0 10vw;
+
+                p{
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 16.5px;
+                    line-height: 22px;
+                    font-weight: 400;
+                }
+            }
         }
     }
 }

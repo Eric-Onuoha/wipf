@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { DefaultEditor } from 'react-simple-wysiwyg';
 import { useDispatch } from "react-redux";
 import { uploadDocWithImage } from '../../firestore/uploadImage.utils';
+import { uploadDocWithImages } from '../../firestore/uploadImage.utils';
 
 
 const ProgramsCMS = () => {
@@ -10,7 +11,7 @@ const ProgramsCMS = () => {
   const [formFields, setFormFields] = useState(" ");
   const {title, date, theme, image} = formFields;
   const [imageUpload, setImageUpload] = useState(null);
-
+ 
   
   const handleReportChange = (e) => {
     const {name, value} = e.target;
@@ -21,9 +22,15 @@ const ProgramsCMS = () => {
   const handleChange = (e) => {
     const {name, value} = e.target;
     setFormFields({...formFields, [name]:value});
+  }
 
+  const handleImageChange = (e) => {
+    let imagelist = [];
     if(e.target.files !== null) {
-      setImageUpload(e.target.files[0]);
+      for(let i = 0; i < e.target.files.length; i++){
+        imagelist.push(e.target.files[i]);
+      }
+      setImageUpload(imagelist);
     }
   }
 
@@ -35,8 +42,9 @@ const ProgramsCMS = () => {
     }
 
     try{
-      uploadDocWithImage(imageUpload, "Programs", undefined, formFields);
-        alert("Program Added");  
+      // uploadDocWithImage(imageUpload, "Programs", undefined, formFields);
+         
+      uploadDocWithImages(imageUpload, "Programs", undefined, formFields);
     } catch(err){
       console.log(err);
     }  
@@ -62,11 +70,16 @@ const ProgramsCMS = () => {
           <br />
           <label htmlFor="ProgramTheme">Program Theme</label>
           <br />
-          <input onChange={handleChange} name='ProgramTheme' value={theme} type="text" />
+          <select onChange={handleChange} name='ProgramTheme' id="searchTheme">
+            <option disabled selected value="search">Search by Theme</option>
+            <option value="Political Advocacy">Political Advocacy</option>
+            <option value="Mentorship & Training">Mentorship & Training</option>
+            <option value="Socio-Political Activism">Socio-Political Activism</option>
+          </select>
           <br />
           <label htmlFor="ProgramImage">Upload Program Image</label>
           <br />
-          <input required onChange={handleChange} type="file" name="image"/>
+          <input required onChange={handleImageChange} type="file" name="image" multiple="multiple"/>
           <br />
           <label htmlFor="ProgramReport">Program Report</label>
           <DefaultEditor name='ProgramReport' value={html} onChange={handleReportChange} />

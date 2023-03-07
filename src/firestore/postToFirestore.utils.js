@@ -40,7 +40,7 @@ export const addCollectionAndDocuments = async (CollectionKey, docKey, docToAdd,
     }
 
     await setDoc(doc(db, CollectionKey, docKey), docToAdd, mergeStatus);
-    console.log("Added Succesfully");
+    alert("Added Succesfully");
 }
 
 
