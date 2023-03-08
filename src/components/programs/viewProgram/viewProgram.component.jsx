@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { useSelector } from "react-redux";
 import parse from "html-react-parser";
 
@@ -20,18 +20,53 @@ const ViewProgram = () => {
       return prog.id == path;
     })
 
+
+    const [a, setA] = useState(0);
+    const [b, setB] = useState(1);
+    const [c, setC] = useState(2);
+
+    const nextImage = () => {
+      if(a === 0){
+        const imgLength = programToView[0].images.length - 1;
+        const prevC = c;
+        setC(b);
+        setB(a);
+        setA(imgLength);
+      } else {
+        setC(b);
+        setB(a);
+        setA(a-1);
+      }
+      console.log(a, b, c);
+    }
+
+    const prevImage = () => {
+      const imgLength = programToView[0].images.length - 1;
+      if(c === imgLength){
+        const prevA = a;
+        setA(b);
+        setB(c);
+        setC(prevA);
+      } else {
+        setA(b);
+        setB(c);
+        setC(c+1);
+      }
+      console.log(a, b, c);
+    }
+
       return(
         <div id="viewProgramComponent">
-          {programToView.map((program)=> (
+          {programToView.map((program)=>  (
                   <div id="viewProgramContent">
                       <div id="header">
-                        <div id="programImages">
-                            <span className="next" id="left"></span>
-                            <img id="headerImage" src={program.image} alt="" />
-                            <img id="headerImage" src={program.image} alt="" />
-                            <img id="headerImage" src={program.image} alt="" />
-                            <span className="next" id="right"></span>
-                        </div>
+                      <div id="programImages">
+                              <span onClick={prevImage} className="next" id="left"></span>
+                              <img id="headerImage" src={program.images[a]} alt="" key="a"/>
+                              <img id="headerImage" src={program.images[b]} alt="" key="b"/>
+                              <img id="headerImage" src={program.images[c]} alt="" key="c"/>
+                              <span onClick={nextImage} className="next" id="right"></span>
+                            </div>
                           <div>
                             <h4 id="programTitle">{program.ProgramTitle}</h4>
                             <p id="programDate">{program.ProgramDate}</p>
