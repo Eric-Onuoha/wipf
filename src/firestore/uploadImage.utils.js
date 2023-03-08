@@ -29,7 +29,6 @@ export const uploadDocWithImage = (fileToUpload, CollectionKey, docKey, docToAdd
                 addCollectionAndDocuments(CollectionKey, docKey, docToAdd, mergeStatus);
             });
         })
-        alert("Succesfully Added To Database"); 
 }
 
 export const uploadDocWithImages = (filesToUpload, CollectionKey, docKey, docToAdd, mergeStatus) => {

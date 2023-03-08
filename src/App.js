@@ -15,8 +15,7 @@ import Programs from "./pages/programs/programs.component";
 import NavigationBar from "./components/navigationBar/navigationBar.components";
 import Footer from "./components/footer/footer.component";
 import ViewProgram from "./components/programs/viewProgram/viewProgram.component";
-import ViewArea from "./components/coreAreas/viewArea.component.jsx";
-
+import ViewArea from "./components/coreAreas/viewArea/viewArea.component";
 import NewsUpdatesCMS from "./cms/landingPage/newsUpdatesCMS.component";
 import CoreAreasCMS from "./cms/landingPage/coreAreasCMS.components";
 import ProgramsCMS from "./cms/programPage/programsCMS.component";
