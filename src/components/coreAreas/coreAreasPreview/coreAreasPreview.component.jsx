@@ -21,7 +21,7 @@ const CoreAreasPreview = ({ areas }) => {
             <p id="coreAreasText" className="p2">
               {areaContent[i]}
             </p>
-            <span onClick={() => navigate(handleNavigation("/aboutus/" + areaTitle))}>
+            <span onClick={() => navigate(handleNavigation("/aboutus/coreareas"))}>
               <PlainButton text="Read Details "></PlainButton>
             </span>
           </span>
