@@ -1,3 +1,32 @@
 #coreAreaComponent{
-    padding: 6em 10vw;
+    padding: 6em 10vw 2em 10vw;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    .coreAreaContent{
+        margin: 45px 0 50px 0;
+
+        // .coreAreaText{
+        //     float: right;
+        // }
+
+        img{
+            float: left;
+            width: 500px;
+            margin: 0px 20px 2px 0;
+        }
+
+        h1{
+            margin: 0 0 2px 0;
+        }
+
+        #coreAreaText{
+            margin: 0;
+            padding: 0;
+        }
+        p{
+            margin: 0;
+            padding: 0;
+        }
+    }
 }
