@@ -1,9 +1,9 @@
-import { useState } from "react";
 import { initializeApp } from "firebase/app";
 import {getStorage} from "firebase/storage";
 import {getDownloadURL, ref, uploadBytesResumable, uploadBytes} from "firebase/storage";
 import {v4} from "uuid";
 import { addCollectionAndDocuments } from "./postToFirestore.utils";
+import objectHash from "object-hash";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDfBhAMiVeEGR_79hy8WcOyOLAefCvTSlE",  
@@ -32,10 +32,14 @@ export const uploadDocWithImage = (fileToUpload, CollectionKey, docKey, docToAdd
 }
 
 export const uploadDocWithImages = (filesToUpload, CollectionKey, docKey, docToAdd, mergeStatus) => {
-    console.log(filesToUpload.length);
+
+        if (docKey === undefined){
+        docKey = objectHash.MD5(docToAdd);
+        }
+
         let imageList = [];
         filesToUpload.forEach(fileToUpload => {
-            const reference = ref(Storage, `wipf/images/${CollectionKey}/${docToAdd.ProgramTitle}/${fileToUpload.name + v4()}`)
+            const reference = ref(Storage, `wipf/images/${CollectionKey}/${docKey}/${fileToUpload.name + v4()}`)
             uploadBytes(reference, fileToUpload)
             .then(snapshot => {
             return getDownloadURL(snapshot.ref)
