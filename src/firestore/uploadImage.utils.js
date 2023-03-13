@@ -32,6 +32,7 @@ export const uploadDocWithImage = (fileToUpload, CollectionKey, docKey, docToAdd
 }
 
 export const uploadDocWithImages = (filesToUpload, CollectionKey, docKey, docToAdd, mergeStatus) => {
+    console.log(filesToUpload.length);
         let imageList = [];
         filesToUpload.forEach(fileToUpload => {
             const reference = ref(Storage, `wipf/images/${CollectionKey}/${docToAdd.ProgramTitle}/${fileToUpload.name + v4()}`)
@@ -40,21 +41,16 @@ export const uploadDocWithImages = (filesToUpload, CollectionKey, docKey, docToA
             return getDownloadURL(snapshot.ref)
             })
             .then(downloadURL => {
-            console.log('Download URL', downloadURL)
-            imageList.push(downloadURL)
-            })
-        }); 
-
-        setTimeout(
-            function () {
-                console.log(imageList);
+            console.log('Download URL', downloadURL);
+            imageList.push(downloadURL);
+            
+            if(filesToUpload.length == imageList.length){
                 docToAdd["images"] = imageList;
                 console.log("doc", docToAdd);
                 addCollectionAndDocuments(CollectionKey, docKey, docToAdd, mergeStatus);
             }
-            .bind(this),
-            15000
-        );
+            })
+        }); 
 }
 
 
