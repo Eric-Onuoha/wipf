@@ -33,7 +33,7 @@ const NewsPreviews = ({newsContent}) => {
 
     return (
         <div id="newsPreviewsComponent" >
-            {newsContent.slice(x,y).map((news)=>(
+            {newsContent.slice(0,5).slice(x,y).map((news)=>(
                 
                     <div id="newsImageCover">
                         {(news.videoLink ? (

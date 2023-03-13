@@ -22,6 +22,7 @@ import ProgramsCMS from "./cms/programPage/programsCMS.component";
 import MandateCMS from "./cms/aboutPage/mandateCMS.component";
 import AboutCMS from "./cms/aboutPage/aboutCMS.component";
 import StaffCMS from "./cms/aboutPage/staffCMS.component";
+import CMSNav from "./cms/cmsNav.component";
 
 function App() {
 
@@ -63,6 +64,7 @@ function App() {
             <Route path="programs?" element={<Programs/>}></Route>
           </Route>
           <Route path="programs/*" element={<ViewProgram/>}></Route>
+          <Route path="admin" element={<CMSNav/>}></Route>
           <Route path="landingcms" element={<CoreAreasCMS/>}></Route>
           <Route path="newsupdatescms" element={<NewsUpdatesCMS/>}></Route>
           <Route path="programscms" element={<ProgramsCMS/>}></Route>

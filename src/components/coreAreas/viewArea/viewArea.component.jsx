@@ -19,7 +19,7 @@ const showImage = (area) =>{
     if(area === "Political Advocacy"){
         return <div className="areaImageDiv">
                 <img src={advocacy} alt="" /> 
-                <p className="areaCaption">Women in Politics forum present in Parliament advocatong for bills in support of women</p>
+                <p className="areaCaption">Women in Politics forum in Parliament advocatong for bills in support of women</p>
             </div>;
     } else if (area === "Mentorship & Training"){
         return <div className="areaImageDiv">
