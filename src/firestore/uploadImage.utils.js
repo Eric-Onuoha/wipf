@@ -34,7 +34,7 @@ export const uploadDocWithImage = (fileToUpload, CollectionKey, docKey, docToAdd
 export const uploadDocWithImages = (filesToUpload, CollectionKey, docKey, docToAdd, mergeStatus) => {
         let imageList = [];
         filesToUpload.forEach(fileToUpload => {
-            const reference = ref(Storage, `wipf/images/${CollectionKey}/${fileToUpload.name + v4()}`)
+            const reference = ref(Storage, `wipf/images/${CollectionKey}/${docToAdd.ProgramTitle}/${fileToUpload.name + v4()}`)
             uploadBytes(reference, fileToUpload)
             .then(snapshot => {
             return getDownloadURL(snapshot.ref)
