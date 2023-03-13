@@ -43,7 +43,7 @@ export const uploadDocWithImages = (filesToUpload, CollectionKey, docKey, docToA
             .then(downloadURL => {
             console.log('Download URL', downloadURL);
             imageList.push(downloadURL);
-            
+
             if(filesToUpload.length == imageList.length){
                 docToAdd["images"] = imageList;
                 console.log("doc", docToAdd);
@@ -53,28 +53,4 @@ export const uploadDocWithImages = (filesToUpload, CollectionKey, docKey, docToA
         }); 
 }
 
-
-
-
-//     // let imageList = [];
-//     // filesToUpload.forEach(fileToUpload => {
-//     //     const fileRef = ref(Storage, `wipf/images/${CollectionKey}/${fileToUpload.name + v4()}`);
-//     //     const uploadTask = uploadBytesResumable(fileRef, fileToUpload)
-//     //         uploadTask.on("state_changed", (snapshot) => {}, (error) => {
-//     //             console.log("Error in image upload", error)
-//     //         }, ()=>{
-//     //             getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-//     //                 console.log(downloadURL);
-//     //                 // imageList.push(downloadURL);
-//     //             });
-//     //         })
-//     };
-
-//     // console.log(imageList);
-
-//     // docToAdd["image"] = ["one", "two", "three"];
-//     // addCollectionAndDocuments(CollectionKey, docKey, docToAdd, mergeStatus);
-//     alert("Succesfully Added To Database"); 
-
-// }
 

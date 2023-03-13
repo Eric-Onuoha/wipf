@@ -34,7 +34,7 @@ export const addCollectionAndDocuments = async (CollectionKey, docKey, docToAdd,
     if(docToAdd.ProgramDate && docToAdd.ProgramDate !== undefined){
         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         const date = new Date(docToAdd.ProgramDate);
-        docToAdd["day"] = date.getDay();
+        docToAdd["day"] = date.getDate();
         docToAdd["month"] = months[date.getMonth()];
         docToAdd["year"] = date.getFullYear();
     }
