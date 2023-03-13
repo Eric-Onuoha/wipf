@@ -53,7 +53,7 @@ export const uploadDocWithImages = (filesToUpload, CollectionKey, docKey, docToA
                 addCollectionAndDocuments(CollectionKey, docKey, docToAdd, mergeStatus);
             }
             .bind(this),
-            10000
+            15000
         );
 }
 
