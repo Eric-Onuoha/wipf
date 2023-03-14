@@ -35,6 +35,7 @@ export const uploadDocWithImages = (filesToUpload, CollectionKey, docKey, docToA
 
         if (docKey === undefined){
         docKey = objectHash.MD5(docToAdd);
+        docToAdd["id"] = docKey;
         }
 
         let imageList = [];
