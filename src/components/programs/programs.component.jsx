@@ -27,11 +27,6 @@ const Programs = ({number}) => {
         }
     }, [window.location.search]);
 
-    console.log("Value ",searchValue);
-    console.log("Name ",searchName);
-    console.log(window.location.search);
-    console.log(window.location)
-
     const programDetails = useSelector((state) => state.programs.programs);
     const programs = [];
     for (const program in programDetails){
