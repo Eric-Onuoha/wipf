@@ -35,7 +35,6 @@ export const uploadDocWithImages = (filesToUpload, CollectionKey, docKey, docToA
 
         if (docKey === undefined){
         docKey = objectHash.MD5(docToAdd);
-        docToAdd["id"] = docKey;
         }
 
         let imageList = [];
@@ -51,7 +50,7 @@ export const uploadDocWithImages = (filesToUpload, CollectionKey, docKey, docToA
 
             if(filesToUpload.length == imageList.length){
                 docToAdd["images"] = imageList;
-                console.log("doc", docToAdd);
+                docToAdd["id"] = docKey;
                 addCollectionAndDocuments(CollectionKey, docKey, docToAdd, mergeStatus);
             }
             })
