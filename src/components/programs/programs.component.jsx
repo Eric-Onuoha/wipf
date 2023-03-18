@@ -51,7 +51,7 @@ const Programs = ({number}) => {
         }
 
     } else {
-        sortedPrograms = programs.sort((a,b) => (new Date(a.ProgramDate) - new Date(b.ProgramDate)));
+        sortedPrograms = programs.sort((a,b) => (new Date(b.ProgramDate) - new Date(a.ProgramDate)));
     }
 
 
