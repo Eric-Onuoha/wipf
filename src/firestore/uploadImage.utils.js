@@ -26,7 +26,9 @@ export const uploadDocWithImage = (fileToUpload, CollectionKey, docKey, docToAdd
         }, ()=>{
             getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                 docToAdd["image"] = downloadURL;
-                addCollectionAndDocuments(CollectionKey, docKey, docToAdd, mergeStatus);
+                if(docToAdd["image"] == downloadURL){
+                    addCollectionAndDocuments(CollectionKey, docKey, docToAdd, mergeStatus);
+                }
             });
         })
 }
