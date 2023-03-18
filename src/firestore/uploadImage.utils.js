@@ -19,7 +19,10 @@ const app = initializeApp(firebaseConfig);
 const Storage = getStorage(app);
 
 export const uploadDocWithImage = (fileToUpload, CollectionKey, docKey, docToAdd, mergeStatus) => {
-    const fileRef = ref(Storage, `wipf/images/${fileToUpload.name + v4()}`);
+    if (docKey === undefined){
+        docKey = objectHash.MD5(docToAdd);
+    }
+    const fileRef = ref(Storage, `wipf/images/${CollectionKey}/${docKey}/${fileToUpload.name + v4()}`);
     const uploadTask = uploadBytesResumable(fileRef, fileToUpload)
         uploadTask.on("state_changed", (snapshot) => {}, (error) => {
             console.log("Error in image upload", error)
@@ -27,6 +30,7 @@ export const uploadDocWithImage = (fileToUpload, CollectionKey, docKey, docToAdd
             getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                 docToAdd["image"] = downloadURL;
                 if(docToAdd["image"] == downloadURL){
+                    docToAdd["id"] = docKey;
                     addCollectionAndDocuments(CollectionKey, docKey, docToAdd, mergeStatus);
                 }
             });
