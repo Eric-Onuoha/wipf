@@ -24,7 +24,7 @@ const showImage = (area) =>{
     } else if (area === "Mentorship & Training"){
         return <div className="areaImageDiv">
         <img src={mentorship} alt="" /> 
-        <p className="areaCaption">Women in Politics forum present in Parliament advocatong for bills in support of women</p>
+        <p className="areaCaption">Networking and politicial training session organized by Women in Politics Forum</p>
     </div>;
     } else {
         return <div className="areaImageDiv">
@@ -42,7 +42,7 @@ const showImage = (area) =>{
                     {showImage(areaTitle)}
                     <div>
                     <h1 className="h2">{areaTitle}</h1>
-                    <p id="coreAreaText" className="p2">
+                    <p id="coreAreaText">
                         {parse(areaContent[i])}
                     </p>
                     </div>

@@ -11,6 +11,8 @@ const News = () => {
       newsContent.push(newsUpdates[news]);
     }
 
+    // const sortedNewsContent = newsContent.sort((a,b) => (new Date(b.ProgramDate) - new Date(a.ProgramDate)));
+
     return(
         <NewsPreviews newsContent = {newsContent} ></NewsPreviews>
     )

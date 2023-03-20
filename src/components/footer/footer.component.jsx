@@ -16,7 +16,7 @@ const Footer = () =>{
                     <div>
                     <WIPFLogo />
                     <p className="p2">
-                    strengthenning the voices and capacity of female politicians, organizations and individuals working to influence and advocate for women’s participation in politics, towards achieving an equitable society and democratic governance for women.
+                    Strengthenning the voices and capacity of female politicians, organizations and individuals working to influence and advocate for women’s participation in politics.
                         </p>
                     </div>
                 </div>
