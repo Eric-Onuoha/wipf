@@ -201,3 +201,15 @@
         }
     }
 }
+
+@media(max-width: 1699px){
+    #latestProgramsPreviewComponent{
+        grid-template-columns: 1fr 1fr;
+        margin: 40px auto 0 160px;
+        row-gap: 150px;
+
+        .latestProgram{
+            margin-bottom: 90px;
+        }
+    }
+}
