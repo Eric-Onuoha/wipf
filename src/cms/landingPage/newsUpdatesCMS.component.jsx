@@ -102,7 +102,7 @@ const NewsUpdatesCMS = () => {
                 <br />
                 <label>Date e.g. 12th June 2021</label>
                 <br />
-                <textarea required onChange={handleChange} name="date" cols={60} rows={1} value={date}></textarea>
+                <input required onChange={handleChange} name="date" cols={60} rows={1} value={date} type="date"></input>
                 <br />
                 <button>Add News Updates</button>
             </form>

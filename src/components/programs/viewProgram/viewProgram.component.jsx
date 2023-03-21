@@ -69,7 +69,7 @@ const ViewProgram = () => {
                             </div>
                           <div>
                             <h4 id="programTitle">{program.ProgramTitle}</h4>
-                            <p id="programDate">{program.ProgramDate}</p>
+                            <p id="programDate">{program.day} {program.month}, {program.year}</p>
                           </div>
                       </div>
                       <div id="body">

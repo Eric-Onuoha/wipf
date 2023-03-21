@@ -63,7 +63,7 @@ const NewsPreviews = ({newsContent}) => {
                         <div id="newsMetadata">
                             <img src={Divider} alt="" />
                             <a href={news.link} target="_blank" rel="noreferrer"><h4 className="h4">{news.source}</h4></a>
-                            <h5 className="h5">{news.date}</h5>
+                            <h5 className="h5">{news.day} {news.month}, {news.year}</h5>
                         </div>
                     </div>                       
                     <div id="newsToggle" >
