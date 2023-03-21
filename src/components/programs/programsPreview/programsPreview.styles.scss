@@ -202,7 +202,7 @@
     }
 }
 
-@media(max-width: 1699px){
+@media (min-width:901px) and (max-width:1699px){ // Ipad flipped
     #latestProgramsPreviewComponent{
         grid-template-columns: 1fr 1fr;
         margin: 40px auto 0 160px;
