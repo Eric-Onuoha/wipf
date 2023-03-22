@@ -41,6 +41,7 @@ const Authenticator = () => {
                 <label htmlFor="password">Password</label>
                 <input type="password" name="password" onChange={handleChange} value={password}/>
                 <button type="submit">Login</button>
+                <p>Don't have an account? Find an existing account holder to help you create one</p>
                 {
                     currentUser ? (
                         <p>User</p>

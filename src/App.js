@@ -23,7 +23,8 @@ import MandateCMS from "./cms/aboutPage/mandateCMS.component";
 import AboutCMS from "./cms/aboutPage/aboutCMS.component";
 import StaffCMS from "./cms/aboutPage/staffCMS.component";
 // import CMSNav from "./cms/cmsNav.component";
-import Authenticator from "./authenticator/authenticator.component";
+import Authenticator from "./authenticator/signIn/authenticator.component";
+import SignUp from "./authenticator/signUp/signUp.component";
 
 function App() {
 
