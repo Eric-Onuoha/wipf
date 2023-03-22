@@ -1,10 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import { signIn } from "./signIn.firebase.utils";
+import { useNavigate } from "react-router-dom";
 import "./authenticator.styles.scss";
 
 const Authenticator = () => {
-    let currentUser = undefined;
+    const navigate = useNavigate();
 
     const defaultFormFields = {
         email:"",
@@ -24,8 +25,7 @@ const Authenticator = () => {
 
         try{
             const {user} = await signIn(email, password);
-            currentUser = user;
-            console.log(user);
+            navigate("/admin/cms");
         } catch(error){
             console.log(error);
         }
@@ -42,13 +42,6 @@ const Authenticator = () => {
                 <input type="password" name="password" onChange={handleChange} value={password}/>
                 <button type="submit">Login</button>
                 <p>Don't have an account? Find an existing account holder to help you create one</p>
-                {
-                    currentUser ? (
-                        <p>User</p>
-                    ) : (
-                        <p></p>
-                    )
-                }
             </form>
         </div>
     )

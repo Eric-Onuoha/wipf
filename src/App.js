@@ -22,7 +22,7 @@ import ProgramsCMS from "./cms/programPage/programsCMS.component";
 import MandateCMS from "./cms/aboutPage/mandateCMS.component";
 import AboutCMS from "./cms/aboutPage/aboutCMS.component";
 import StaffCMS from "./cms/aboutPage/staffCMS.component";
-// import CMSNav from "./cms/cmsNav.component";
+import CMSNav from "./cms/cmsNav.component";
 import Authenticator from "./authenticator/signIn/authenticator.component";
 import SignUp from "./authenticator/signUp/signUp.component";
 
@@ -67,6 +67,7 @@ function App() {
           </Route>
           <Route path="programs/*" element={<ViewProgram/>}></Route>
           <Route path="admin" element={<Authenticator/>}></Route>
+          <Route path="admin/cms" element={<CMSNav/>}></Route>
           <Route path="landingcms" element={<CoreAreasCMS/>}></Route>
           <Route path="newsupdatescms" element={<NewsUpdatesCMS/>}></Route>
           <Route path="programscms" element={<ProgramsCMS/>}></Route>
