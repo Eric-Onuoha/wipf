@@ -78,13 +78,7 @@ function App() {
           <Route path="admin/cms/newsupdates/new" element={<Authenticate component = {NewsUpdatesCMS} user = {currentUser} />}></Route>
           <Route path="admin/cms/mandate/new" element={<Authenticate component = {MandateCMS} user = {currentUser} />}></Route>
           <Route path="admin/cms/staff/new" element={<Authenticate component = {StaffCMS} user = {currentUser} />}></Route>
-
-          {/* <Route path="landingcms" element={<CoreAreasCMS/>}></Route>
-          <Route path="newsupdatescms" element={<NewsUpdatesCMS/>}></Route>
-          <Route path="programscms" element={<ProgramsCMS/>}></Route>
-          <Route path="mandatecms" element={<MandateCMS/>}></Route>
-          <Route path="aboutcms" element={<AboutCMS/>}></Route>
-          <Route path="staffcms" element={<StaffCMS/>}></Route> */}
+          <Route path="admin/cms/about/new" element={<Authenticate component = {AboutCMS} user = {currentUser} />}></Route>
         </Route>
       </Routes>
         {/* <Footer/> */}

@@ -11,6 +11,8 @@ const CMSNav = () => {
                 <Link className="compNav" to={"/admin/cms/newsupdates/new"}><p>News Updates</p></Link>
                 <Link className="compNav" to={"/admin/cms/programs/new"}><p>Programs</p></Link>
                 <Link className="compNav" to={"/admin/cms/mandate/new"}><p>Mandate</p></Link>
+                <Link className="compNav" to={"/admin/cms/staff/new"}><p>Staff</p></Link>
+                <Link className="compNav" to={"/admin/cms/about/new"}><p>About WIPF</p></Link>
             </div>
         </div>
     )
