@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { updateCoreAreas, updateMandate, updateAboutWIPF, addStaff } from "./reduxStore/actionDispatches";
 import { addPrograms } from "./reduxStore/actionDispatches";
@@ -25,10 +25,11 @@ import StaffCMS from "./cms/aboutPage/staffCMS.component";
 import CMSNav from "./cms/cmsNav.component";
 import Authenticator from "./authenticator/signIn/authenticator.component";
 import SignUp from "./authenticator/signUp/signUp.component";
+import Authenticate from "./authenticator/authenticate.component";
 
 function App() {
-
   const dispatch = useDispatch();
+  const currentUser = useSelector((state) => state.currentUser.currentUser) || "";
 
   useEffect(() => {
     getMultipleDocuments("LandingPage").then((coreAreasDB) => dispatch(updateCoreAreas(coreAreasDB)));
@@ -66,14 +67,24 @@ function App() {
             <Route path="programs?" element={<Programs/>}></Route>
           </Route>
           <Route path="programs/*" element={<ViewProgram/>}></Route>
+
+          {/* Rest Routes */}
           <Route path="admin" element={<Authenticator/>}></Route>
-          <Route path="admin/cms" element={<CMSNav/>}></Route>
-          <Route path="landingcms" element={<CoreAreasCMS/>}></Route>
+          <Route path="admin/cms" element={<Authenticate component = {CMSNav} user = {currentUser} />}></Route>
+          <Route path="admin/signup" element={<Authenticate component = {SignUp} user = {currentUser} />}></Route>
+        
+          <Route path="admin/cms/coreareas/new" element={<Authenticate component = {CoreAreasCMS} user = {currentUser} />}></Route>
+          <Route path="admin/cms/programs/new" element={<Authenticate component = {ProgramsCMS} user = {currentUser} />}></Route>
+          <Route path="admin/cms/newsupdates/new" element={<Authenticate component = {NewsUpdatesCMS} user = {currentUser} />}></Route>
+          <Route path="admin/cms/mandate/new" element={<Authenticate component = {MandateCMS} user = {currentUser} />}></Route>
+          <Route path="admin/cms/staff/new" element={<Authenticate component = {StaffCMS} user = {currentUser} />}></Route>
+
+          {/* <Route path="landingcms" element={<CoreAreasCMS/>}></Route>
           <Route path="newsupdatescms" element={<NewsUpdatesCMS/>}></Route>
           <Route path="programscms" element={<ProgramsCMS/>}></Route>
           <Route path="mandatecms" element={<MandateCMS/>}></Route>
           <Route path="aboutcms" element={<AboutCMS/>}></Route>
-          <Route path="staffcms" element={<StaffCMS/>}></Route>
+          <Route path="staffcms" element={<StaffCMS/>}></Route> */}
         </Route>
       </Routes>
         {/* <Footer/> */}

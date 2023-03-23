@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { addCollectionAndDocuments } from "../../firestore/postToFirestore.utils";
 import { updateMandate } from "../../reduxStore/actionDispatches";
 

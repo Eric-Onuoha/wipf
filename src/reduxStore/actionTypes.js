@@ -22,3 +22,7 @@ export const aboutWIPFTypes = {
 export const staffTypes = {
     setStaff: "staff/setStaff"
 }
+
+export const currentUserTypes = {
+    setCurrentUser: "currentUser/setCurrentUser"
+}

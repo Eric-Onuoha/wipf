@@ -2,10 +2,13 @@ import React from "react";
 import { useState } from "react";
 import { signIn } from "./signIn.firebase.utils";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addCurrentUser } from "../../reduxStore/actionDispatches";
 import "./authenticator.styles.scss";
 
 const Authenticator = () => {
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const defaultFormFields = {
         email:"",
@@ -25,9 +28,10 @@ const Authenticator = () => {
 
         try{
             const {user} = await signIn(email, password);
+            dispatch(addCurrentUser(user.email))
             navigate("/admin/cms");
         } catch(error){
-            console.log(error);
+            alert(error.message);
         }
 
     }

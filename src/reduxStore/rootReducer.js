@@ -5,6 +5,7 @@ import { programsReducer } from "./reducers/programs.reducer";
 import { mandateReducer } from "./reducers/mandateReducer";
 import { aboutWIPFReducer } from "./reducers/aboutWIPF.reducer";
 import { staffReducer } from "./reducers/staff.reducer";
+import { currentUserReducer } from "./reducers/currrentUser.reducer";
 
 export const rootReducer = combineReducers({
     coreAreas: coreAreasReducer,
@@ -12,5 +13,6 @@ export const rootReducer = combineReducers({
     programs: programsReducer,
     mandate: mandateReducer,
     about: aboutWIPFReducer,
-    staff: staffReducer
+    staff: staffReducer,
+    currentUser: currentUserReducer
 })

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { DefaultEditor } from 'react-simple-wysiwyg';
 import { useDispatch } from "react-redux";
-import { uploadDocWithImage } from '../../firestore/uploadImage.utils';
 import { uploadDocWithImages } from '../../firestore/uploadImage.utils';
+import "./programCMS.styles.scss";
 
 
 const ProgramsCMS = () => {
@@ -52,40 +52,46 @@ const ProgramsCMS = () => {
   }
 
   return (
-    <div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+    <div id='newProgramComponent'>
         <form onSubmit={handleSubmit}>
+          <h2>Add New Program</h2>
+
           <label htmlFor="ProgramTitle">Title of Program</label>
-          <br />
-          <input onChange={handleChange} name='ProgramTitle' value={title} type="text" />
-          <br />
+          <textarea id='title' required onChange={handleChange} name='ProgramTitle' value={title} type="text" />
+
           <label htmlFor="ProgramDate">Date of Program</label>
-          <br />
-          <input onChange={handleChange} name='ProgramDate' value={date} type="date" />
-          <br />
+          <input required onChange={handleChange} name='ProgramDate' value={date} type="date" />
+
           <label htmlFor="ProgramTheme">Program Theme</label>
-          <br />
-          <select onChange={handleChange} name='ProgramTheme' id="searchTheme">
+          <select required onChange={handleChange} name='ProgramTheme' id="searchTheme">
             <option disabled selected value="search">Search by Theme</option>
             <option value="Political Advocacy">Political Advocacy</option>
             <option value="Mentorship & Training">Mentorship & Training</option>
             <option value="Socio-Political Activism">Socio-Political Activism</option>
           </select>
-          <br />
+
           <label htmlFor="ProgramImage">Upload Program Image</label>
-          <br />
           <input required onChange={handleImageChange} type="file" name="image" multiple="multiple"/>
-          <br />
+
           <label htmlFor="ProgramReport">Program Report</label>
-          <DefaultEditor name='ProgramReport' value={html} onChange={handleReportChange} />
+          <DefaultEditor required name='ProgramReport' value={html} onChange={handleReportChange} />
+
           <button type="submit">Add Report</button>
         </form>
 
+        <div>
+          <h3>Guidelines</h3>
+          <p>
+            <ol>
+              <li>All form fields are compulsory</li>
+              <li>Select program theme that more closely relates to the program</li>
+              <li>All programs must have a minimum of three images</li>
+              <li>The image file names MUST NOT include brackets () or other special symbols</li>
+              <li>The second image will be the program banner image</li>
+              <li>Program report must not include any external formatting. Please be careful when copying and pasting</li>
+            </ol>
+          </p>
+        </div>
     </div>
   );
 }; export default ProgramsCMS;
