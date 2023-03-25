@@ -71,8 +71,8 @@ function App() {
           {/* Rest Routes */}
           <Route path="admin" element={<Authenticator/>}></Route>
           <Route path="admin/cms" element={<Authenticate component = {CMSNav} user = {currentUser} />}></Route>
-          <Route path="admin/signup" element={<Authenticate component = {SignUp} user = {currentUser} />}></Route>
-        
+
+          <Route path="admin/cms/user/new" element={<Authenticate component = {SignUp} user = {currentUser} />}></Route>        
           <Route path="admin/cms/coreareas/new" element={<Authenticate component = {CoreAreasCMS} user = {currentUser} />}></Route>
           <Route path="admin/cms/programs/new" element={<Authenticate component = {ProgramsCMS} user = {currentUser} />}></Route>
           <Route path="admin/cms/newsupdates/new" element={<Authenticate component = {NewsUpdatesCMS} user = {currentUser} />}></Route>

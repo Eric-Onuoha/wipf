@@ -13,6 +13,7 @@ const CMSNav = () => {
                 <Link className="compNav" to={"/admin/cms/mandate/new"}><p>Mandate</p></Link>
                 <Link className="compNav" to={"/admin/cms/staff/new"}><p>Staff</p></Link>
                 <Link className="compNav" to={"/admin/cms/about/new"}><p>About WIPF</p></Link>
+                <Link className="compNav" to={"/admin/cms/user/new"}><p>Add New Account</p></Link>
             </div>
         </div>
     )
