@@ -8,6 +8,9 @@ import UkAIDLogo from "../../assets/images/ukaid.jpg";
 import WrappaLogo from "../../assets/images/wrappa.png";
 import UNWomenLogo from "../../assets/images/unwomen.png";
 import NDILogo from "../../assets/images/ndi.jpg";
+import IRILogo from "../../assets/images/irilogo.png";
+import WDNLogo from "../../assets/images/wdn.jpg";
+
 
 
 let sponsors = [
@@ -18,7 +21,9 @@ let sponsors = [
   {name: "ukaid", logo: UkAIDLogo, link: "#"},
   {name: "wrappa", logo: WrappaLogo, link: "#"},
   {name: "unwomen", logo: UNWomenLogo, link: "#"},
-  {name: "ndi", logo: NDILogo, link: "#"}
+  {name: "ndi", logo: NDILogo, link: "#"},
+  {name: "iri", logo: IRILogo, link: "#"},
+  {name: "WDN", logo: WDNLogo, link: "#"}
 ]
 
 const SponsorsList = () => {
