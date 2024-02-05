@@ -21,6 +21,10 @@
         &:nth-of-type(3){
             background-color: #FEA444;
         }
+
+        &:nth-of-type(4){
+            background-color: #001D23;
+        }
         
         #coreAreasText{
             display: -webkit-box;
@@ -53,7 +57,7 @@
 @media(min-width:900px){
     .coreAreaPreviewComponent{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         column-gap: 28px;
         padding: 0 10vw;
 

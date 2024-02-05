@@ -9,7 +9,7 @@ const CoreAreasCMS = () => {
     const dispatch = useDispatch();
 
     const [formFields, setFormFields] = useState({});
-    const {mentorship, advocacy, activism} = formFields;
+    const {mentorship, advocacy, activism, gbv} = formFields;
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -48,6 +48,10 @@ const CoreAreasCMS = () => {
                 <label>Socio-Political Activism</label>
                 <br />
                 <textarea onChange={handleChange} name="Socio-Political Activism" cols={80} rows={4} value={activism}></textarea>
+                <br />
+                <label>Gender Based Violence</label>
+                <br />
+                <textarea onChange={handleChange} name="Gender Based Violence" cols={80} rows={4} value={gbv}></textarea>
                 <br />
                 <button>Add Core Area</button>
             </form>
