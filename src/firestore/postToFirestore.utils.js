@@ -4,6 +4,7 @@ import objectHash from "object-hash";
 import {
     getFirestore,
     doc,
+    deleteDoc,
     setDoc,
 } from "firebase/firestore";
 
@@ -51,6 +52,10 @@ export const addCollectionAndDocuments = async (CollectionKey, docKey, docToAdd,
     alert("Added Succesfully");
 }
 
+
+export const removeDocument = async (CollectionKey, docToDelete) => {
+    await deleteDoc(doc(db, CollectionKey, docToDelete));
+} 
 
 
 

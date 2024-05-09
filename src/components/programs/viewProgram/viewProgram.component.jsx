@@ -2,10 +2,13 @@ import React, {useState} from "react";
 import { useSelector } from "react-redux";
 import parse from "html-react-parser";
 
+import { removeDocument } from "../../../firestore/postToFirestore.utils";
+
 import "./viewProgram.styles.scss";
 
 const ViewProgram = () => {
     const programsDB = useSelector((state) => state.programs.programs);
+    const currentUser = useSelector((state) => state.currentUser.currentUser) || "";
 
     const pathName = window.location.pathname;
     const paths = pathName.split("/");
@@ -19,6 +22,16 @@ const ViewProgram = () => {
     const programToView = programs.filter((prog) => {
       return prog.id == path;
     })
+
+    const handleDeletion = (e) =>{
+      e.preventDefault();
+
+      try{           
+        removeDocument("Programs", path);
+      } catch(err){
+        console.log(err);
+      }  
+    }
 
 
     const [a, setA] = useState(0);
@@ -77,6 +90,16 @@ const ViewProgram = () => {
                       </div>
                   </div>
           ))}
+          {currentUser ? (
+          <div id="deleteFromDB">
+            <form onSubmit={handleDeletion}>
+              <button>Delete</button>
+            </form>
+          </div>
+          ): (
+            <p></p>
+          )}
+
       </div>
     )
 }; export default ViewProgram;

@@ -83,6 +83,17 @@
                 text-decoration: underline;
             }
         }
+        #deleteFromDB{
+            text-align: center;
+            button{
+                height: 50px;
+                background-color: red;
+                padding: 0 30px;
+                color: #FFFFFF;
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
     }
 }
 
@@ -167,6 +178,17 @@
                     line-height: 22px !important;
                     font-weight: 400 !important;
                 }
+            }
+        }
+        #deleteFromDB{
+            text-align: center;
+            button{
+                height: 50px;
+                background-color: red;
+                padding: 0 30px;
+                color: #FFFFFF;
+                font-size: 16px;
+                font-weight: 600;
             }
         }
     }
