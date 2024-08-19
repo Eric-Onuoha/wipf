@@ -50,6 +50,7 @@ const ProgramsNavigationPreview = ({ programsYear }) => {
           <option value="Political Advocacy">Political Advocacy</option>
           <option value="Mentorship & Training">Mentorship & Training</option>
           <option value="Socio-Political Activism">Socio-Political Activism</option>
+          <option value="Gender Based Violence">Gender Based Violence</option>
         </select>
 
         <select onChange={handleYear} name="year" id="searchYear">

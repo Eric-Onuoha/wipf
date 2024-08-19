@@ -68,7 +68,8 @@ const ProgramsCMS = () => {
             <option value="Political Advocacy">Political Advocacy</option>
             <option value="Mentorship & Training">Mentorship & Training</option>
             <option value="Socio-Political Activism">Socio-Political Activism</option>
-          </select>
+            <option value="Gender Based Violence">Gender Based Violence</option>
+            </select>
 
           <label htmlFor="ProgramImage">Upload Program Image</label>
           <input required onChange={handleImageChange} type="file" name="image" multiple="multiple"/>

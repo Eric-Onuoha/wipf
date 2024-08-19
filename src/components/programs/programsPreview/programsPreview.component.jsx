@@ -5,6 +5,7 @@ import PlainButton from "../../plainButton/plainButton.component";
 
 const ProgramsPreview = ({programs, number = programs.length}) =>{
     const navigate = useNavigate();
+    console.log(programs)
     
     return (
         <div id="latestProgramsPreviewComponent">
